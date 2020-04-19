@@ -8,6 +8,8 @@ BASEVMNAME=
 INVENTORYFILE=
 GUESTUSER=
 GUESTPASS=
+VMWARETYPE=fusion
+
 
 echo "Parameters are:"
 while true; do
@@ -31,10 +33,17 @@ done
 echo
 
 clone_vm() {
-    BASEVMPATH="${BASEVMNAME}.vmwarevm"
+    BASEVMPATH="${BASEVMNAME}"
+    if [ $VMWARETYPE == "fusion" ]; then
+        BASEVMPATH="${BASEVMPATH}.vmwarevm"
+    fi
 
     SOURCE="${VMPATH}/${BASEVMPATH}/${BASEVMNAME}.vmx"
-    NEWVM="${VMPATH}/$NEWNAME.vmwarevm/$NEWNAME.vmx"
+    NEWVM="${VMPATH}/$NEWNAME"
+    if [ $VMWARETYPE == "fusion" ]; then
+        NEWVM="${NEWVM}.vmwarevm"
+    fi
+    NEWVM="${NEWVM}/$NEWNAME.vmx"
 
     echo "CLONING: $BASEVMNAME to $NEWNAME"
 # vmrun -T fusion -gu $GUESTUSER -gp $GUESTPASS  ........
