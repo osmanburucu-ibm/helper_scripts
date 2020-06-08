@@ -1,16 +1,18 @@
 # helper_scripts
 
+A collection of scripts.
+
+## VMWare Automation Scripts
+
 Simple scripts for my other projects, createvmclone is based on [Virtjunkie.com repo](https://github.com/jonhowe/Virtjunkie.com)
 
 Cannot remember where i had found the base for addtoknownhosts.
 
 Both scripts were tested only on Mac OS (zsh) so they could work on Linux but not sure.
 
-## Scripts
-
 ### createvmclone
 
-This script will clone a given base image and will insiert its name and ip address to an ansible inventory file
+This script will clone a given base image and will insert its name and ip address to an ansible inventory file
 
 ~~~sh
 
@@ -20,7 +22,7 @@ sh ./createvmclone -v|--vms <path to vmware image directory> -n|--name <New VM n
 
 The parameters -u|--user and -p|--pass are not used, but are the admin user for the vm image with its password
 
-prereqs: vmware tools have to be installed in the base image!
+pre-reqs: vmware tools have to be installed in the base image!
 
 
 ### addtoknownhosts
@@ -32,3 +34,9 @@ This script will exchange your ssh keys with the image for the given userid (mus
 sh ./addtoknownhosts.sh <ip address of running image> <userid for image>
 
 ~~~
+
+## Upgrading / Updating UrbanCode
+
+### upgrade_ucd_agent.py
+
+This script will iterate over all IBM UrbanCode Agents and upgrade the ones with a given tag.
