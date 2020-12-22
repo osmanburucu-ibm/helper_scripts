@@ -127,6 +127,27 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-hosts
-oz-helper-scripts.code-workspace
+
+#  Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# .tfvars files
+*.tfvars
+
+# vs-code files
+*.code-workspace
+
+# Ansible files
+*.retry
+
+# Vagrant
+.vagrant
+
+
+roles
+playbooks/roles
 .vscode
