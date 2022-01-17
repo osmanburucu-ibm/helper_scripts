@@ -1,0 +1,394 @@
+{
+  "source": "ucd.nbg-demo.cloud",
+  "date": "2022-01-17 17:16:55.711294",
+  "resources": [
+    {
+      "name": "DEMO",
+      "path": "/DEMO",
+      "type": "resource",
+      "tags": [
+        {
+          "id": "17e57b68-dcb5-e072-d63e-ee28da875290",
+          "name": "TLR",
+          "color": "#00B2EF",
+          "description": "",
+          "objectType": "Resource"
+        }
+      ],
+      "children": [
+        {
+          "name": "DEV",
+          "path": "/DEMO/DEV",
+          "type": "subresource",
+          "tags": [],
+          "children": [
+            {
+              "name": "ucd.local",
+              "path": "/DEMO/DEV/ucd.local",
+              "type": "agent",
+              "tags": [],
+              "children": [
+                {
+                  "name": "GIT-BE",
+                  "path": "/DEMO/DEV/ucd.local/GIT-BE",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                },
+                {
+                  "name": "GIT-DB",
+                  "path": "/DEMO/DEV/ucd.local/GIT-DB",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                },
+                {
+                  "name": "GIT-FE",
+                  "path": "/DEMO/DEV/ucd.local/GIT-FE",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PROD",
+          "path": "/DEMO/PROD",
+          "type": "subresource",
+          "tags": [],
+          "children": [
+            {
+              "name": "ucd.local",
+              "path": "/DEMO/PROD/ucd.local",
+              "type": "agent",
+              "tags": [],
+              "children": [
+                {
+                  "name": "GIT-BE",
+                  "path": "/DEMO/PROD/ucd.local/GIT-BE",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                },
+                {
+                  "name": "GIT-DB",
+                  "path": "/DEMO/PROD/ucd.local/GIT-DB",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                },
+                {
+                  "name": "GIT-FE",
+                  "path": "/DEMO/PROD/ucd.local/GIT-FE",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "TEST",
+          "path": "/DEMO/TEST",
+          "type": "subresource",
+          "tags": [],
+          "children": [
+            {
+              "name": "ucd.local",
+              "path": "/DEMO/TEST/ucd.local",
+              "type": "agent",
+              "tags": [],
+              "children": [
+                {
+                  "name": "GIT-BE",
+                  "path": "/DEMO/TEST/ucd.local/GIT-BE",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                },
+                {
+                  "name": "GIT-DB",
+                  "path": "/DEMO/TEST/ucd.local/GIT-DB",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                },
+                {
+                  "name": "GIT-FE",
+                  "path": "/DEMO/TEST/ucd.local/GIT-FE",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DEMOXXX",
+      "path": "/DEMOXXX",
+      "type": "resource",
+      "tags": [],
+      "children": []
+    },
+    {
+      "name": "DEMOXXXx",
+      "path": "/DEMOXXXx",
+      "type": "resource",
+      "tags": [],
+      "children": []
+    },
+    {
+      "name": "JPetStore-Demo-Lab",
+      "path": "/JPetStore-Demo-Lab",
+      "type": "resource",
+      "tags": [],
+      "children": [
+        {
+          "name": "DEV",
+          "path": "/JPetStore-Demo-Lab/DEV",
+          "type": "subresource",
+          "tags": [],
+          "children": [
+            {
+              "name": "ucd.local",
+              "path": "/JPetStore-Demo-Lab/DEV/ucd.local",
+              "type": "agent",
+              "tags": [],
+              "children": [
+                {
+                  "name": "JPetStore-APP",
+                  "path": "/JPetStore-Demo-Lab/DEV/ucd.local/JPetStore-APP",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                },
+                {
+                  "name": "JPetStore-DB",
+                  "path": "/JPetStore-Demo-Lab/DEV/ucd.local/JPetStore-DB",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                },
+                {
+                  "name": "JPetStore-WEB",
+                  "path": "/JPetStore-Demo-Lab/DEV/ucd.local/JPetStore-WEB",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SIT",
+          "path": "/JPetStore-Demo-Lab/SIT",
+          "type": "subresource",
+          "tags": [],
+          "children": [
+            {
+              "name": "ucd.local",
+              "path": "/JPetStore-Demo-Lab/SIT/ucd.local",
+              "type": "agent",
+              "tags": [],
+              "children": [
+                {
+                  "name": "JPetStore-APP",
+                  "path": "/JPetStore-Demo-Lab/SIT/ucd.local/JPetStore-APP",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                },
+                {
+                  "name": "JPetStore-DB",
+                  "path": "/JPetStore-Demo-Lab/SIT/ucd.local/JPetStore-DB",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                },
+                {
+                  "name": "JPetStore-WEB",
+                  "path": "/JPetStore-Demo-Lab/SIT/ucd.local/JPetStore-WEB",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "UAT",
+          "path": "/JPetStore-Demo-Lab/UAT",
+          "type": "subresource",
+          "tags": [],
+          "children": [
+            {
+              "name": "ucd.local",
+              "path": "/JPetStore-Demo-Lab/UAT/ucd.local",
+              "type": "agent",
+              "tags": [],
+              "children": [
+                {
+                  "name": "JPetStore-APP",
+                  "path": "/JPetStore-Demo-Lab/UAT/ucd.local/JPetStore-APP",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                },
+                {
+                  "name": "JPetStore-DB",
+                  "path": "/JPetStore-Demo-Lab/UAT/ucd.local/JPetStore-DB",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                },
+                {
+                  "name": "JPetStore-WEB",
+                  "path": "/JPetStore-Demo-Lab/UAT/ucd.local/JPetStore-WEB",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "NEWTLR",
+      "path": "/NEWTLR",
+      "type": "resource",
+      "tags": [],
+      "children": [
+        {
+          "name": "NEWDEV",
+          "path": "/NEWTLR/NEWDEV",
+          "type": "subresource",
+          "tags": [],
+          "children": [
+            {
+              "name": "myAgentPOOL",
+              "path": "/NEWTLR/NEWDEV/myAgentPOOL",
+              "type": "agentPool",
+              "tags": [],
+              "children": [
+                {
+                  "name": "WebSphere Liberty",
+                  "path": "/NEWTLR/NEWDEV/myAgentPOOL/WebSphere Liberty",
+                  "type": "ComponentTag",
+                  "tags": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "NEWQA",
+          "path": "/NEWTLR/NEWQA",
+          "type": "subresource",
+          "tags": [],
+          "children": [
+            {
+              "name": "ucd.local",
+              "path": "/NEWTLR/NEWQA/ucd.local",
+              "type": "agent",
+              "tags": [],
+              "children": [
+                {
+                  "name": "NEWQAGroupUnderAgent",
+                  "path": "/NEWTLR/NEWQA/ucd.local/NEWQAGroupUnderAgent",
+                  "type": "subresource",
+                  "tags": [],
+                  "children": [
+                    {
+                      "name": "KubeToy",
+                      "path": "/NEWTLR/NEWQA/ucd.local/NEWQAGroupUnderAgent/KubeToy",
+                      "type": "COMPONENT",
+                      "tags": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sum-App",
+      "path": "/Sum-App",
+      "type": "resource",
+      "tags": [],
+      "children": [
+        {
+          "name": "DEV",
+          "path": "/Sum-App/DEV",
+          "type": "subresource",
+          "tags": [],
+          "children": [
+            {
+              "name": "ucd.local",
+              "path": "/Sum-App/DEV/ucd.local",
+              "type": "agent",
+              "tags": [],
+              "children": [
+                {
+                  "name": "Sum-App-API",
+                  "path": "/Sum-App/DEV/ucd.local/Sum-App-API",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                },
+                {
+                  "name": "Sum-App-SmokeTest",
+                  "path": "/Sum-App/DEV/ucd.local/Sum-App-SmokeTest",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                },
+                {
+                  "name": "Sum-App-WAR",
+                  "path": "/Sum-App/DEV/ucd.local/Sum-App-WAR",
+                  "type": "COMPONENT",
+                  "tags": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PROD",
+          "path": "/Sum-App/PROD",
+          "type": "subresource",
+          "tags": [],
+          "children": []
+        },
+        {
+          "name": "QA",
+          "path": "/Sum-App/QA",
+          "type": "subresource",
+          "tags": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "UCD-agent",
+      "path": "/UCD-agent",
+      "type": "resource",
+      "tags": [],
+      "children": []
+    }
+  ]
+}

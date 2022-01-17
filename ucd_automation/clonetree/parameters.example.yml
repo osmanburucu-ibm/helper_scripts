@@ -1,0 +1,15 @@
+---
+
+source:
+    hostname: ucd.nbg-demo.cloud
+    https_port: 8443
+    user: "PasswordIsAuthToken"
+    token: "xxxxxxxxxxxxxxxxxx"
+
+target:
+    hostname: ucd2.demo.cloud
+    https_port: 8443
+    user: "admin"
+    token: "mypassword"
+
+
