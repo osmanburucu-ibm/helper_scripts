@@ -1,15 +1,3 @@
-#   - name: create top level resource
-#     uri:
-#         url: "https://{{ ucd_server_hostname }}:{{ install_server_web_https_port }}/cli/resource/create"
-#         user: "{{ ucds_admin_user }}"
-#         password: "{{ ucds_initial_admin_pwd }}"
-#         method: PUT
-#         body: ' { "name" : "{{ demo_name }}-Demo-Lab" }'
-#         force_basic_auth: yes
-#         body_format: json
-#         validate_certs: no
-
-
 # TODO: A LOT OF DUPLICATION at the moment, next iteration put all reusable methods/functions and so on into a module/class/package?? whatever it is in python
 
 import json
@@ -41,14 +29,28 @@ def create_resource(res, parent):
     ucd_url="https://"+ parameters["target"]["hostname"] + ":"  + str(parameters["target"]["https_port"]) + "/cli/resource/create"
     logging.info(ucd_url)
 
+    # set working variables
     payload = {}
-    fieldnames=("name","description")
+    fieldnames=["name","description"]
     defaultValues={"description":"", "tags":[]}
 
     for name in fieldnames:
         payload[str(name)] = res.get(str(name), defaultValues.get(str(name),""))
+
     if (parent and not parent.isspace()):
         payload["parent"]=parent
+
+    if (res.get("type") == "agent"):
+        payload["agent"] = res.get(str("name"))
+    if (res.get("type") == "agentPool"):
+        payload["agentPool"] = res.get(str("name"))
+
+    if (res.get("type") == "COMPONENT"):
+        payload["component"] = res.get(str("name"))
+    if (res.get("type") == "ComponentTag"):
+        payload["componentTag"] = res.get(str("name"))
+    
+    
     logging.info(payload)
 
     auth_user=parameters["target"]["user"]
@@ -56,6 +58,10 @@ def create_resource(res, parent):
 
     r = requests.put(ucd_url, data=json.dumps(payload), auth=HTTPBasicAuth(auth_user, auth_pwd),headers=headers, verify=False)
     logging.info(r.text)
+
+    # now iterate over children
+    for child in res["children"]:
+        create_resource(child, res["path"])
 #    logging.info(json.dumps(r.json(), indent=2))
 
 def main():

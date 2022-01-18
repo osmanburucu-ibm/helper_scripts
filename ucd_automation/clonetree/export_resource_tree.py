@@ -18,7 +18,7 @@ def read_configuration(file_path):
     with open(file_path, "r") as f:
         return yaml.safe_load(f)
 
-def get_ressource_type(path):
+def get_resource_type(path):
     parameters=read_configuration("parameters.yml")
     specialType = "subresource"
 
@@ -42,7 +42,7 @@ def get_ressource_type(path):
     return specialType
 
 
-def get_ressource(parent):
+def get_resource(parent):
 
     parameters=read_configuration("parameters.yml")
 
@@ -70,9 +70,9 @@ def get_ressource(parent):
                 actResource[str(name)] = res.get(str(name), defaultValues.get(str(name),""))
             # check info when type = subresource and hasAgent = true
             if (res.get("hasAgent", "false") and res.get("type") == "subresource"):
-                specialType=get_ressource_type(res.get("path"))
+                specialType=get_resource_type(res.get("path"))
                 actResource["type"]=specialType
-            childresources=get_ressource(actResource["path"])
+            childresources=get_resource(actResource["path"])
             actResource["children"]=childresources
             allResources.append(actResource)
 
@@ -83,7 +83,7 @@ def main():
     parameters=read_configuration("parameters.yml")
     myTree = {"source":str(parameters["source"]["hostname"]), "date":str(datetime.now())}
 
-    tlrResources=get_ressource("")
+    tlrResources=get_resource("")
     myTree["resources"]=tlrResources
     logging.info(json.dumps(myTree))
     with open ("ResourceTree.json","w") as outputfile:
