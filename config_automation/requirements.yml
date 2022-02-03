@@ -1,0 +1,6 @@
+---
+# collections:
+#    - name: robertdebock.roles
+roles:
+    - name: robertdebock.bootstrap
+    - name: geerlingguy.docker
