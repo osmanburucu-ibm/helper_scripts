@@ -24,7 +24,7 @@ def getlistitems(url):
     ahrefs = soup.find_all("a",href=True)
     for ahref in ahrefs:
         adir = ahref['href']
-        if (adir[0] != "?" and adir[0] != "/"):
+        if adir[0] not in ["?", "/"]:
             itemname = adir.replace("/", "")
             listitems.append(itemname)
     listitems.sort()
@@ -86,7 +86,7 @@ def getallplugins(url):
             logger1.warning (f"{item} is a zip.file not a directory")
     return allplugins
 
-def main(argv):
+def main():
 
     source_url = os.getenv("PLUGINFILES_SOURCE_URL")
     plugin_type = os.getenv("EXPORT_PLUGIN_TYPE")
@@ -100,4 +100,5 @@ def main(argv):
 
     os._exit(0)
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    #main(sys.argv[1:])
+    main()

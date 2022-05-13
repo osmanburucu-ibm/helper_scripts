@@ -30,7 +30,7 @@ def get_plugin_doc_link(plugin_item):
     item = plugin_item.find(class_="uc-grid-link")
     mystring = ""
     mystring = ''.join(map(str,item))
-    doc_link = re.search("(?P<url>https?://[^\s]+)", mystring).group("url")
+    doc_link = re.search("(?P<url>https?://[^\s]+)", mystring)["url"]
     doc_link = doc_link.replace('/\">Go', '')
     logging.debug(f"get_plugin_doc_link: {doc_link}")
     return doc_link
@@ -153,7 +153,7 @@ def get_all_plugin_docs(source_url):
             allplugindocs.append(oneplugin)
     return allplugindocs
 
-def main(argv):
+def main():
     source_url = os.getenv("PLUGIN_LIST_URL")
     plugin_type = os.getenv("EXPORT_PLUGIN_TYPE")
 
@@ -174,4 +174,5 @@ def main(argv):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    # main(sys.argv[1:])
+    main()
