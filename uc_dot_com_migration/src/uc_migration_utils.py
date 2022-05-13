@@ -1,6 +1,8 @@
 # sourcery skip: avoid-builtin-shadow
 import logging
 import os
+from decimal import Decimal
+from unicodedata import decimal
 
 logging.basicConfig()
 logging.root.setLevel(logging.INFO)
@@ -45,7 +47,7 @@ def get_config():
 # TODO: x.yyyy also check yyyy ! f.e. 6.86 is higher than 6.111 in this function, should be 6.111 higher!
 # TODO: Check that the versionnumber makes sense, as there are several "version naming" conventions used!
 def getversionnumber2(elem):
-    return float(getversionnumber(elem, True))
+    return Decimal(getversionnumber(elem, True))
 
 def getversionnumber(elem, forsort=False):
     logger1.info(elem)
@@ -55,6 +57,13 @@ def getversionnumber(elem, forsort=False):
         parts = split_tup[0].split(":")
     else:
         parts = split_tup[0].split("-")
+        # if the parts are more than 2 concat from second entry to last with . and create a new allnumparts
+        if len(parts) > 2:
+            newstring = ""
+            for i in range(1, len(parts)):
+                newstring = parts[i] if newstring == "" else f"{newstring}.{parts[i]}"
+            parts[-1] = newstring
+        
    #versionnumber = parts[-1] will be used later maybe...
     allnumparts = parts[-1].split(".")
     logger1.info(f"allnumparts={allnumparts}")
@@ -62,7 +71,7 @@ def getversionnumber(elem, forsort=False):
         numfilter = filter(str.isdigit, allnumparts[i])
         numstring = "".join(numfilter)
         if forsort: 
-            numstring = numstring.zfill(5)
+            numstring = numstring.zfill(10)
         allnumparts[i] = "".join(numstring)
 
     x = "0"
