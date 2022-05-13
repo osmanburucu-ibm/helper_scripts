@@ -49,8 +49,7 @@ def get_config():
 def getversionnumber2(elem):
     return Decimal(getversionnumber(elem, True))
 
-def getversionnumber(elem, forsort=False):
-    logger1.info(elem)
+def get_allnumparts(elem) -> list:
     split_tup = os.path.splitext(elem)
     logger1.info(split_tup)
     if (":" in str(split_tup[0])):
@@ -63,10 +62,13 @@ def getversionnumber(elem, forsort=False):
             for i in range(1, len(parts)):
                 newstring = parts[i] if newstring == "" else f"{newstring}.{parts[i]}"
             parts[-1] = newstring
-        
-   #versionnumber = parts[-1] will be used later maybe...
     allnumparts = parts[-1].split(".")
-    logger1.info(f"allnumparts={allnumparts}")
+    logger1.info(f"allnumparts={allnumparts}")    
+    return allnumparts
+
+def getversionnumber(elem, forsort=False):
+    logger1.info(elem)
+    allnumparts = get_allnumparts(elem)
     for i in range(len(allnumparts)):
         numfilter = filter(str.isdigit, allnumparts[i])
         numstring = "".join(numfilter)
