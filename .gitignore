@@ -151,3 +151,4 @@ dmypy.json
 roles
 playbooks/roles
 .vscode
+uc_dot_com_migration/.DS_Store
