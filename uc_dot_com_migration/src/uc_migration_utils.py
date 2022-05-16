@@ -55,10 +55,6 @@ def getversionnumber2(elem):
 def get_allnumparts(elem) -> list:
     split_tup = os.path.splitext(elem.replace("_", "-"))
     logger1.info(split_tup)
-
-#    # splitchar = ":" if (":" in str(split_tup[0])) else "-" TEST 
- 
-    logger1.info(f"split_tup after replace {split_tup[0]}")
     splitchar = ""
     if (":" in str(split_tup[0])):
         splitchar = ":"

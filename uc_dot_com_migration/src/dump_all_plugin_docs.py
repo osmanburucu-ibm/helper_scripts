@@ -1,3 +1,4 @@
+# sourcery skip: avoid-builtin-shadow
 from cgitb import text
 import json, os, sys
 from tabnanny import check
@@ -6,11 +7,33 @@ from bs4 import BeautifulSoup
 import requests
 import re
 import logging
+import uc_migration_utils as ucutil
+
 
 SOUP_PARSER = "html.parser"
+script_name = "dump_all_plugin_docs"
 
-# logging.basicConfig(format="[%(filename)s:%(lineno)s - %(funcName)20s() ] %(message)s")
+logging.basicConfig()
+logging.root.setLevel(logging.INFO)
+logging.basicConfig(format="[%(filename)s:%(lineno)s - %(funcName)20s() ] %(message)s")
 logging.basicConfig(level=logging.INFO)
+
+# create file handler which logs even debug messages
+fh = logging.FileHandler(f"{script_name}.log")
+fh.setLevel(logging.DEBUG)
+# create console handler with a higher log level
+ch = logging.StreamHandler()
+ch.setLevel(logging.INFO)
+lformat=logging.Formatter("[%(filename)s:%(lineno)s - %(funcName)20s() ] %(message)s")
+
+fh.setFormatter(lformat)
+ch.setFormatter(lformat)
+logger1 = logging.getLogger(script_name)
+
+
+logger1.addHandler(fh)
+logger1.addHandler(ch)
+
 
 def remove_tags(taggedcontent):
     for data in taggedcontent(['style', 'script']):
@@ -154,20 +177,22 @@ def get_all_plugin_docs(source_url):
     return allplugindocs
 
 def main():
-    source_url = os.getenv("PLUGIN_LIST_URL")
-    plugin_type = os.getenv("EXPORT_PLUGIN_TYPE")
+    
+    config = ucutil.get_config()
+    source_url = config["plugin_list_url"]
+    plugin_type = config["plugin_type"]
 
     allplugindocs = []
     allplugindocs = get_all_plugin_docs(source_url)
 
     adict = {
-        "source_url": source_url,
-        "source_overview_url": os.getenv("PLUGIN_OVERVIEW_URL"),
-        "source_documentation_url": os.getenv("PLUGIN_DOCUMENTATION_URL"),
-        "source_download_folder": os.getenv("PLUGINFILES_SOURCE_URL")
+        "source_url": source_url, 
+        "source_overview_url": config["plugin_doc_overview_url"], 
+        "source_documentation_url": config["plugin_full_doc_url"], 
+        "source_download_folder": config["files_source_url"], 
+        "plugins": allplugindocs
     }
 
-    adict["plugins"] = allplugindocs
 
     with open (f"{plugin_type}-allplugindocs.json", "w") as f:
         json.dump(adict,f, indent=4)
