@@ -1,0 +1,3514 @@
+{
+    "source_url": "https://www.urbancode.com/plugins",
+    "source_overview_url": "https://www.urbancode.com/plugin",
+    "source_documentation_url": "https://www.urbancode.com/plugindoc",
+    "source_download_folder": "https://www.urbancode.com/uc-downloads/plugins/ibmucd",
+    "plugins": [
+        {
+            "name": "7-Zip",
+            "plugin_folder_name": "",
+            "doc_folder_name": "7-zip",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "AccuRev SCM",
+            "plugin_folder_name": "AccuRevSourceConfig",
+            "doc_folder_name": "accurev-scm",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage-2"
+                },
+                {
+                    "name": "Steps and Roles",
+                    "tab_id": "#tab-settings"
+                }
+            ]
+        },
+        {
+            "name": "Actifio",
+            "plugin_folder_name": "",
+            "doc_folder_name": "actifio",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Amazon EC2",
+            "plugin_folder_name": "AmazonEC2",
+            "doc_folder_name": "amazon-ec2",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-5-641618"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "Amazon Web Services (AWS) Lambda",
+            "plugin_folder_name": "aws-lambda",
+            "doc_folder_name": "amazon-web-services-aws-lambda",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Ansible",
+            "plugin_folder_name": "",
+            "doc_folder_name": "ansible",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Apache Ant",
+            "plugin_folder_name": "Ant",
+            "doc_folder_name": "apache-ant",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-apache-ant"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Apache Hadoop",
+            "plugin_folder_name": "",
+            "doc_folder_name": "apache-hadoop",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Apache HTTP Server",
+            "plugin_folder_name": "Apache",
+            "doc_folder_name": "apache-http-server",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "Apache Tomcat",
+            "plugin_folder_name": "Tomcat",
+            "doc_folder_name": "apache-tomcat",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-chef-1"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "App Connect Enterprise",
+            "plugin_folder_name": "ibm-ace",
+            "doc_folder_name": "app-connect-enterprise",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Apple Xcode",
+            "plugin_folder_name": "",
+            "doc_folder_name": "apple-xcode",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Apprenda",
+            "plugin_folder_name": "",
+            "doc_folder_name": "apprenda",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Artifactory",
+            "plugin_folder_name": "Artifactory",
+            "doc_folder_name": "artifactory",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Artifactory Source Config",
+            "plugin_folder_name": "ArtifactorySourceConfig",
+            "doc_folder_name": "artifactory-source-config",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Roles",
+                    "tab_id": "#tab-roles"
+                }
+            ]
+        },
+        {
+            "name": "Aspera",
+            "plugin_folder_name": "aspera",
+            "doc_folder_name": "aspera",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Autosys",
+            "plugin_folder_name": "Autosys",
+            "doc_folder_name": "autosys",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Avnet Talos",
+            "plugin_folder_name": "",
+            "doc_folder_name": "avnet-talos",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "BMC Remedy Action Request System",
+            "plugin_folder_name": "Remedy",
+            "doc_folder_name": "bmc-remedy-action-request-system",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Box",
+            "plugin_folder_name": "",
+            "doc_folder_name": "box",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "CA SCM (formerly Harvest)",
+            "plugin_folder_name": "air-plugin-CASCM",
+            "doc_folder_name": "ca-scm-formerly-harvest",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-526060"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Chef",
+            "plugin_folder_name": "Chef",
+            "doc_folder_name": "chef",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-chef-1"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "CICS CM (Beta)",
+            "plugin_folder_name": "CICS-CM",
+            "doc_folder_name": "cics-cm-beta",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Component Templates",
+                    "tab_id": "#tab-component-templates"
+                }
+            ]
+        },
+        {
+            "name": "CICS TS",
+            "plugin_folder_name": "CICS",
+            "doc_folder_name": "cics-ts",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-0-1"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage-6"
+                },
+                {
+                    "name": "Component Templates",
+                    "tab_id": "#tab-component-templates"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                }
+            ]
+        },
+        {
+            "name": "Citrix NetScaler",
+            "plugin_folder_name": "Netscaler",
+            "doc_folder_name": "citrix-netscaler",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Cloud Foundry",
+            "plugin_folder_name": "cloud-foundry",
+            "doc_folder_name": "cloud-foundry",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-docs"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Cloudant",
+            "plugin_folder_name": "",
+            "doc_folder_name": "cloudant",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "CyberArk",
+            "plugin_folder_name": "",
+            "doc_folder_name": "cyberark",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-3-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Datical DB",
+            "plugin_folder_name": "",
+            "doc_folder_name": "datical-db",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "DBmaestro",
+            "plugin_folder_name": "",
+            "doc_folder_name": "dbmaestro",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Dimensions",
+            "plugin_folder_name": "DimensionsSourceConfig",
+            "doc_folder_name": "dimensions",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Docker",
+            "plugin_folder_name": "docker-plugin",
+            "doc_folder_name": "docker",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Docker Compose",
+            "plugin_folder_name": "docker-compose",
+            "doc_folder_name": "docker-compose",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Docker Registry",
+            "plugin_folder_name": "DockerSourceConfig",
+            "doc_folder_name": "docker-registry",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Settings",
+                    "tab_id": "#tab-settings"
+                }
+            ]
+        },
+        {
+            "name": "eggPlant",
+            "plugin_folder_name": "",
+            "doc_folder_name": "eggplant",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "External Artifact Repository",
+            "plugin_folder_name": "zOS-external-artifact-download",
+            "doc_folder_name": "external-artifact-repository",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-6-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "F5 BIG-IP",
+            "plugin_folder_name": "F5",
+            "doc_folder_name": "f5-big-ip",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "File System",
+            "plugin_folder_name": "FileSystemSourceConfig",
+            "doc_folder_name": "file-system",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-4-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "File System (Versioned)",
+            "plugin_folder_name": "FileSystemVersionedSourceConfig",
+            "doc_folder_name": "file-system-versioned",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-8-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "File Utils",
+            "plugin_folder_name": "FileUtils",
+            "doc_folder_name": "file-utils",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                }
+            ]
+        },
+        {
+            "name": "FileNet \u2013 IBM Case Manager",
+            "plugin_folder_name": "FileNet-CaseManager",
+            "doc_folder_name": "filenet-ibm-case-manager",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Git",
+            "plugin_folder_name": "GitSourceConfig",
+            "doc_folder_name": "git",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Settings",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "Git Install",
+            "plugin_folder_name": "",
+            "doc_folder_name": "git-install",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "GitHub-Release",
+            "plugin_folder_name": "sourceconfig-github-release",
+            "doc_folder_name": "github-release",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Google Android SDK",
+            "plugin_folder_name": "plugin-air-Android",
+            "doc_folder_name": "google-android-sdk",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Gradle",
+            "plugin_folder_name": "",
+            "doc_folder_name": "gradle",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Groovy",
+            "plugin_folder_name": "Groovy",
+            "doc_folder_name": "groovy",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "HCL AppScan on Cloud (ASoC)",
+            "plugin_folder_name": "appscan",
+            "doc_folder_name": "appscan-on-cloud-asoc",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-10-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "HCL Digital Experience",
+            "plugin_folder_name": "digital-experience",
+            "doc_folder_name": "hcl-digital-experience",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "HCL OneTest API",
+            "plugin_folder_name": "HCLOneTestAPI",
+            "doc_folder_name": "hcl-onetest-api",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "HCL OneTest Performance",
+            "plugin_folder_name": "HCLOneTestPerf",
+            "doc_folder_name": "hcl-onetest-performance",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "HCL OneTest Server",
+            "plugin_folder_name": "onetest-server",
+            "doc_folder_name": "hcl-onetest-server",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "HCL OneTest UI",
+            "plugin_folder_name": "HCLOneTestUI",
+            "doc_folder_name": "hcl-onetest-ui",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "HCL OneTest Virtualization",
+            "plugin_folder_name": "HCLOneTestVirtualization",
+            "doc_folder_name": "hcl-onetest-virtualization",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "HCL OneTest WebUI",
+            "plugin_folder_name": "HCLOneTestWebUI",
+            "doc_folder_name": "hcl-onetest-webui",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "HP LoadRunner",
+            "plugin_folder_name": "hp-loadrunner",
+            "doc_folder_name": "hp-loadrunner",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "HP Unified Functional Testing (QTP)",
+            "plugin_folder_name": "QTP",
+            "doc_folder_name": "hp-unified-functional-testing-qtp",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-504346"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM API Connect",
+            "plugin_folder_name": "apiconnect",
+            "doc_folder_name": "ibm-api-connect",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Tutorials",
+                    "tab_id": "#tab-tutorials"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                }
+            ]
+        },
+        {
+            "name": "IBM AppScan Enterprise",
+            "plugin_folder_name": "appscan",
+            "doc_folder_name": "ibm-appscan-enterprise",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-7-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM BigFix",
+            "plugin_folder_name": "bigfix",
+            "doc_folder_name": "ibm-bigfix",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Bluemix Auto-Scaling",
+            "plugin_folder_name": "bluemix-autoscale",
+            "doc_folder_name": "ibm-bluemix-auto-scaling",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps-2"
+                }
+            ]
+        },
+        {
+            "name": "IBM Business Process Manager (WebSphere BPM)",
+            "plugin_folder_name": "WebSphereBPMSourceConfig",
+            "doc_folder_name": "ibm-business-process-manager-websphere-bpm",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Settings",
+                    "tab_id": "#tab-settings"
+                }
+            ]
+        },
+        {
+            "name": "IBM Business Process Manager (WebSphere BPM) for IBM UrbanCode Deploy",
+            "plugin_folder_name": "WebSphereBPM",
+            "doc_folder_name": "ibm-business-process-manager-websphere-bpm-2",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Cognos",
+            "plugin_folder_name": "Cognos",
+            "doc_folder_name": "ibm-cognos",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Cognos Analytics",
+            "plugin_folder_name": "cognos-analytics",
+            "doc_folder_name": "ibm-cognos-analytics",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Containers",
+            "plugin_folder_name": "cloud-foundry-ibm-containers",
+            "doc_folder_name": "ibm-containers",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM DataPower Configuration Manager",
+            "plugin_folder_name": "datapower",
+            "doc_folder_name": "ibm-datapower-configuration-manager",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-available-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Db2 for z/OS Package",
+            "plugin_folder_name": "",
+            "doc_folder_name": "ibm-db2-for-z-os-package",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "IBM Globalization Pipeline",
+            "plugin_folder_name": "",
+            "doc_folder_name": "ibm-globalization-pipeline",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "IBM IMS",
+            "plugin_folder_name": "IMSz",
+            "doc_folder_name": "ibm-ims",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM InfoSphere DataStage",
+            "plugin_folder_name": "datastage",
+            "doc_folder_name": "ibm-infosphere-datastage",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-2-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM InfoSphere Optim",
+            "plugin_folder_name": "optim",
+            "doc_folder_name": "ibm-infosphere-optim",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Installation Manager",
+            "plugin_folder_name": "",
+            "doc_folder_name": "ibm-installation-manager",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Integration Bus (formerly WebSphere Message Broker) \u2013 CMP",
+            "plugin_folder_name": "WebSphereMessageBroker-CMP",
+            "doc_folder_name": "ibm-integration-bus-formerly-websphere-message-broker-cmp",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Integration Bus (IIB) plugin Deploy step for zOS",
+            "plugin_folder_name": "zos-ibm-integration-bus-ucd",
+            "doc_folder_name": "ibm-integration-bus-iib-plugin-deploy-step-for-zos",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM MaaS360",
+            "plugin_folder_name": "",
+            "doc_folder_name": "ibm-maas360",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "IBM MobileFirst Platform (formerly Worklight)",
+            "plugin_folder_name": "air-worklight",
+            "doc_folder_name": "ibm-mobilefirst-platform-formerly-worklight",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                }
+            ]
+        },
+        {
+            "name": "IBM MobileFirst Platform Foundation on IBM Containers",
+            "plugin_folder_name": "MFPFC",
+            "doc_folder_name": "ibm-mobilefirst-platform-foundation-on-ibm-containers",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM MQ for z/OS \u2013 Generate MQSC Commands",
+            "plugin_folder_name": "",
+            "doc_folder_name": "ibm-mq-for-z-os-generate-mqsc-commands",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "IBM Operational Decision Manager (ODM)",
+            "plugin_folder_name": "ibm-odm",
+            "doc_folder_name": "ibm-operational-decision-manager-odm",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Operational Decision Manager (ODM) Source Config",
+            "plugin_folder_name": "ibm-odm-source-config",
+            "doc_folder_name": "ibm-operational-decision-manager-odm-source-config",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-docs"
+                },
+                {
+                    "name": "Settings",
+                    "tab_id": "#tab-settings"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "IBM Rational Asset Manager",
+            "plugin_folder_name": "RAM",
+            "doc_folder_name": "ibm-rational-asset-manager",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-7-5-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "IBM Rational Asset Manager for IBM UrbanCode Deploy",
+            "plugin_folder_name": "RAMSourceConfig",
+            "doc_folder_name": "ibm-rational-asset-manager-2",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-8-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Settings",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Rational Automation Framework for WebSphere",
+            "plugin_folder_name": "",
+            "doc_folder_name": "ibm-rational-automation-framework-for-websphere",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "IBM Rational ClearCase",
+            "plugin_folder_name": "ClearCaseSourceConfig",
+            "doc_folder_name": "ibm-rational-clearcase",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-5-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps and Roles",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Rational ClearQuest",
+            "plugin_folder_name": "",
+            "doc_folder_name": "ibm-rational-clearquest",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "IBM Rational Functional Tester (RFT)",
+            "plugin_folder_name": "RFT-UCD",
+            "doc_folder_name": "ibm-rational-functional-tester-rft",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-rft-ucd-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-rft-ucd-usage"
+                }
+            ]
+        },
+        {
+            "name": "IBM Rational Integration Tester (RIT)",
+            "plugin_folder_name": "RIT-UCD",
+            "doc_folder_name": "ibm-rational-integration-tester-rit",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Rational Performance Tester (RPT)",
+            "plugin_folder_name": "RPT-UCD",
+            "doc_folder_name": "ibm-rational-performance-tester-rpt",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-4-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-rpt-usage"
+                }
+            ]
+        },
+        {
+            "name": "IBM Rational Quality Manager (RQM)",
+            "plugin_folder_name": "",
+            "doc_folder_name": "ibm-rational-quality-manager-rqm",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Rational Team Concert Work Items",
+            "plugin_folder_name": "plugin-air-RTC-WorkItems",
+            "doc_folder_name": "ibm-rational-team-concert-work-items",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-2-455564"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Rational Team Concert \u2013 Build",
+            "plugin_folder_name": "",
+            "doc_folder_name": "ibm-rational-team-concert-build",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "IBM Rational Team Concert \u2013 SCM",
+            "plugin_folder_name": "air-plugin-RTC-scm",
+            "doc_folder_name": "ibm-rational-team-concert-scm",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-docs"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-roles"
+                },
+                {
+                    "name": "Settings",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Rational Test Automation Server (RTAS)",
+            "plugin_folder_name": "RTAS-UCD",
+            "doc_folder_name": "ibm-rational-test-automation-server-rtas",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-1"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usagesv"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-stepssv"
+                }
+            ]
+        },
+        {
+            "name": "IBM Rational Test Virtualization Server (RTVS)",
+            "plugin_folder_name": "RTVS-UCD",
+            "doc_folder_name": "ibm-rational-test-virtualization-server-rtvs",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-1"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usagesv"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-stepssv"
+                }
+            ]
+        },
+        {
+            "name": "IBM Rational Test Workbench Web UI Tester",
+            "plugin_folder_name": "RFT-WebUI-UCD",
+            "doc_folder_name": "ibm-rational-test-workbench-web-ui-tester",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-rtwec-overview"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps-rtwec"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-rtwec-usage"
+                }
+            ]
+        },
+        {
+            "name": "IBM Security Access Manager (WebSEAL)",
+            "plugin_folder_name": "webseal",
+            "doc_folder_name": "ibm-security-access-manager-webseal",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Sterling B2B Integrator",
+            "plugin_folder_name": "",
+            "doc_folder_name": "ibm-sterling-b2b-integrator",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "IBM UrbanCode Build",
+            "plugin_folder_name": "uBuildSourceConfig",
+            "doc_folder_name": "ibm-urbancode-build",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-7-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-38487-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM UrbanCode DBUpgrader",
+            "plugin_folder_name": "DBUpgrader",
+            "doc_folder_name": "ibm-urbancode-dbupgrader",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-530255"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM UrbanCode Deploy Agent Package for Dynamic Cloud Environments",
+            "plugin_folder_name": "AgentScript",
+            "doc_folder_name": "ibm-urbancode-deploy-agent-package-for-dynamic-cloud-environments",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "IBM UrbanCode Deploy Applications",
+            "plugin_folder_name": "uDeploy-Application",
+            "doc_folder_name": "ibm-urbancode-deploy-applications",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-66-545101"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM UrbanCode Deploy Components",
+            "plugin_folder_name": "uDeploy-Component",
+            "doc_folder_name": "ibm-urbancode-deploy-components",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-61-455109"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM UrbanCode Deploy Configuration Management",
+            "plugin_folder_name": "uDeployConfigManagement",
+            "doc_folder_name": "ibm-urbancode-deploy-configuration-management",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM UrbanCode Deploy Environments",
+            "plugin_folder_name": "uDeploy-Environment",
+            "doc_folder_name": "ibm-urbancode-deploy-environments",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM UrbanCode Deploy General Utilites",
+            "plugin_folder_name": "general-utilities",
+            "doc_folder_name": "ibm-urbancode-deploy-general-utilites",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM UrbanCode Deploy Process",
+            "plugin_folder_name": "uDeploy-Process",
+            "doc_folder_name": "ibm-urbancode-deploy-process",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM UrbanCode Deploy Resources",
+            "plugin_folder_name": "uDeploy-Resource",
+            "doc_folder_name": "ibm-urbancode-deploy-resources",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM UrbanCode Deploy System",
+            "plugin_folder_name": "uDeploy-System",
+            "doc_folder_name": "ibm-urbancode-deploy-system",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM UrbanCode Deploy Tools",
+            "plugin_folder_name": "DeployTools",
+            "doc_folder_name": "ibm-urbancode-deploy-tools",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM UrbanCode Deploy Versioned File Storage",
+            "plugin_folder_name": "UrbancodeVFS",
+            "doc_folder_name": "ibm-urbancode-deploy-versioned-file-storage",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM UrbanCode Deploy Versions",
+            "plugin_folder_name": "uDeploy-Version",
+            "doc_folder_name": "ibm-urbancode-deploy-versions",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-60-455054"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM UrbanCode Package Manager",
+            "plugin_folder_name": "UrbanCodePackageManager",
+            "doc_folder_name": "ibm-urbancode-package-manager",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM UrbanCode PHP CLI Tool",
+            "plugin_folder_name": "PHPCLI",
+            "doc_folder_name": "ibm-urbancode-php-cli-tool",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Setup",
+                    "tab_id": "#tab-setup"
+                }
+            ]
+        },
+        {
+            "name": "IBM UrbanCode Release",
+            "plugin_folder_name": "ucr-plugin",
+            "doc_folder_name": "ibm-urbancode-release",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM UrbanCode uBuild",
+            "plugin_folder_name": "uBuild",
+            "doc_folder_name": "ibm-urbancode-ubuild",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-18473-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "IBM VDP",
+            "plugin_folder_name": "",
+            "doc_folder_name": "ibm-vdp",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "IBM WebSphere Commerce",
+            "plugin_folder_name": "WebSphereCommerce",
+            "doc_folder_name": "ibm-websphere-commerce",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM WebSphere Liberty",
+            "plugin_folder_name": "WebSphereLiberty",
+            "doc_folder_name": "ibm-websphere-liberty",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM WebSphere Portal",
+            "plugin_folder_name": "WebSpherePortal",
+            "doc_folder_name": "ibm-websphere-portal",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM WebSphere Service Registry and Repository",
+            "plugin_folder_name": "WSRR",
+            "doc_folder_name": "ibm-websphere-service-registry-and-repository",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-7-531920"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "IBM Workload Automation",
+            "plugin_folder_name": "",
+            "doc_folder_name": "ibm-workload-automation",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "IBM z/TPF Beta",
+            "plugin_folder_name": "",
+            "doc_folder_name": "ibm-z-tpf-beta",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "IBM-MQ",
+            "plugin_folder_name": "WebSphereMQ",
+            "doc_folder_name": "ibm-mq",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-6-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Informatica",
+            "plugin_folder_name": "",
+            "doc_folder_name": "informatica",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "InfoSphere-ISD",
+            "plugin_folder_name": "infosphere-isd",
+            "doc_folder_name": "infosphere-isd",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "JBoss Application Server",
+            "plugin_folder_name": "JBoss",
+            "doc_folder_name": "jboss-application-server",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "JBoss-ON",
+            "plugin_folder_name": "",
+            "doc_folder_name": "jboss-on",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Jenkins Job Manager",
+            "plugin_folder_name": "",
+            "doc_folder_name": "jenkins-job-manager",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Jenkins Pipeline",
+            "plugin_folder_name": "jenkins-pipeline-ud-plugin",
+            "doc_folder_name": "jenkins-pipeline",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage-2"
+                }
+            ]
+        },
+        {
+            "name": "Jenkins Publisher",
+            "plugin_folder_name": "jenkins-ud-plugin",
+            "doc_folder_name": "jenkins-publisher",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-3"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "JIRA for IBM UrbanCode Deploy",
+            "plugin_folder_name": "JIRA",
+            "doc_folder_name": "jira",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-3-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Kubernetes",
+            "plugin_folder_name": "kubernetes",
+            "doc_folder_name": "kubernetes",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-37096-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Linux System Tools",
+            "plugin_folder_name": "LinuxSystemTools",
+            "doc_folder_name": "linux-system-tools",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-9-631844"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "Liquibase",
+            "plugin_folder_name": "",
+            "doc_folder_name": "liquibase",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "LogiGear TestArchitect",
+            "plugin_folder_name": "",
+            "doc_folder_name": "logigear-testarchitect",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Maven",
+            "plugin_folder_name": "MavenSourceConfig",
+            "doc_folder_name": "maven",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-16-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Maven Resolve",
+            "plugin_folder_name": "Maven",
+            "doc_folder_name": "maven-resolve",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Mesos Marathon",
+            "plugin_folder_name": "mesos-marathon",
+            "doc_folder_name": "mesos-marathon",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "MicroFocus ALM (formerly HP Quality Center)",
+            "plugin_folder_name": "HPQualityCenter",
+            "doc_folder_name": "microfocus-alm-formerly-hp-quality-center",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-7-485865"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Microsoft BizTalk",
+            "plugin_folder_name": "BizTalk",
+            "doc_folder_name": "microsoft-biztalk",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-6-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Microsoft IIS AdminScripts",
+            "plugin_folder_name": "IIS-AdminScripts",
+            "doc_folder_name": "microsoft-iis-adminscripts",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Microsoft IIS AppCmd",
+            "plugin_folder_name": "IIS-AppCmd",
+            "doc_folder_name": "microsoft-iis-appcmd",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-2-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Microsoft IIS MS-Deploy (Azure App Service)",
+            "plugin_folder_name": "IIS-MSDeploy",
+            "doc_folder_name": "microsoft-iis-ms-deploy-azure-app-service",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Microsoft IIS \u2013 Configure",
+            "plugin_folder_name": "iis-configuration",
+            "doc_folder_name": "microsoft-iis-configure",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Microsoft SharePoint",
+            "plugin_folder_name": "Sharepoint",
+            "doc_folder_name": "microsoft-sharepoint",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Microsoft Software Installer (MSI)",
+            "plugin_folder_name": "MSI",
+            "doc_folder_name": "microsoft-software-installer-msi",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Microsoft SQL Server SQLCmd",
+            "plugin_folder_name": "SQLCmd",
+            "doc_folder_name": "microsoft-sql-server-sqlcmd",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "Microsoft SSIS",
+            "plugin_folder_name": "MicrosoftSSIS",
+            "doc_folder_name": "microsoft-ssis",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Microsoft TFS (Team Foundation Server)",
+            "plugin_folder_name": "TFS-SourceConfig",
+            "doc_folder_name": "microsoft-tfs-team-foundation-server",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-15-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Microsoft TFS Work Items",
+            "plugin_folder_name": "plugin-air-TFS-WorkItems",
+            "doc_folder_name": "microsoft-tfs-work-items",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-474464"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "Microsoft TFS_SCM (Team Foundation Server)",
+            "plugin_folder_name": "TFS_SCM-SourceConfig",
+            "doc_folder_name": "microsoft-tfs_scm-team-foundation-server",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Settings",
+                    "tab_id": "#tab-settings"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "Microsoft Visual Studio Team Services (VSTS)",
+            "plugin_folder_name": "",
+            "doc_folder_name": "microsoft-visual-studio-team-services-vsts",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Microsoft Windows Failover Clusters",
+            "plugin_folder_name": "WindowsFailoverCluster",
+            "doc_folder_name": "microsoft-windows-failover-clusters",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-overview"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Microsoft Windows Services",
+            "plugin_folder_name": "ServiceControlManager",
+            "doc_folder_name": "microsoft-windows-services",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Microsoft Windows System Tools",
+            "plugin_folder_name": "WindowsSystemTools",
+            "doc_folder_name": "microsoft-windows-system-tools",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-docs"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Mulesoft",
+            "plugin_folder_name": "mulesoft",
+            "doc_folder_name": "mulesoft",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "New Relic",
+            "plugin_folder_name": "",
+            "doc_folder_name": "new-relic",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Nexus",
+            "plugin_folder_name": "nexus",
+            "doc_folder_name": "nexus",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Nexus Repository Manager V3",
+            "plugin_folder_name": "sourceconfig-nexus-v3",
+            "doc_folder_name": "nexus-repository-manager-v3",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-37187-2"
+                }
+            ]
+        },
+        {
+            "name": "Nexus Source Config",
+            "plugin_folder_name": "nexus-source-config",
+            "doc_folder_name": "nexus-source-config",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Configuration",
+                    "tab_id": "#tab-configuration"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Node-RED",
+            "plugin_folder_name": "",
+            "doc_folder_name": "node-red",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Node.js",
+            "plugin_folder_name": "",
+            "doc_folder_name": "node-js",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "NPM",
+            "plugin_folder_name": "sourceconfig-npm",
+            "doc_folder_name": "npm",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Settings",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "NuGet",
+            "plugin_folder_name": "nuget-source-config",
+            "doc_folder_name": "nuget",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Settings",
+                    "tab_id": "#tab-settings"
+                }
+            ]
+        },
+        {
+            "name": "OpenShift",
+            "plugin_folder_name": "OpenShiftSourceConfig",
+            "doc_folder_name": "openshift",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Settings",
+                    "tab_id": "#tab-settings"
+                }
+            ]
+        },
+        {
+            "name": "OpenShift for IBM UrbanCode Deploy",
+            "plugin_folder_name": "openshift",
+            "doc_folder_name": "openshift-2",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-2-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Oracle Service Bus Configuration Management",
+            "plugin_folder_name": "plugin-air-OSB-Configuration-Management",
+            "doc_folder_name": "oracle-service-bus-configuration-management",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Oracle SQLPlus",
+            "plugin_folder_name": "SQLPlus",
+            "doc_folder_name": "oracle-sqlplus",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-oracle-sqlplus"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Oracle WebLogic Application Deployment",
+            "plugin_folder_name": "plugin-air-WebLogic-Application-Deployment",
+            "doc_folder_name": "oracle-weblogic-application-deployment",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-4-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "Oracle WebLogic Integration Resource Management",
+            "plugin_folder_name": "plugin-air-WLI-Resource-Management",
+            "doc_folder_name": "oracle-weblogic-integration-resource-management",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-496700"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Oracle WebLogic Scripting Tool (WLST)",
+            "plugin_folder_name": "WebLogic-WLST",
+            "doc_folder_name": "oracle-weblogic-scripting-tool-wlst",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Oracle WebLogic Server Resource Management",
+            "plugin_folder_name": "plugin-air-WLS-Resource-Management",
+            "doc_folder_name": "oracle-weblogic-server-resource-management",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-2-554520"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Oracle WebLogic Server Security Management",
+            "plugin_folder_name": "WebLogicSecurityMgmt",
+            "doc_folder_name": "oracle-weblogic-server-security-management",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-2-504117"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Oracle WebLogic WLDeploy",
+            "plugin_folder_name": "WLDeploy",
+            "doc_folder_name": "oracle-weblogic-wldeploy",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-12-699360"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "Perforce Helix",
+            "plugin_folder_name": "PerforceSourceConfig",
+            "doc_folder_name": "perforce-helix",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Settings",
+                    "tab_id": "#tab-settings"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "PowerShell",
+            "plugin_folder_name": "powershell-integration",
+            "doc_folder_name": "powershell",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "Property Utils",
+            "plugin_folder_name": "",
+            "doc_folder_name": "property-utils",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Puppet",
+            "plugin_folder_name": "",
+            "doc_folder_name": "puppet",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "PVCS",
+            "plugin_folder_name": "PvcsSourceConfig",
+            "doc_folder_name": "pvcs",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Settings",
+                    "tab_id": "#tab-settings"
+                }
+            ]
+        },
+        {
+            "name": "Rally for IBM UrbanCode Deploy",
+            "plugin_folder_name": "Rally",
+            "doc_folder_name": "rally-2",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-rally-for-ibm-urbancode-deploy1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-process-steps"
+                }
+            ]
+        },
+        {
+            "name": "Resource Utilities",
+            "plugin_folder_name": "resource-utilities",
+            "doc_folder_name": "resource-utilities",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "RPM",
+            "plugin_folder_name": "RPM",
+            "doc_folder_name": "rpm",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-3-641572"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "Salesforce",
+            "plugin_folder_name": "salesforce",
+            "doc_folder_name": "salesforce",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "SAP Change and Transport System (CTS)",
+            "plugin_folder_name": "SAP-CTS",
+            "doc_folder_name": "sap-change-and-transport-system-cts",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Selenium",
+            "plugin_folder_name": "Selenium",
+            "doc_folder_name": "selenium",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-4-641615"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Send SMTP Email",
+            "plugin_folder_name": "",
+            "doc_folder_name": "send-smtp-email",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "ServiceNow",
+            "plugin_folder_name": "ServiceNow",
+            "doc_folder_name": "servicenow",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-solutions"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Shell",
+            "plugin_folder_name": "Shell",
+            "doc_folder_name": "shell",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Siebel",
+            "plugin_folder_name": "",
+            "doc_folder_name": "siebel",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Skytap Automation Pack",
+            "plugin_folder_name": "",
+            "doc_folder_name": "skytap-automation-pack",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Slack",
+            "plugin_folder_name": "",
+            "doc_folder_name": "slack",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "SQL-JDBC",
+            "plugin_folder_name": "SQL-JDBC",
+            "doc_folder_name": "sql-jdbc",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Subversion",
+            "plugin_folder_name": "SubversionSourceConfig",
+            "doc_folder_name": "subversion",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-13-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Subversion-Export",
+            "plugin_folder_name": "Subversion-export",
+            "doc_folder_name": "subversion-export",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-3-641655"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "Sybase",
+            "plugin_folder_name": "sybase",
+            "doc_folder_name": "sybase",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-2-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "System Information",
+            "plugin_folder_name": "SystemInformation",
+            "doc_folder_name": "system-information",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "TeamCity",
+            "plugin_folder_name": "TeamCitySourceConfig",
+            "doc_folder_name": "teamcity",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-summary"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "Text Utility",
+            "plugin_folder_name": "",
+            "doc_folder_name": "text-utility",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "TIBCO",
+            "plugin_folder_name": "",
+            "doc_folder_name": "tibco",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Venafi",
+            "plugin_folder_name": "",
+            "doc_folder_name": "venafi",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "VMware AirWatch",
+            "plugin_folder_name": "",
+            "doc_folder_name": "vmware-airwatch",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "Web Utilities",
+            "plugin_folder_name": "web-utilities",
+            "doc_folder_name": "web-utilities",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "WebSphere Application Server \u2013 Configure",
+            "plugin_folder_name": "WebSphereConfiguration",
+            "doc_folder_name": "websphere-application-server-configure",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Example Applications",
+                    "tab_id": "#tab-example-applications"
+                },
+                {
+                    "name": "Example Processes",
+                    "tab_id": "#tab-example-processes"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps-2"
+                },
+                {
+                    "name": "Roles",
+                    "tab_id": "#tab-roles"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                }
+            ]
+        },
+        {
+            "name": "WebSphere Application Server \u2013 Deployment",
+            "plugin_folder_name": "Websphere",
+            "doc_folder_name": "websphere-application-server-deployment",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "User permissions",
+                    "tab_id": "#tab-required-user-permissions"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Roles",
+                    "tab_id": "#tab-roles"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                }
+            ]
+        },
+        {
+            "name": "WebSphere Application Server \u2013 Install",
+            "plugin_folder_name": "websphere-install",
+            "doc_folder_name": "websphere-application-server-install",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "WinRS Agent Install",
+            "plugin_folder_name": "WinRSAgentInstall",
+            "doc_folder_name": "winrs-agent-install",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-2-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "z/OS Dataset Writer",
+            "plugin_folder_name": "zos-dataset-writer",
+            "doc_folder_name": "zos-dataset-writer",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "z/OS File Source Config",
+            "plugin_folder_name": "zOSFileSourceConfig",
+            "doc_folder_name": "z-os-file-source-config",
+            "documentation_name": "",
+            "doc_tabs": []
+        },
+        {
+            "name": "z/OS FTP Utility",
+            "plugin_folder_name": "zos-ftp",
+            "doc_folder_name": "z-os-ftp-utility",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-6-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "z/OS Multi Generate Artifact Information",
+            "plugin_folder_name": "zos-multi-generate-artifact-info",
+            "doc_folder_name": "z-os-utility-generate-artifact-information",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "z/OS Shell",
+            "plugin_folder_name": "java-shell",
+            "doc_folder_name": "z-os-shell",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-6-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "z/OS USS Utility",
+            "plugin_folder_name": "zos-replacetokens-uss",
+            "doc_folder_name": "z-os-uss-utility",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        },
+        {
+            "name": "z/OS Utility",
+            "plugin_folder_name": "zos-deploy",
+            "doc_folder_name": "z-os-utility",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-1-2"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "tab_id": "#tab-troubleshooting"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                }
+            ]
+        },
+        {
+            "name": "zOS Management Facility",
+            "plugin_folder_name": "zosmf",
+            "doc_folder_name": "zos-management-facility",
+            "documentation_name": "",
+            "doc_tabs": [
+                {
+                    "name": "Overview",
+                    "tab_id": "#tab-4-2"
+                },
+                {
+                    "name": "Usage",
+                    "tab_id": "#tab-usage"
+                },
+                {
+                    "name": "Steps",
+                    "tab_id": "#tab-steps"
+                }
+            ]
+        }
+    ]
+}
