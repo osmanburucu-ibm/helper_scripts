@@ -62,7 +62,7 @@ NAME_DOC_TABS_ID = "tab_id"
 
 def get_config():
     return {
-        GITHUB_API_URL: os.getenv("GITHUB_API_URL"),
+        GITHUB_API_URL: os.getenv("GITHUB_API_URL", "https://api.github.com"),
         PLUGIN_LIST_URL: os.getenv("PLUGIN_LIST_URL", "https://www.urbancode.com/plugins"),
         EXPORT_PLUGIN_TYPE: os.getenv("EXPORT_PLUGIN_TYPE"), 
         PLUGINFILES_SOURCE_URL: os.getenv("PLUGINFILES_SOURCE_URL", "https://www.urbancode.com/uc-downloads/plugins"),
