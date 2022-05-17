@@ -28,23 +28,55 @@ logger1 = logging.getLogger(__name__)
 logger1.addHandler(fh)
 logger1.addHandler(ch)
 
+GITHUB_API_URL = "github_api_url"
+PLUGIN_LIST_URL = "plugin_list_url"
+EXPORT_PLUGIN_TYPE = "plugin_type"
+PLUGINFILES_SOURCE_URL = "files_source_url"
+PLUGIN_OVERVIEW_URL = "plugin_doc_overview_url"
+PLUGIN_DOCUMENTATION_URL = "plugin_full_doc_url"
+GITHUB_TOKEN = "github_token"
+GITHUB_TARGET_REPO = "github_target_repo"
+GITHUB_DOC_TARGET_REPO = "github_doc_target_repo"
+GITHUB_RELEASE_NOTES_TARGET_REPO = "github_release_notes_target_repo"
+REPO_TARGET_FOLDER = "repo_target_folder"
+DOC_TARGET_FOLDER = "doc_target_folder"
+UPLOAD_FILES_TO_REPO = "upload_files_to_repo"
+LOCAL_REPOSITORY_LOCATION = "local_repository_location"
+WORKING_FOLDER_LOCATION="working_folder"
+
+EXPORT_SOURCE_URL = "source_url"
+EXPORT_SOURCE_OVERVIEW_URL = "source_overview_url"
+EXPORT_SOURCE_DOCUMENTATION_URL = "source_documentation_url"
+EXPORT_SOURCE_DOWNLOAD_FOLDER = "source_download_folder"
+
+NAME_PLUGIN_LIST_NAME = "plugins"
+NAME_PLUGIN_NAME = "name"
+NAME_PLUGIN_FOLDER_NAME = "plugin_folder_name"
+NAME_PLUGIN_LATESTVERSION_NAME = "latestversion"
+NAME_PLUGIN_FILELIST_NAME = "files"
+NAME_DOC_FOLDER_NAME = "doc_folder_name"
+NAME_DOCUMENTATION_NAME = "documentation_name"
+NAME_DOC_TABS = "doc_tabs"
+NAME_DOC_TABS_NAME = "name"
+NAME_DOC_TABS_ID = "tab_id"
 
 def get_config():
     return {
-        "github_api_url": os.getenv("GITHUB_API_URL"),
-        "plugin_list_url" : os.getenv("PLUGIN_LIST_URL", "https://www.urbancode.com/plugins"),
-        "plugin_type" : os.getenv("EXPORT_PLUGIN_TYPE"), 
-        "files_source_url" : os.getenv("PLUGINFILES_SOURCE_URL", "https://www.urbancode.com/uc-downloads/plugins"),
-        "plugin_doc_overview_url": os.getenv("PLUGIN_OVERVIEW_URL", "https://www.urbancode.com/plugin"),
-        "plugin_full_doc_url": os.getenv("PLUGIN_DOCUMENTATION_URL", "https://www.urbancode.com/plugindoc" ),
-        "github_token" : os.getenv("GITHUB_TOKEN"),
-        "github_target_repo" : os.getenv("GITHUB_TARGET_REPO"),
-        "github_doc_target_repo" : os.getenv("GITHUB_DOC_TARGET_REPO"),
-        "github_release_notes_target_repo" : os.getenv("GITHUB_RELEASE_NOTES_TARGET_REPO"),        
-        "repo_target_folder" : os.getenv("REPO_TARGET_FOLDER", "files"),
-        "doc_target_folder" : os.getenv("DOC_TARGET_FOLDER", "docs"),
-        "upload_files_to_repo": os.getenv("UPLOAD_FILES_TO_REPO", "False"),
-        "local_repository_location": os.getenv("LOCAL_REPOSITORY_LOCATION", "")
+        GITHUB_API_URL: os.getenv("GITHUB_API_URL"),
+        PLUGIN_LIST_URL: os.getenv("PLUGIN_LIST_URL", "https://www.urbancode.com/plugins"),
+        EXPORT_PLUGIN_TYPE: os.getenv("EXPORT_PLUGIN_TYPE"), 
+        PLUGINFILES_SOURCE_URL: os.getenv("PLUGINFILES_SOURCE_URL", "https://www.urbancode.com/uc-downloads/plugins"),
+        PLUGIN_OVERVIEW_URL: os.getenv("PLUGIN_OVERVIEW_URL", "https://www.urbancode.com/plugin"),
+        PLUGIN_DOCUMENTATION_URL: os.getenv("PLUGIN_DOCUMENTATION_URL", "https://www.urbancode.com/plugindoc" ),
+        GITHUB_TOKEN: os.getenv("GITHUB_TOKEN"),
+        GITHUB_TARGET_REPO: os.getenv("GITHUB_TARGET_REPO"),
+        GITHUB_DOC_TARGET_REPO: os.getenv("GITHUB_DOC_TARGET_REPO"),
+        GITHUB_RELEASE_NOTES_TARGET_REPO: os.getenv("GITHUB_RELEASE_NOTES_TARGET_REPO"),        
+        REPO_TARGET_FOLDER: os.getenv("REPO_TARGET_FOLDER", "files"),
+        DOC_TARGET_FOLDER: os.getenv("DOC_TARGET_FOLDER", "docs"),
+        UPLOAD_FILES_TO_REPO: os.getenv("UPLOAD_FILES_TO_REPO", "False"),
+        LOCAL_REPOSITORY_LOCATION: os.getenv("LOCAL_REPOSITORY_LOCATION", ""),
+        WORKING_FOLDER_LOCATION: os.getenv("WORKING_FOLDER_LOCATION", "exports")
     }
 
 # TODO: x.yyyy also check yyyy ! f.e. 6.86 is higher than 6.111 in this function, should be 6.111 higher!
