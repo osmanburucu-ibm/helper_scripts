@@ -74,6 +74,7 @@ def merge_docs_with_plugins(localalldocs, localallplugins):
             allplugins.append(aplugin)
         
     merged[ucutil.NAME_PLUGIN_LIST_NAME]=allplugins
+    return merged
 
 def main():
     
