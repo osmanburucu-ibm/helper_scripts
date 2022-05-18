@@ -31,6 +31,7 @@ logger1.addHandler(ch)
 GITHUB_API_URL = "github_api_url"
 PLUGIN_LIST_URL = "plugin_list_url"
 EXPORT_PLUGIN_TYPE = "plugin_type"
+DOC_PLUGIN_TYPE = "doc_plugin_type"
 PLUGINFILES_SOURCE_URL = "files_source_url"
 PLUGIN_OVERVIEW_URL = "plugin_doc_overview_url"
 PLUGIN_DOCUMENTATION_URL = "plugin_full_doc_url"
@@ -43,6 +44,7 @@ DOC_TARGET_FOLDER = "doc_target_folder"
 UPLOAD_FILES_TO_REPO = "upload_files_to_repo"
 LOCAL_REPOSITORY_LOCATION = "local_repository_location"
 WORKING_FOLDER_LOCATION="working_folder"
+LOCAL_DOCREPO_LOCATION = "local_docrepo_location"
 
 EXPORT_SOURCE_URL = "source_url"
 EXPORT_SOURCE_OVERVIEW_URL = "source_overview_url"
@@ -60,11 +62,16 @@ NAME_DOC_TABS = "doc_tabs"
 NAME_DOC_TABS_NAME = "name"
 NAME_DOC_TABS_ID = "tab_id"
 
+MARKDOWN_EXTENSION = "md"
+
+DOWNLOADS_DOCNAME = "Downloads"
+
 def get_config():
     return {
         GITHUB_API_URL: os.getenv("GITHUB_API_URL", "https://api.github.com"),
         PLUGIN_LIST_URL: os.getenv("PLUGIN_LIST_URL", "https://www.urbancode.com/plugins"),
-        EXPORT_PLUGIN_TYPE: os.getenv("EXPORT_PLUGIN_TYPE"), 
+        EXPORT_PLUGIN_TYPE: os.getenv("EXPORT_PLUGIN_TYPE"),
+        DOC_PLUGIN_TYPE: os.getenv("DOC_PLUGIN_TYPE"),
         PLUGINFILES_SOURCE_URL: os.getenv("PLUGINFILES_SOURCE_URL", "https://www.urbancode.com/uc-downloads/plugins"),
         PLUGIN_OVERVIEW_URL: os.getenv("PLUGIN_OVERVIEW_URL", "https://www.urbancode.com/plugin"),
         PLUGIN_DOCUMENTATION_URL: os.getenv("PLUGIN_DOCUMENTATION_URL", "https://www.urbancode.com/plugindoc" ),
@@ -76,6 +83,7 @@ def get_config():
         DOC_TARGET_FOLDER: os.getenv("DOC_TARGET_FOLDER", "docs"),
         UPLOAD_FILES_TO_REPO: os.getenv("UPLOAD_FILES_TO_REPO", "False"),
         LOCAL_REPOSITORY_LOCATION: os.getenv("LOCAL_REPOSITORY_LOCATION", ""),
+        LOCAL_DOCREPO_LOCATION: os.getenv("LOCAL_DOCREPO_LOCATION"),
         WORKING_FOLDER_LOCATION: os.getenv("WORKING_FOLDER_LOCATION", "exports")
     }
 

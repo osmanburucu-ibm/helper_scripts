@@ -1,9 +1,13 @@
 import json
 import os
 from github import Github
-import sys
+from mdutils.mdutils import MdUtils
 import logging
+import requests
+from bs4 import BeautifulSoup
+import markdownify
 import uc_migration_utils as ucutil
+
 
 SOUP_PARSER = "html.parser"
 script_name = "create_plugin_docs"
@@ -29,6 +33,10 @@ logger1 = logging.getLogger(script_name)
 logger1.addHandler(fh)
 logger1.addHandler(ch)
 
+# Create shorthand method for conversion
+def md(soup, **options):
+    return markdownify.MarkdownConverter(**options).convert_soup(soup)
+
 def get_list_of_files_from_repo(config, repo):
     all_files = []
     workfolder = config[ucutil.WORKING_FOLDER_LOCATION]
@@ -51,6 +59,73 @@ def get_list_of_files_from_repo(config, repo):
             #afile.writelines(all_files)
     return all_files
 
+def content_to_md (soupcontent):
+    logger1.info(f"content= {soupcontent}")
+
+    contents = "".join(str(item) for item in soupcontent.contents)
+    # the tables are broken no idea why... try to fix it.. does not work well...
+    contents = contents.replace("</em></caption>", "</em></caption> \n <p></p> \n <p></p>")
+    contents = contents.replace("   ", "")
+    contents = contents.replace("  ", "") 
+    contents = contents.replace(" \n", " ")
+    contents = contents.replace("\n </td>", "</td>")  
+    contents = contents.replace("\n</td>", "</td>")
+    contents = contents.replace("${", "``${")
+    contents = contents.replace("}", "}``")
+    
+    soup2 = BeautifulSoup(contents, SOUP_PARSER)
+    
+    return md(soup2)
+
+def get_content_for_doc(config, plugin):
+    mdcontent = ""
+    response = requests.get(f"{config[ucutil.PLUGIN_DOCUMENTATION_URL]}/{plugin[ucutil.NAME_DOC_FOLDER_NAME]}")
+
+    soup = BeautifulSoup(response.text, SOUP_PARSER)
+
+    mdcontent = content_to_md(soup)
+    logger1.info(f"mdcontent = {mdcontent}")
+    
+    return mdcontent
+
+def create_doc_files(config, plugin, all_files):
+    logger1.info(f"create doc for plugin: {plugin}")
+    plugin_doc_name = plugin.get(ucutil.NAME_DOC_FOLDER_NAME)
+    if (plugin_doc_name == ""): plugin_doc_name = plugin.get(ucutil.NAME_PLUGIN_NAME)
+    
+    plugin_folder_name = plugin.get(ucutil.NAME_PLUGIN_FOLDER_NAME)
+    if plugin_folder_name == "": plugin_folder_name = plugin_doc_name
+    
+    doc_path = f"{config[ucutil.LOCAL_DOCREPO_LOCATION]}/{config[ucutil.DOC_TARGET_FOLDER]}/{config[ucutil.DOC_PLUGIN_TYPE]}/{plugin_folder_name}"
+    doc_name = f"{doc_path}/{plugin_doc_name}_Documentation.md"
+    logger1.info (f"doc_name = {doc_name}")
+    
+    doc_title = f"{plugin[ucutil.NAME_PLUGIN_NAME]} - Documentation"
+
+    doc_md_file = MdUtils(file_name=doc_name, title=doc_title)
+  
+    if (plugin.get(ucutil.NAME_DOC_FOLDER_NAME) != ""):
+        doc_url = f"{config[ucutil.PLUGIN_DOCUMENTATION_URL]}/{plugin_doc_name}"
+        logger1.info(f"doc_url={doc_url}")
+        response = requests.get(doc_url)
+        logger1.info(f"Response Status Code = {response.status_code}")
+        soup = BeautifulSoup(response.text, SOUP_PARSER)
+        # check response code
+        # response.status_code
+        for doctab in plugin[ucutil.NAME_DOC_TABS]:
+            logger1.info(f"doctabs: {doctab}")
+            doc_md_file.new_header(level=1, title=doctab[ucutil.NAME_DOC_TABS_NAME])
+            tabref = doctab.get(ucutil.NAME_DOC_TABS_ID, "")
+            tabarray = tabref.split("#")
+            tab_id = tabarray[-1]
+            tab_content = soup.find("div", {"id":tab_id})
+            md_tab_content = content_to_md(tab_content)
+            doc_md_file.new_paragraph(md_tab_content)
+        logger1.info(f"doc_md_file={doc_md_file}")
+    
+    # create directory if needed
+    os.makedirs(doc_path, exist_ok=True)
+    doc_md_file.create_md_file()
 
 def main():
     adict = {}
@@ -65,6 +140,10 @@ def main():
     repo = g.get_repo(config[ucutil.GITHUB_TARGET_REPO])
     
     all_files = get_list_of_files_from_repo(config, repo)
+    
+    for plugin in adict[ucutil.NAME_PLUGIN_LIST_NAME]:
+        create_doc_files(config, plugin, all_files)
+
     
     os._exit(0)
 

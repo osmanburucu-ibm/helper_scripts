@@ -21,4 +21,4 @@ export EXPORT_PLUGIN_TYPE="MYPLUGINTYPE" # "Build" | "Deploy" | "Release" | "Vel
 
 export UPLOAD_FILES_TO_REPO="False"
 export LOCAL_REPOSITORY_LOCATION="onmylocalfilesystem"
-export LOCAL_DOCREPO_ROCATION="onmylocalfilesystem"
+export LOCAL_DOCREPO_LOCATION="onmylocalfilesystem"
