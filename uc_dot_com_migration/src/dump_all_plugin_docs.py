@@ -39,13 +39,13 @@ def remove_tags(taggedcontent):
     for data in taggedcontent(['style', 'script']):
         data.decompose()
     mycontent = ''.join(taggedcontent.stripped_strings)
-    logging.debug(f"remove_tags content: {mycontent}")
+    logger1.info(f"remove_tags content: {mycontent}")
     return  mycontent
 
 def get_content (misosoup):
     mydiv = misosoup.find("div", {"id":"container"})
     mycontent = remove_tags(mydiv)
-    logging.debug(f"get_content: {mycontent}")
+    logger1.info(f"get_content: {mycontent}")
     return mycontent
 
 ## sanitize plugin doc link, as item is like this "<a href="https://www.urbancode.com/plugin/devops-insights-deployment-risk-analytics-dra/">Go to Plugin</a>"
@@ -55,24 +55,39 @@ def get_plugin_doc_link(plugin_item):
     mystring = ''.join(map(str,item))
     doc_link = re.search("(?P<url>https?://[^\s]+)", mystring)["url"]
     doc_link = doc_link.replace('/\">Go', '')
-    logging.debug(f"get_plugin_doc_link: {doc_link}")
+    logger1.info(f"get_plugin_doc_link: {doc_link}")
     return doc_link
 
-def get_doc_folder_name(plugin_doc_link):
-    doc_folder_name = ""
-    urlparts = plugin_doc_link.split("/")
-    logging.debug(f"get_doc_folder_name: URLParts= {urlparts}")
-    doc_folder_name = urlparts[-1]
+def get_full_doc_link (response):
+    soup = BeautifulSoup(response.text, SOUP_PARSER)
+
+    linkelement = soup.find_all("div", {"class": "plugin-detail-content"})
+    plugin_full_doc_link = ""
+    for item in linkelement:
+        if sitem := item.find("a", string="Documentation"):
+            logging.debug(f"sitem: {sitem}")
+            plugin_full_doc_link=sitem['href']
+            # if last character is "/" then remove...
+    return plugin_full_doc_link
+
+def get_doc_folder_name(response, plugin_doc_link):
+    doc_link = get_full_doc_link(response)
+    if (doc_link == ""): doc_link = plugin_doc_link
+    urlparts = doc_link.split("/")
+    logger1.info(f"URLParts= {urlparts}")
+    # either use that or fix it in get_full_doc_link
+    doc_folder_name = urlparts[-2] if (urlparts[-1] == "") else urlparts[-1]
+    logger1.info(f"doc_foler_name={doc_folder_name}")
     return doc_folder_name 
 
 def check_plugin_type(plugin_item, plugin_type):
     item = plugin_item.find(class_="uc-grid-product").text.strip()
-    logging.debug(f"check_plugin_type: {plugin_type} - item: {item}")
+    logger1.info(f"check_plugin_type: {plugin_type} - item: {item}")
     return (plugin_type in item)
 
 def isright_plugin_type(plugin_item, plugin_type):
     item = plugin_item.find("div", {"id":"product"})
-    logging.debug(f"is_right_plugin_type: {plugin_type} - item: {item}")
+    logger1.info(f"is_right_plugin_type: {plugin_type} - item: {item}")
     return (plugin_type in str(item))
 
 # get documentation only for specific plugin tpyes
@@ -86,14 +101,14 @@ def get_documentation(plugin_item, plugin_type):
     if isright_plugin_type (soup2, plugin_type):
         # get the short info content (for the overview page of all plugins)
         mycontent = get_content(soup2)
-        logging.debug(f"get_documentation: {mycontent}")
+        logger1.info(f"get_documentation: {mycontent}")
     return mycontent
 
 def get_plugin_name(response):
     plugin_name = ""
     soup = BeautifulSoup(response.text, SOUP_PARSER)
     plugin_name = soup.select('h1.entry-title')[0].text.strip()
-    logging.info(f"get_plugin_name={plugin_name}")
+    logger1.info(f"get_plugin_name={plugin_name}")
     return plugin_name
 
 # get the folder name from the download url, will be used to recreate the docs folder structure same as for the files subfolders
@@ -111,13 +126,13 @@ def get_plugin_folder_name(response):
         plugin_folder_name=(linkelement["href"] if (linkelement is not None) else "")
         if ("urbancode.com" not in plugin_folder_name): plugin_folder_name = ""
         urlpartsindex = -2
-        logging.info("searched for dowloadlink, as not other available")
-    logging.info(f"get_plugin_folder_name={plugin_folder_name}")
+        logger1.info("searched for dowloadlink, as not other available")
+    logger1.info(f"get_plugin_folder_name={plugin_folder_name}")
     urlparts = plugin_folder_name.split("/")
-    logging.info(f"get_plugin_folder_name: URLParts= {urlparts}")
+    logger1.info(f"get_plugin_folder_name: URLParts= {urlparts}")
     if len(urlparts) >1 :
         plugin_folder_name= urlparts[urlpartsindex]
-    logging.info(f"plugin_folder_name = {plugin_folder_name}")
+    logger1.info(f"plugin_folder_name = {plugin_folder_name}")
     return  plugin_folder_name
 
 # <div class="plugin-detail-content">  <p><a href="https://www.urbancode.com/plugindoc/accurev/">Documentation</a></p>
@@ -128,7 +143,7 @@ def extract_tabs(plugin_doc_link):
 
     alltabs = soup.find_all("a", {"class": "nav-link", "role":"tab"})
     for tab in alltabs:
-        logging.debug(f"tab: {tab['href']} and {tab.contents}")
+        logger1.info(f"tab: {tab['href']} and {tab.contents}")
         atab = {"name": tab.contents[0], "tab_id": tab["href"]}
         doctabs.append (atab)
     return doctabs
@@ -142,16 +157,16 @@ def get_doc_tabs(response):
     plugin_doc_link = ""
     for item in linkelement:
         if sitem := item.find("a", string="Documentation"):
-            logging.debug(f"sitem: {sitem}")
+            logger1.info(f"sitem: {sitem}")
             plugin_doc_link=sitem['href']
     if plugin_doc_link:
         # extract the doctabs
-        logging.debug(f"getdoctabs found {plugin_doc_link} ")
+        logger1.info(f"getdoctabs found {plugin_doc_link} ")
         doctabs = extract_tabs(plugin_doc_link)
     return doctabs
                   
 def get_all_plugin_docs(source_url):
-    logging.info(f"Plugin URL: {source_url}")
+    logger1.info(f"Plugin URL: {source_url}")
 
     response = requests.get(source_url)
     soup = BeautifulSoup(response.text, SOUP_PARSER)
@@ -165,12 +180,12 @@ def get_all_plugin_docs(source_url):
         if (check_plugin_type(plugin_item, plugin_type)):
             plugin_doc_link = ""
             plugin_doc_link = get_plugin_doc_link(plugin_item)
-            logging.info(plugin_doc_link)
+            logger1.info(plugin_doc_link)
 
             response2 = requests.get(plugin_doc_link)
             oneplugin = {"name": get_plugin_name(response2)}
             oneplugin["plugin_folder_name"]= get_plugin_folder_name(response2)
-            oneplugin["doc_folder_name"]= get_doc_folder_name(plugin_doc_link)
+            oneplugin["doc_folder_name"]= get_doc_folder_name(response2, plugin_doc_link)
             oneplugin["documentation_name"]=""
             oneplugin["doc_tabs"]= get_doc_tabs(response2)
             allplugindocs.append(oneplugin)

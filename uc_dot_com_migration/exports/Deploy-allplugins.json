@@ -3331,9 +3331,10 @@
                 "ucd-zos-deploy-69.1132511.zip",
                 "ucd-zos-deploy-70.1132678.zip",
                 "ucd-zos-deploy-70.1132810.zip",
-                "ucd-zos-deploy-71.1132832.zip"
+                "ucd-zos-deploy-71.1132832.zip",
+                "ucd-zos-deploy-71.1132900.zip"
             ],
-            "latestversion": "71.1132832"
+            "latestversion": "71.1132900"
         },
         {
             "plugin_folder_name": "zos-ftp",
@@ -3360,9 +3361,10 @@
                 "plugins-zos-multi-generate-artifact-info-4.1100684.zip",
                 "plugins-zos-multi-generate-artifact-info-5.1121469.zip",
                 "ucd-plugins-zos-multi-generate-artifact-info-5.1126660.zip",
-                "ucd-plugins-zos-multi-generate-artifact-info-6.1132811.zip"
+                "ucd-plugins-zos-multi-generate-artifact-info-6.1132811.zip",
+                "ucd-plugins-zos-multi-generate-artifact-info-6.1132902.zip"
             ],
-            "latestversion": "6.1132811"
+            "latestversion": "6.1132902"
         },
         {
             "plugin_folder_name": "zos-mvscommand-plugin",

@@ -50,7 +50,7 @@ def get_plugin_docs (pluginfile, localalldocs):
             for field in copyfields:
                 aplugin[field] = doc_plugin.get(field, defaultvalues.get(field))
 
-    logging.info(f"aplugin={aplugin}")
+    logger1.info(f"aplugin={aplugin}")
         
     return aplugin
 

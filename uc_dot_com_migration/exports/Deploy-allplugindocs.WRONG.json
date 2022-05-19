@@ -1742,7 +1742,7 @@
         {
             "name": "IBM UrbanCode Deploy Versioned File Storage",
             "plugin_folder_name": "UrbancodeVFS",
-            "doc_folder_name": "ibm-urbancode-deploy-versioned-file-storage-2",
+            "doc_folder_name": "ibm-urbancode-deploy-versioned-file-storage",
             "documentation_name": "",
             "doc_tabs": [
                 {
@@ -2081,7 +2081,7 @@
         {
             "name": "JIRA for IBM UrbanCode Deploy",
             "plugin_folder_name": "JIRA",
-            "doc_folder_name": "jira-2",
+            "doc_folder_name": "jira",
             "documentation_name": "",
             "doc_tabs": [
                 {
@@ -3366,7 +3366,7 @@
         {
             "name": "z/OS External Artifact Repository",
             "plugin_folder_name": "zOS-external-artifact-download",
-            "doc_folder_name": "external-artifact-repository-2",
+            "doc_folder_name": "external-artifact-repository",
             "documentation_name": "",
             "doc_tabs": [
                 {
@@ -3489,7 +3489,7 @@
         {
             "name": "z/OS Utility",
             "plugin_folder_name": "zos-deploy",
-            "doc_folder_name": "z-os-utility-2",
+            "doc_folder_name": "z-os-utility",
             "documentation_name": "",
             "doc_tabs": [
                 {

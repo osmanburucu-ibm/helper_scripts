@@ -1521,7 +1521,7 @@
         {
             "name": "JIRA for IBM UrbanCode Deploy",
             "plugin_folder_name": "JIRA",
-            "doc_folder_name": "jira",
+            "doc_folder_name": "jira-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3011,7 +3011,7 @@
         {
             "name": "IBM UrbanCode Deploy Versioned File Storage",
             "plugin_folder_name": "UrbancodeVFS",
-            "doc_folder_name": "ibm-urbancode-deploy-versioned-file-storage",
+            "doc_folder_name": "ibm-urbancode-deploy-versioned-file-storage-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5753,9 +5753,9 @@
             "latestversion": "17.692574"
         },
         {
-            "name": "External Artifact Repository",
+            "name": "z/OS External Artifact Repository",
             "plugin_folder_name": "zOS-external-artifact-download",
-            "doc_folder_name": "external-artifact-repository",
+            "doc_folder_name": "external-artifact-repository-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5826,7 +5826,7 @@
         {
             "name": "z/OS Utility",
             "plugin_folder_name": "zos-deploy",
-            "doc_folder_name": "z-os-utility",
+            "doc_folder_name": "z-os-utility-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5914,9 +5914,10 @@
                 "ucd-zos-deploy-69.1132511.zip",
                 "ucd-zos-deploy-70.1132678.zip",
                 "ucd-zos-deploy-70.1132810.zip",
-                "ucd-zos-deploy-71.1132832.zip"
+                "ucd-zos-deploy-71.1132832.zip",
+                "ucd-zos-deploy-71.1132900.zip"
             ],
-            "latestversion": "71.1132832"
+            "latestversion": "71.1132900"
         },
         {
             "name": "z/OS FTP Utility",
@@ -5987,9 +5988,10 @@
                 "plugins-zos-multi-generate-artifact-info-4.1100684.zip",
                 "plugins-zos-multi-generate-artifact-info-5.1121469.zip",
                 "ucd-plugins-zos-multi-generate-artifact-info-5.1126660.zip",
-                "ucd-plugins-zos-multi-generate-artifact-info-6.1132811.zip"
+                "ucd-plugins-zos-multi-generate-artifact-info-6.1132811.zip",
+                "ucd-plugins-zos-multi-generate-artifact-info-6.1132902.zip"
             ],
-            "latestversion": "6.1132811"
+            "latestversion": "6.1132902"
         },
         {
             "name": "zos-mvscommand-plugin",
@@ -6027,7 +6029,7 @@
             "latestversion": "1.1127592"
         },
         {
-            "name": "zOS Management Facility",
+            "name": "z/OS Management Facility",
             "plugin_folder_name": "zosmf",
             "doc_folder_name": "zos-management-facility",
             "doc_tabs": [

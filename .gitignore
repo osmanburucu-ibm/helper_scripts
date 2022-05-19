@@ -153,3 +153,4 @@ playbooks/roles
 .vscode
 uc_dot_com_migration/.DS_Store
 uc_dot_com_migration/src/.DS_Store
+.DS_Store
