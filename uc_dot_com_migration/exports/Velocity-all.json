@@ -8,6 +8,7 @@
             "name": "CICS",
             "plugin_folder_name": "CICS",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "sw-devops-Launch-L3-vsm.json"
@@ -18,6 +19,7 @@
             "name": "Digital.ai Agility",
             "plugin_folder_name": "ucv-ext-agility",
             "doc_folder_name": "digital-ai-agility",
+            "documentation_name": "digital-ai-agility",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -40,6 +42,7 @@
             "name": "HCL AppScan Enterprise (ASE)",
             "plugin_folder_name": "ucv-ext-appscan",
             "doc_folder_name": "hcl-appscan-enterprise-ucv",
+            "documentation_name": "appscan",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -63,6 +66,7 @@
             "name": "HCL AppScan on Cloud (ASoC)",
             "plugin_folder_name": "ucv-ext-asoc",
             "doc_folder_name": "hcl-appscan-on-cloud-ucv",
+            "documentation_name": "asoc",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -87,6 +91,7 @@
             "name": "Azure DevOps",
             "plugin_folder_name": "ucv-ext-azure",
             "doc_folder_name": "azure-devops-ucv",
+            "documentation_name": "azure-devops",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -116,6 +121,7 @@
             "name": "ucv-ext-bitbucket-cloud",
             "plugin_folder_name": "ucv-ext-bitbucket-cloud",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ucv-ext-bitbucket-cloud:1.0.7.tar",
@@ -129,6 +135,7 @@
             "name": "BitBucket Server",
             "plugin_folder_name": "ucv-ext-bitbucket-server",
             "doc_folder_name": "bitbucket-server-ucv",
+            "documentation_name": "bitbucket",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -153,6 +160,7 @@
             "name": "Black Duck",
             "plugin_folder_name": "ucv-ext-blackduck",
             "doc_folder_name": "black-duck-ucv",
+            "documentation_name": "black-duck",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -173,6 +181,7 @@
             "name": "ucv-ext-bottleneck-detection",
             "plugin_folder_name": "ucv-ext-bottleneck-detection",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ucv-ext-bottleneck-detection:1.0.1.tar",
@@ -184,6 +193,7 @@
             "name": "ucv-ext-circleci",
             "plugin_folder_name": "ucv-ext-circleci",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ucv-ext-circleci:1.0.3.tar",
@@ -197,6 +207,7 @@
             "name": "Code Coverage",
             "plugin_folder_name": "ucv-ext-coverage-core",
             "doc_folder_name": "coverage-core-ucv",
+            "documentation_name": "code-coverage",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -216,6 +227,7 @@
             "name": "Cucumber",
             "plugin_folder_name": "ucv-ext-cucumber",
             "doc_folder_name": "cucumber-ucv",
+            "documentation_name": "cucumber-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -236,6 +248,7 @@
             "name": "ucv-ext-dependabot",
             "plugin_folder_name": "ucv-ext-dependabot",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ucv-ext-dependabot:1.0.2.tar"
@@ -246,6 +259,7 @@
             "name": "IBM Engineering Workflow Management (EWM)",
             "plugin_folder_name": "ucv-ext-ewm",
             "doc_folder_name": "ibm-engineering-workflow-management-ucv",
+            "documentation_name": "ibm-rational-team-concert",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -267,6 +281,7 @@
             "name": "ucv-ext-fortify-ssc",
             "plugin_folder_name": "ucv-ext-fortify-ssc",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ucv-ext-fortify-ssc:1.0.1.tar"
@@ -277,6 +292,7 @@
             "name": "GitHub",
             "plugin_folder_name": "ucv-ext-github",
             "doc_folder_name": "github-ucv",
+            "documentation_name": "github",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -307,6 +323,7 @@
             "name": "GitLab",
             "plugin_folder_name": "ucv-ext-gitlab",
             "doc_folder_name": "gitlab-ucv-3",
+            "documentation_name": "gitlab",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -339,6 +356,7 @@
             "name": "Handlebar Reporter",
             "plugin_folder_name": "ucv-ext-handlebars-reporter",
             "doc_folder_name": "handlebar-reporter",
+            "documentation_name": "handlebar-reporter",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -363,6 +381,7 @@
             "name": "Jira",
             "plugin_folder_name": "ucv-ext-jira",
             "doc_folder_name": "jira-ucv",
+            "documentation_name": "jira-4",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -398,6 +417,7 @@
             "name": "ucv-ext-jira-test",
             "plugin_folder_name": "ucv-ext-jira-test",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ucv-ext-jira-test:1.0.17.tar"
@@ -408,6 +428,7 @@
             "name": "Apache JMeter",
             "plugin_folder_name": "ucv-ext-jmeter",
             "doc_folder_name": "apache-jmeter-ucv",
+            "documentation_name": "jmeter",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -428,6 +449,7 @@
             "name": "JUnit",
             "plugin_folder_name": "ucv-ext-junit",
             "doc_folder_name": "junit-ucv",
+            "documentation_name": "junit-3",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -448,6 +470,7 @@
             "name": "ucv-ext-leankit",
             "plugin_folder_name": "ucv-ext-leankit",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ucv-ext-leankit:1.0.1.tar"
@@ -458,6 +481,7 @@
             "name": "HCL OneTest",
             "plugin_folder_name": "ucv-ext-onetest",
             "doc_folder_name": "hcl-onetest-ucv",
+            "documentation_name": "onetest",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -479,6 +503,7 @@
             "name": "HCL OneTest Server",
             "plugin_folder_name": "ucv-ext-onetest-server",
             "doc_folder_name": "hcl-onetest-server-ucv",
+            "documentation_name": "hcl-onetest-server",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -500,6 +525,7 @@
             "name": "Rally",
             "plugin_folder_name": "ucv-ext-rally",
             "doc_folder_name": "rally-ucv",
+            "documentation_name": "rally-4",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -524,6 +550,7 @@
             "name": "Rational Test Automation Server",
             "plugin_folder_name": "ucv-ext-rtas",
             "doc_folder_name": "rational-test-automation-server-ucv",
+            "documentation_name": "1-0-3",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -544,6 +571,7 @@
             "name": "ucv-ext-salesforce",
             "plugin_folder_name": "ucv-ext-salesforce",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ucv-ext-salesforce:1.0.5.tar",
@@ -556,6 +584,7 @@
             "name": "ServiceNow",
             "plugin_folder_name": "ucv-ext-servicenow",
             "doc_folder_name": "servicenow-ucv",
+            "documentation_name": "servicenow-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -578,6 +607,7 @@
             "name": "ucv-ext-shell",
             "plugin_folder_name": "ucv-ext-shell",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ucv-ext-shell:0.0.7.tar",
@@ -589,6 +619,7 @@
             "name": "ucv-ext-snyk",
             "plugin_folder_name": "ucv-ext-snyk",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ucv-ext-snyk:1.0.1.tar"
@@ -599,6 +630,7 @@
             "name": "SonarQube",
             "plugin_folder_name": "ucv-ext-sonarqube",
             "doc_folder_name": "sonarqube-ucv",
+            "documentation_name": "sonarqube-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -629,6 +661,7 @@
             "name": "TestNG",
             "plugin_folder_name": "ucv-ext-testng",
             "doc_folder_name": "testng-ucv",
+            "documentation_name": "testng",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -648,6 +681,7 @@
             "name": "Twistlock",
             "plugin_folder_name": "ucv-ext-twistlock",
             "doc_folder_name": "twistlock-ucv",
+            "documentation_name": "twistlock",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -668,6 +702,7 @@
             "name": "CollabNet VersionOne",
             "plugin_folder_name": "ucv-ext-versionone",
             "doc_folder_name": "collabnet-versionone-ucv",
+            "documentation_name": "collabnet-versionone",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -687,6 +722,7 @@
             "name": "ucv-ext-vs-quality",
             "plugin_folder_name": "ucv-ext-vs-quality",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ucv-ext-vs-quality:1.0.30.tar",
@@ -698,6 +734,7 @@
             "name": "ucv-ext-whitesource",
             "plugin_folder_name": "ucv-ext-whitesource",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ucv-ext-whitesource:2.0.15.tar"
@@ -708,6 +745,7 @@
             "name": "Selenium",
             "plugin_folder_name": "",
             "doc_folder_name": "selenium-ucv",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -716,6 +754,7 @@
             "name": "TestComplete",
             "plugin_folder_name": "",
             "doc_folder_name": "testcomplete-ucv",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"

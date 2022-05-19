@@ -55,6 +55,8 @@ def get_plugin_doc_link(plugin_item):
     mystring = ''.join(map(str,item))
     doc_link = re.search("(?P<url>https?://[^\s]+)", mystring)["url"]
     doc_link = doc_link.replace('/\">Go', '')
+    if (doc_link[-1]=="/"):
+        doc_link = doc_link[:-1]
     logger1.info(f"get_plugin_doc_link: {doc_link}")
     return doc_link
 
@@ -67,18 +69,28 @@ def get_full_doc_link (response):
         if sitem := item.find("a", string="Documentation"):
             logging.debug(f"sitem: {sitem}")
             plugin_full_doc_link=sitem['href']
-            # if last character is "/" then remove...
+            if (plugin_full_doc_link[-1]=="/"):
+                plugin_full_doc_link = plugin_full_doc_link[:-1]
+            logger1.info(f"get_plugin_doc_link: {plugin_full_doc_link}")
     return plugin_full_doc_link
 
-def get_doc_folder_name(response, plugin_doc_link):
+def get_full_doc_folder_name(response):
     doc_link = get_full_doc_link(response)
-    if (doc_link == ""): doc_link = plugin_doc_link
+    if (doc_link == ""): doc_link = "/"
     urlparts = doc_link.split("/")
-    logger1.info(f"URLParts= {urlparts}")
-    # either use that or fix it in get_full_doc_link
-    doc_folder_name = urlparts[-2] if (urlparts[-1] == "") else urlparts[-1]
+    logger1.debug(f"URLParts= {urlparts}")
+    doc_folder_name = urlparts[-1]
     logger1.info(f"doc_foler_name={doc_folder_name}")
     return doc_folder_name 
+
+def get_doc_folder_name_from_link(doc_link):
+    logger1.info(f"link provided={doc_link}")
+    urlparts = doc_link.split("/")
+    logger1.info(f"URLParts= {urlparts}")
+    doc_folder_name = urlparts[-1]
+    logger1.info(f"doc_foler_name={doc_folder_name}")
+    return doc_folder_name 
+
 
 def check_plugin_type(plugin_item, plugin_type):
     item = plugin_item.find(class_="uc-grid-product").text.strip()
@@ -177,39 +189,41 @@ def get_all_plugin_docs(source_url):
     # iterate over all plugin entries (as articles)
     list_of_plugins = soup.find_all("article", class_="uc-grid-item")
     for plugin_item in list_of_plugins:
+        logger1.debug(f"plugin_item={plugin_item}")
         if (check_plugin_type(plugin_item, plugin_type)):
             plugin_doc_link = ""
             plugin_doc_link = get_plugin_doc_link(plugin_item)
             logger1.info(plugin_doc_link)
 
             response2 = requests.get(plugin_doc_link)
-            oneplugin = {"name": get_plugin_name(response2)}
-            oneplugin["plugin_folder_name"]= get_plugin_folder_name(response2)
-            oneplugin["doc_folder_name"]= get_doc_folder_name(response2, plugin_doc_link)
-            oneplugin["documentation_name"]=""
-            oneplugin["doc_tabs"]= get_doc_tabs(response2)
+            oneplugin = {ucutil.NAME_PLUGIN_NAME: get_plugin_name(response2)}
+            oneplugin[ucutil.NAME_PLUGIN_FOLDER_NAME]= get_plugin_folder_name(response2)
+            oneplugin[ucutil.NAME_DOC_FOLDER_NAME]= get_doc_folder_name_from_link(plugin_doc_link)
+            oneplugin[ucutil.NAME_DOCUMENTATION_NAME]=get_full_doc_folder_name(response2)
+            oneplugin[ucutil.NAME_DOC_TABS]= get_doc_tabs(response2)
             allplugindocs.append(oneplugin)
     return allplugindocs
 
 def main():
     
     config = ucutil.get_config()
-    source_url = config["plugin_list_url"]
-    plugin_type = config["plugin_type"]
+    source_url = config[ucutil.PLUGIN_LIST_URL]
+    plugin_type = config[ucutil.EXPORT_PLUGIN_TYPE]
 
     allplugindocs = []
     allplugindocs = get_all_plugin_docs(source_url)
 
     adict = {
-        "source_url": source_url, 
-        "source_overview_url": config["plugin_doc_overview_url"], 
-        "source_documentation_url": config["plugin_full_doc_url"], 
-        "source_download_folder": config["files_source_url"], 
-        "plugins": allplugindocs
+        ucutil.EXPORT_SOURCE_URL: source_url, 
+        ucutil.EXPORT_SOURCE_OVERVIEW_URL: config[ucutil.PLUGIN_OVERVIEW_URL], 
+        ucutil.EXPORT_SOURCE_DOCUMENTATION_URL: config[ucutil.PLUGIN_DOCUMENTATION_URL], 
+        ucutil.EXPORT_SOURCE_DOWNLOAD_FOLDER: config[ucutil.PLUGINFILES_SOURCE_URL], 
+        ucutil.NAME_PLUGIN_LIST_NAME: allplugindocs
     }
 
-
-    with open (f"{plugin_type}-allplugindocs.json", "w") as f:
+    workfolder = config[ucutil.WORKING_FOLDER_LOCATION]
+    
+    with open (f"{workfolder}/{plugin_type}-allplugindocs.json", "w") as f:
         json.dump(adict,f, indent=4)
 
 

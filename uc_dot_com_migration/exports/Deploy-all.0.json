@@ -8,7 +8,6 @@
             "name": "7zip",
             "plugin_folder_name": "7zip",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "7zip-2.1100875.zip"
@@ -19,7 +18,6 @@
             "name": "AccuRev SCM",
             "plugin_folder_name": "AccuRevSourceConfig",
             "doc_folder_name": "accurev-scm",
-            "documentation_name": "accurev-scm",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -48,7 +46,6 @@
             "name": "AgentPropertiesCollector",
             "plugin_folder_name": "AgentPropertiesCollector",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "AgentPropertiesCollector-4.973426.zip"
@@ -59,7 +56,6 @@
             "name": "IBM UrbanCode Deploy Agent Package for Dynamic Cloud Environments",
             "plugin_folder_name": "AgentScript",
             "doc_folder_name": "ibm-urbancode-deploy-agent-package-for-dynamic-cloud-environments",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ibm-ucd-agent-script-package.zip",
@@ -72,7 +68,6 @@
             "name": "Amazon EC2",
             "plugin_folder_name": "AmazonEC2",
             "doc_folder_name": "amazon-ec2",
-            "documentation_name": "amazon-ec2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -99,7 +94,6 @@
             "name": "Android",
             "plugin_folder_name": "Android",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "android_plugin.pdf",
@@ -112,7 +106,6 @@
             "name": "Apache Ant",
             "plugin_folder_name": "Ant",
             "doc_folder_name": "apache-ant",
-            "documentation_name": "apache-ant",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -141,7 +134,6 @@
             "name": "Anthill",
             "plugin_folder_name": "Anthill",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "Anthill-7.424532.zip",
@@ -156,7 +148,6 @@
             "name": "AnthillSourceConfig",
             "plugin_folder_name": "AnthillSourceConfig",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "AnthillSourceConfig-3.786805.zip",
@@ -174,7 +165,6 @@
             "name": "Apache HTTP Server",
             "plugin_folder_name": "Apache",
             "doc_folder_name": "apache-http-server",
-            "documentation_name": "apache-http-server",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -200,7 +190,6 @@
             "name": "ApacheHTTPServer",
             "plugin_folder_name": "ApacheHTTPServer",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "Apache-1.423580.zip",
@@ -212,7 +201,6 @@
             "name": "ApplicationDeploymentForWebSphere",
             "plugin_folder_name": "ApplicationDeploymentForWebSphere",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ApplicationDeploymentForWebSphere-66.424797.zip",
@@ -249,7 +237,6 @@
             "name": "Artifactory",
             "plugin_folder_name": "Artifactory",
             "doc_folder_name": "artifactory",
-            "documentation_name": "artifactory",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -293,7 +280,6 @@
             "name": "ArtifactoryAuto",
             "plugin_folder_name": "ArtifactoryAuto",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "Artifactory-1.496701.zip",
@@ -305,7 +291,6 @@
             "name": "Artifactory Source Config",
             "plugin_folder_name": "ArtifactorySourceConfig",
             "doc_folder_name": "artifactory-source-config",
-            "documentation_name": "artifactory-source-config",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -365,7 +350,6 @@
             "name": "Autosys",
             "plugin_folder_name": "Autosys",
             "doc_folder_name": "autosys",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "EPL.txt",
@@ -377,7 +361,6 @@
             "name": "BMCRemedy",
             "plugin_folder_name": "BMCRemedy",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "Remedy-1.423633.zip",
@@ -390,7 +373,6 @@
             "name": "Microsoft BizTalk",
             "plugin_folder_name": "BizTalk",
             "doc_folder_name": "microsoft-biztalk",
-            "documentation_name": "microsoft-biztalk",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -412,7 +394,6 @@
             "name": "CICS TS",
             "plugin_folder_name": "CICS",
             "doc_folder_name": "cics-ts",
-            "documentation_name": "cics-ts",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -455,7 +436,6 @@
             "name": "CICS CM (Beta)",
             "plugin_folder_name": "CICS-CM",
             "doc_folder_name": "cics-cm-beta",
-            "documentation_name": "cics-cm-beta",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -484,7 +464,6 @@
             "name": "Chef",
             "plugin_folder_name": "Chef",
             "doc_folder_name": "chef",
-            "documentation_name": "chef",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -511,7 +490,6 @@
             "name": "IBM Rational ClearCase",
             "plugin_folder_name": "ClearCaseSourceConfig",
             "doc_folder_name": "ibm-rational-clearcase",
-            "documentation_name": "ibm-rational-clearcase",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -542,7 +520,6 @@
             "name": "CloudFoundry",
             "plugin_folder_name": "CloudFoundry",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "cloud-foundry-13.697224.zip",
@@ -554,7 +531,6 @@
             "name": "IBM Cognos",
             "plugin_folder_name": "Cognos",
             "doc_folder_name": "ibm-cognos",
-            "documentation_name": "ibm-cognos",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -587,7 +563,6 @@
             "name": "DB2z",
             "plugin_folder_name": "DB2z",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "DB2forzOS1.0.zip",
@@ -602,7 +577,6 @@
             "name": "IBM UrbanCode DBUpgrader",
             "plugin_folder_name": "DBUpgrader",
             "doc_folder_name": "ibm-urbancode-dbupgrader",
-            "documentation_name": "ibm-urbancode-dbupgrader",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -632,7 +606,6 @@
             "name": "IBM UrbanCode Deploy Tools",
             "plugin_folder_name": "DeployTools",
             "doc_folder_name": "ibm-urbancode-deploy-tools",
-            "documentation_name": "ibm-urbancode-deploy-tools",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -657,7 +630,6 @@
             "name": "Dimensions",
             "plugin_folder_name": "DimensionsSourceConfig",
             "doc_folder_name": "dimensions",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "DimensionsSourceConfig-5.786801.zip",
@@ -672,7 +644,6 @@
             "name": "Docker",
             "plugin_folder_name": "Docker",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "com.ibm.rational.plugin.source.docker.zip",
@@ -687,7 +658,6 @@
             "name": "DockerCompose",
             "plugin_folder_name": "DockerCompose",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "docker-compose-9.750519.zip"
@@ -698,7 +668,6 @@
             "name": "Docker Registry",
             "plugin_folder_name": "DockerSourceConfig",
             "doc_folder_name": "docker-registry",
-            "documentation_name": "docker-registry",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -750,7 +719,6 @@
             "name": "F5 BIG-IP",
             "plugin_folder_name": "F5",
             "doc_folder_name": "f5-big-ip",
-            "documentation_name": "f5-big-ip",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -793,7 +761,6 @@
             "name": "FileNet \u2013 IBM Case Manager",
             "plugin_folder_name": "FileNet-CaseManager",
             "doc_folder_name": "filenet-ibm-case-manager",
-            "documentation_name": "filenet-ibm-case-manager",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -818,7 +785,6 @@
             "name": "File System",
             "plugin_folder_name": "FileSystemSourceConfig",
             "doc_folder_name": "file-system",
-            "documentation_name": "file-system",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -850,7 +816,6 @@
             "name": "File System (Versioned)",
             "plugin_folder_name": "FileSystemVersionedSourceConfig",
             "doc_folder_name": "file-system-versioned",
-            "documentation_name": "file-system-versioned",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -884,7 +849,6 @@
             "name": "File Utils",
             "plugin_folder_name": "FileUtils",
             "doc_folder_name": "file-utils",
-            "documentation_name": "file-utils",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -963,7 +927,6 @@
             "name": "GeneralUtils",
             "plugin_folder_name": "GeneralUtils",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "general-utilities-1.624056.zip"
@@ -974,7 +937,6 @@
             "name": "Git",
             "plugin_folder_name": "GitSourceConfig",
             "doc_folder_name": "git",
-            "documentation_name": "git",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1019,7 +981,6 @@
             "name": "GreenHat",
             "plugin_folder_name": "GreenHat",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "GreenHat-1.455099.zip",
@@ -1032,7 +993,6 @@
             "name": "Groovy",
             "plugin_folder_name": "Groovy",
             "doc_folder_name": "groovy",
-            "documentation_name": "groovy",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1068,7 +1028,6 @@
             "name": "HCL OneTest API",
             "plugin_folder_name": "HCLOneTestAPI",
             "doc_folder_name": "hcl-onetest-api",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "HCL_OT_API_1010_UCD.zip",
@@ -1082,7 +1041,6 @@
             "name": "HCL OneTest Performance",
             "plugin_folder_name": "HCLOneTestPerf",
             "doc_folder_name": "hcl-onetest-performance",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "HCL_OT_PERF_1010_UCD.zip",
@@ -1099,7 +1057,6 @@
             "name": "HCLOneTestServer",
             "plugin_folder_name": "HCLOneTestServer",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "OTS-UCD-1.0.zip",
@@ -1112,7 +1069,6 @@
             "name": "HCL OneTest UI",
             "plugin_folder_name": "HCLOneTestUI",
             "doc_folder_name": "hcl-onetest-ui",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "HCL_OT_UI_1010_UCD.zip",
@@ -1127,7 +1083,6 @@
             "name": "HCL OneTest Virtualization",
             "plugin_folder_name": "HCLOneTestVirtualization",
             "doc_folder_name": "hcl-onetest-virtualization",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "HCL_OT_VIRT_1010_UCD.zip",
@@ -1140,7 +1095,6 @@
             "name": "HCL OneTest WebUI",
             "plugin_folder_name": "HCLOneTestWebUI",
             "doc_folder_name": "hcl-onetest-webui",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "HCL_OT_UI_WebUI_1010_UCD.zip",
@@ -1159,7 +1113,6 @@
             "name": "HPQTP",
             "plugin_folder_name": "HPQTP",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "QTP-1.504346.zip",
@@ -1171,7 +1124,6 @@
             "name": "MicroFocus ALM (formerly HP Quality Center)",
             "plugin_folder_name": "HPQualityCenter",
             "doc_folder_name": "microfocus-alm-formerly-hp-quality-center",
-            "documentation_name": "microfocus-alm-formerly-hp-quality-center",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1209,7 +1161,6 @@
             "name": "IBMAppScan",
             "plugin_folder_name": "IBMAppScan",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "appscan-1.748840.zip"
@@ -1220,7 +1171,6 @@
             "name": "IBMContainers",
             "plugin_folder_name": "IBMContainers",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "cloud-foundry-ibm-containers-1.734803.zip"
@@ -1231,7 +1181,6 @@
             "name": "IBMInstallationManager",
             "plugin_folder_name": "IBMInstallationManager",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "plugin-air-InstallationManager-1.748439.zip"
@@ -1242,7 +1191,6 @@
             "name": "IBMMiddlewareConfigurationForWebSphere",
             "plugin_folder_name": "IBMMiddlewareConfigurationForWebSphere",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "mcwas_plugin_v5.pdf",
@@ -1265,7 +1213,6 @@
             "name": "IBMUCDApplications",
             "plugin_folder_name": "IBMUCDApplications",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "uDeploy-Application-61.423582.zip",
@@ -1280,7 +1227,6 @@
             "name": "IBMUCDComponents",
             "plugin_folder_name": "IBMUCDComponents",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "uDeploy-Component-61.455109.zip",
@@ -1293,7 +1239,6 @@
             "name": "IBMUCDConfigurationManagement",
             "plugin_folder_name": "IBMUCDConfigurationManagement",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "uDeployConfigManagement-2.423617.zip",
@@ -1307,7 +1252,6 @@
             "name": "IBMUCDEnvironments",
             "plugin_folder_name": "IBMUCDEnvironments",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "uDeploy-Environment-64.455050.zip",
@@ -1319,7 +1263,6 @@
             "name": "IBMUCDProcess",
             "plugin_folder_name": "IBMUCDProcess",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "uDeploy-Process-1.641819.zip"
@@ -1330,7 +1273,6 @@
             "name": "IBMUCDResources",
             "plugin_folder_name": "IBMUCDResources",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "uDeploy-Resource-64.461479.zip",
@@ -1343,7 +1285,6 @@
             "name": "IBMUCDSystem",
             "plugin_folder_name": "IBMUCDSystem",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "uDeploy-System-61.453415.zip",
@@ -1355,7 +1296,6 @@
             "name": "IBMUCDVersionedFileStorage",
             "plugin_folder_name": "IBMUCDVersionedFileStorage",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "UrbancodeVFS-16.434033.zip",
@@ -1376,7 +1316,6 @@
             "name": "IBMUCDVersions",
             "plugin_folder_name": "IBMUCDVersions",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "uDeploy-Version-60.455054.zip",
@@ -1388,7 +1327,6 @@
             "name": "IBMWorklight",
             "plugin_folder_name": "IBMWorklight",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "air-worklight-1.423586.zip",
@@ -1405,7 +1343,6 @@
             "name": "Microsoft IIS AdminScripts",
             "plugin_folder_name": "IIS-AdminScripts",
             "doc_folder_name": "microsoft-iis-adminscripts",
-            "documentation_name": "microsoft-iis-adminscripts",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1426,7 +1363,6 @@
             "name": "Microsoft IIS AppCmd",
             "plugin_folder_name": "IIS-AppCmd",
             "doc_folder_name": "microsoft-iis-appcmd",
-            "documentation_name": "microsoft-iis-appcmd",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1448,7 +1384,6 @@
             "name": "Microsoft IIS MS-Deploy (Azure App Service)",
             "plugin_folder_name": "IIS-MSDeploy",
             "doc_folder_name": "microsoft-iis-ms-deploy-azure-app-service",
-            "documentation_name": "microsoft-iis-ms-deploy-azure-app-service",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1473,7 +1408,6 @@
             "name": "IISAdminScripts",
             "plugin_folder_name": "IISAdminScripts",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "IIS-AdminScripts-7.424216.zip",
@@ -1485,7 +1419,6 @@
             "name": "IISAppCmd",
             "plugin_folder_name": "IISAppCmd",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "IIS-AppCmd-2.423623.zip",
@@ -1497,7 +1430,6 @@
             "name": "IISMSDeploy",
             "plugin_folder_name": "IISMSDeploy",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "IIS-MSDeploy-1.423639.zip",
@@ -1510,7 +1442,6 @@
             "name": "IBM IMS",
             "plugin_folder_name": "IMSz",
             "doc_folder_name": "ibm-ims",
-            "documentation_name": "ibm-ims",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1538,7 +1469,6 @@
             "name": "InfoSphereOptim",
             "plugin_folder_name": "InfoSphereOptim",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "optim-1.461277.zip",
@@ -1550,7 +1480,6 @@
             "name": "JBoss Application Server",
             "plugin_folder_name": "JBoss",
             "doc_folder_name": "jboss-application-server",
-            "documentation_name": "jboss-application-server",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1592,8 +1521,7 @@
         {
             "name": "JIRA for IBM UrbanCode Deploy",
             "plugin_folder_name": "JIRA",
-            "doc_folder_name": "jira",
-            "documentation_name": "jira-2",
+            "doc_folder_name": "jira-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1631,7 +1559,6 @@
             "name": "JUnit",
             "plugin_folder_name": "JUnit",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "JUnit-1.455144.zip",
@@ -1645,7 +1572,6 @@
             "name": "Jenkins",
             "plugin_folder_name": "Jenkins",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ibm-ucdeploy-publisher.hpi",
@@ -1669,7 +1595,6 @@
             "name": "Linux System Tools",
             "plugin_folder_name": "LinuxSystemTools",
             "doc_folder_name": "linux-system-tools",
-            "documentation_name": "linux-system-tools",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1699,7 +1624,6 @@
             "name": "LuntbuildSourceConfig",
             "plugin_folder_name": "LuntbuildSourceConfig",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "LuntbuildSourceConfig-3.786807.zip",
@@ -1711,7 +1635,6 @@
             "name": "IBM MobileFirst Platform Foundation on IBM Containers",
             "plugin_folder_name": "MFPFC",
             "doc_folder_name": "ibm-mobilefirst-platform-foundation-on-ibm-containers",
-            "documentation_name": "ibm-mobilefirst-platform-foundation-on-ibm-containers",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1731,7 +1654,6 @@
             "name": "Microsoft Software Installer (MSI)",
             "plugin_folder_name": "MSI",
             "doc_folder_name": "microsoft-software-installer-msi",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "MSI-2.879047.zip",
@@ -1743,7 +1665,6 @@
             "name": "MaaS360",
             "plugin_folder_name": "MaaS360",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "plugin-mobilefirst-MaaS360_v14.zip"
@@ -1754,7 +1675,6 @@
             "name": "Maven Resolve",
             "plugin_folder_name": "Maven",
             "doc_folder_name": "maven-resolve",
-            "documentation_name": "maven-resolve",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1781,7 +1701,6 @@
             "name": "MavenResolve",
             "plugin_folder_name": "MavenResolve",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "Maven-1.423661.zip",
@@ -1798,7 +1717,6 @@
             "name": "Maven",
             "plugin_folder_name": "MavenSourceConfig",
             "doc_folder_name": "maven",
-            "documentation_name": "maven",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1843,7 +1761,6 @@
             "name": "MicrosoftSQLServerSQLCmd",
             "plugin_folder_name": "MicrosoftSQLServerSQLCmd",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "SQLCmd-4.455081.zip",
@@ -1855,7 +1772,6 @@
             "name": "Microsoft SSIS",
             "plugin_folder_name": "MicrosoftSSIS",
             "doc_folder_name": "microsoft-ssis",
-            "documentation_name": "microsoft-ssis",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1879,7 +1795,6 @@
             "name": "MicrosoftTFS-WorkItems",
             "plugin_folder_name": "MicrosoftTFS-WorkItems",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "TFS-WorkItems-1.474464.zip",
@@ -1891,7 +1806,6 @@
             "name": "Citrix NetScaler",
             "plugin_folder_name": "Netscaler",
             "doc_folder_name": "citrix-netscaler",
-            "documentation_name": "citrix-netscaler",
             "doc_tabs": [],
             "files": [
                 "Netscaler-7.851185.zip",
@@ -1903,7 +1817,6 @@
             "name": "OSB",
             "plugin_folder_name": "OSB",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "OSB-Configuration-Management-8.504118.zip"
@@ -1914,7 +1827,6 @@
             "name": "OpenShift",
             "plugin_folder_name": "OpenShiftSourceConfig",
             "doc_folder_name": "openshift",
-            "documentation_name": "openshift",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1938,7 +1850,6 @@
             "name": "OracleSQLPlus",
             "plugin_folder_name": "OracleSQLPlus",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "SQLPlus-5.423603.zip",
@@ -1952,7 +1863,6 @@
             "name": "IBM UrbanCode PHP CLI Tool",
             "plugin_folder_name": "PHPCLI",
             "doc_folder_name": "ibm-urbancode-php-cli-tool",
-            "documentation_name": "ibm-urbancode-php-cli-tool",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1983,7 +1893,6 @@
             "name": "Perforce Helix",
             "plugin_folder_name": "PerforceSourceConfig",
             "doc_folder_name": "perforce-helix",
-            "documentation_name": "perforce-helix",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2011,7 +1920,6 @@
             "name": "PowerShell",
             "plugin_folder_name": "PowerShell",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "PowerShell-Integration-1.708445.zip",
@@ -2023,7 +1931,6 @@
             "name": "Powershell",
             "plugin_folder_name": "Powershell",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "Powershell-3.1100857.zip"
@@ -2034,7 +1941,6 @@
             "name": "PVCS",
             "plugin_folder_name": "PvcsSourceConfig",
             "doc_folder_name": "pvcs",
-            "documentation_name": "pvcs",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2061,7 +1967,6 @@
             "name": "HP Unified Functional Testing (QTP)",
             "plugin_folder_name": "QTP",
             "doc_folder_name": "hp-unified-functional-testing-qtp",
-            "documentation_name": "hp-unified-functional-testing-qtp",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2085,7 +1990,6 @@
             "name": "IBM Rational Asset Manager",
             "plugin_folder_name": "RAM",
             "doc_folder_name": "ibm-rational-asset-manager",
-            "documentation_name": "ibm-rational-asset-manager",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2109,7 +2013,6 @@
             "name": "IBM Rational Asset Manager for IBM UrbanCode Deploy",
             "plugin_folder_name": "RAMSourceConfig",
             "doc_folder_name": "ibm-rational-asset-manager-2",
-            "documentation_name": "ibm-rational-asset-manager-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2143,7 +2046,6 @@
             "name": "RFT",
             "plugin_folder_name": "RFT",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "RTW-RFT8.6.0.3.zip",
@@ -2155,7 +2057,6 @@
             "name": "IBM Rational Functional Tester (RFT)",
             "plugin_folder_name": "RFT-UCD",
             "doc_folder_name": "ibm-rational-functional-tester-rft",
-            "documentation_name": "ibm-rational-functional-tester-rft",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2181,7 +2082,6 @@
             "name": "IBM Rational Test Workbench Web UI Tester",
             "plugin_folder_name": "RFT-WebUI-UCD",
             "doc_folder_name": "ibm-rational-test-workbench-web-ui-tester",
-            "documentation_name": "ibm-rational-test-workbench-web-ui-tester",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2211,7 +2111,6 @@
             "name": "RIT",
             "plugin_folder_name": "RIT",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "RTW-RIT8.7.zip"
@@ -2222,7 +2121,6 @@
             "name": "IBM Rational Integration Tester (RIT)",
             "plugin_folder_name": "RIT-UCD",
             "doc_folder_name": "ibm-rational-integration-tester-rit",
-            "documentation_name": "ibm-rational-integration-tester-rit",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2248,7 +2146,6 @@
             "name": "RPM",
             "plugin_folder_name": "RPM",
             "doc_folder_name": "rpm",
-            "documentation_name": "rpm",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2277,7 +2174,6 @@
             "name": "RPT",
             "plugin_folder_name": "RPT",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "RTW-RPT8.7.zip"
@@ -2288,7 +2184,6 @@
             "name": "IBM Rational Performance Tester (RPT)",
             "plugin_folder_name": "RPT-UCD",
             "doc_folder_name": "ibm-rational-performance-tester-rpt",
-            "documentation_name": "ibm-rational-performance-tester-rpt",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2317,7 +2212,6 @@
             "name": "RQM",
             "plugin_folder_name": "RQM",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "RQM-4.753298.zip"
@@ -2328,7 +2222,6 @@
             "name": "IBM Rational Test Automation Server (RTAS)",
             "plugin_folder_name": "RTAS-UCD",
             "doc_folder_name": "ibm-rational-test-automation-server-rtas",
-            "documentation_name": "ibm-rational-test-automation-server-rtas",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2355,7 +2248,6 @@
             "name": "RTCSCM",
             "plugin_folder_name": "RTCSCM",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "air-plugin-RTC-scm-1.526059.zip",
@@ -2367,7 +2259,6 @@
             "name": "RTCWorkItems",
             "plugin_folder_name": "RTCWorkItems",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "plugin-air-RTC-WorkItems-1.446762.zip",
@@ -2381,7 +2272,6 @@
             "name": "IBM Rational Test Virtualization Server (RTVS)",
             "plugin_folder_name": "RTVS-UCD",
             "doc_folder_name": "ibm-rational-test-virtualization-server-rtvs",
-            "documentation_name": "ibm-rational-test-virtualization-server-rtvs",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2407,7 +2297,6 @@
             "name": "RTWec",
             "plugin_folder_name": "RTWec",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "RTW-RTWec8.7.zip",
@@ -2419,7 +2308,6 @@
             "name": "Rally for IBM UrbanCode Deploy",
             "plugin_folder_name": "Rally",
             "doc_folder_name": "rally-2",
-            "documentation_name": "rally-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2444,7 +2332,6 @@
             "name": "RationalQualityManager",
             "plugin_folder_name": "RationalQualityManager",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "RQM-2.455153.zip",
@@ -2466,7 +2353,6 @@
             "name": "BMC Remedy Action Request System",
             "plugin_folder_name": "Remedy",
             "doc_folder_name": "bmc-remedy-action-request-system",
-            "documentation_name": "bmc-remedy-action-request-system",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2488,7 +2374,6 @@
             "name": "SAP Change and Transport System (CTS)",
             "plugin_folder_name": "SAP-CTS",
             "doc_folder_name": "sap-change-and-transport-system-cts",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "SAP-CTS-1.971690.zip",
@@ -2500,7 +2385,6 @@
             "name": "SQL-JDBC",
             "plugin_folder_name": "SQL-JDBC",
             "doc_folder_name": "sql-jdbc",
-            "documentation_name": "sql-jdbc",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2535,7 +2419,6 @@
             "name": "Microsoft SQL Server SQLCmd",
             "plugin_folder_name": "SQLCmd",
             "doc_folder_name": "microsoft-sql-server-sqlcmd",
-            "documentation_name": "microsoft-sql-server-sqlcmd",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2564,7 +2447,6 @@
             "name": "SQLJDBC",
             "plugin_folder_name": "SQLJDBC",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "SQL-JDBC-4.423630.zip",
@@ -2578,7 +2460,6 @@
             "name": "Oracle SQLPlus",
             "plugin_folder_name": "SQLPlus",
             "doc_folder_name": "oracle-sqlplus",
-            "documentation_name": "oracle-sqlplus",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2618,7 +2499,6 @@
             "name": "SalesForce",
             "plugin_folder_name": "SalesForce",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "salesforce-1.680469.zip",
@@ -2638,7 +2518,6 @@
             "name": "Selenium",
             "plugin_folder_name": "Selenium",
             "doc_folder_name": "selenium",
-            "documentation_name": "selenium",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2667,7 +2546,6 @@
             "name": "Microsoft Windows Services",
             "plugin_folder_name": "ServiceControlManager",
             "doc_folder_name": "microsoft-windows-services",
-            "documentation_name": "microsoft-windows-services",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2692,7 +2570,6 @@
             "name": "ServiceNow",
             "plugin_folder_name": "ServiceNow",
             "doc_folder_name": "servicenow",
-            "documentation_name": "servicenow",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2744,7 +2621,6 @@
             "name": "ServiceVirtualization",
             "plugin_folder_name": "ServiceVirtualization",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "RTW-SV8.7.zip"
@@ -2755,7 +2631,6 @@
             "name": "Microsoft SharePoint",
             "plugin_folder_name": "Sharepoint",
             "doc_folder_name": "microsoft-sharepoint",
-            "documentation_name": "microsoft-sharepoint",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2778,7 +2653,6 @@
             "name": "Shell",
             "plugin_folder_name": "Shell",
             "doc_folder_name": "shell",
-            "documentation_name": "shell",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2817,7 +2691,6 @@
             "name": "SourceConfig",
             "plugin_folder_name": "SourceConfig",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "AnthillPro",
@@ -2841,7 +2714,6 @@
             "name": "StarTeamSourceConfig",
             "plugin_folder_name": "StarTeamSourceConfig",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "StarTeamSourceConfig-3.786813.zip",
@@ -2854,7 +2726,6 @@
             "name": "Subversion-Export",
             "plugin_folder_name": "Subversion-export",
             "doc_folder_name": "subversion-export",
-            "documentation_name": "subversion-export",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2880,7 +2751,6 @@
             "name": "SubversionExport",
             "plugin_folder_name": "SubversionExport",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "Subversion-export-2.423664.zip",
@@ -2893,7 +2763,6 @@
             "name": "Subversion",
             "plugin_folder_name": "SubversionSourceConfig",
             "doc_folder_name": "subversion",
-            "documentation_name": "subversion",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2930,7 +2799,6 @@
             "name": "System Information",
             "plugin_folder_name": "SystemInformation",
             "doc_folder_name": "system-information",
-            "documentation_name": "system-information",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -2959,7 +2827,6 @@
             "name": "Microsoft TFS (Team Foundation Server)",
             "plugin_folder_name": "TFS-SourceConfig",
             "doc_folder_name": "microsoft-tfs-team-foundation-server",
-            "documentation_name": "microsoft-tfs-team-foundation-server",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3001,7 +2868,6 @@
             "name": "Microsoft TFS_SCM (Team Foundation Server)",
             "plugin_folder_name": "TFS_SCM-SourceConfig",
             "doc_folder_name": "microsoft-tfs_scm-team-foundation-server",
-            "documentation_name": "microsoft-tfs_scm-team-foundation-server",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3037,7 +2903,6 @@
             "name": "TeamCity",
             "plugin_folder_name": "TeamCity",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "TeamCitySourceConfig-2.467089.zip",
@@ -3050,7 +2915,6 @@
             "name": "TeamCity",
             "plugin_folder_name": "TeamCitySourceConfig",
             "doc_folder_name": "teamcity",
-            "documentation_name": "teamcity",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3088,7 +2952,6 @@
             "name": "Apache Tomcat",
             "plugin_folder_name": "Tomcat",
             "doc_folder_name": "apache-tomcat",
-            "documentation_name": "apache-tomcat",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3118,7 +2981,6 @@
             "name": "IBM UrbanCode Package Manager",
             "plugin_folder_name": "UrbanCodePackageManager",
             "doc_folder_name": "ibm-urbancode-package-manager",
-            "documentation_name": "ibm-urbancode-package-manager",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3138,7 +3000,6 @@
             "name": "UrbanCodeRelease",
             "plugin_folder_name": "UrbanCodeRelease",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ucr-plugin-1.489188.zip",
@@ -3150,8 +3011,7 @@
         {
             "name": "IBM UrbanCode Deploy Versioned File Storage",
             "plugin_folder_name": "UrbancodeVFS",
-            "doc_folder_name": "ibm-urbancode-deploy-versioned-file-storage",
-            "documentation_name": "ibm-urbancode-deploy-versioned-file-storage-2",
+            "doc_folder_name": "ibm-urbancode-deploy-versioned-file-storage-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3198,7 +3058,6 @@
             "name": "WASconfigure",
             "plugin_folder_name": "WASconfigure",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "SampleProcesses",
@@ -3223,7 +3082,6 @@
             "name": "WASinstall",
             "plugin_folder_name": "WASinstall",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "WAS-Install-1.640462.zip",
@@ -3236,7 +3094,6 @@
             "name": "Oracle WebLogic WLDeploy",
             "plugin_folder_name": "WLDeploy",
             "doc_folder_name": "oracle-weblogic-wldeploy",
-            "documentation_name": "oracle-weblogic-wldeploy",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3277,7 +3134,6 @@
             "name": "WLIResourceMgmt",
             "plugin_folder_name": "WLIResourceMgmt",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "WLI-Resource-Management-1.485262.zip"
@@ -3288,7 +3144,6 @@
             "name": "WLST",
             "plugin_folder_name": "WLST",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "WebLogic-WLST-1.695186.zip",
@@ -3300,7 +3155,6 @@
             "name": "IBM WebSphere Service Registry and Repository",
             "plugin_folder_name": "WSRR",
             "doc_folder_name": "ibm-websphere-service-registry-and-repository",
-            "documentation_name": "ibm-websphere-service-registry-and-repository",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3327,7 +3181,6 @@
             "name": "Oracle WebLogic Scripting Tool (WLST)",
             "plugin_folder_name": "WebLogic-WLST",
             "doc_folder_name": "oracle-weblogic-scripting-tool-wlst",
-            "documentation_name": "oracle-weblogic-scripting-tool-wlst",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3353,7 +3206,6 @@
             "name": "WebLogicAppDeploy",
             "plugin_folder_name": "WebLogicAppDeploy",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "WebLogic-Application-Deployment-3.489466.zip",
@@ -3368,7 +3220,6 @@
             "name": "WebLogicResourceMgmt",
             "plugin_folder_name": "WebLogicResourceMgmt",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "WLS-Resource-Management-2.504116.zip",
@@ -3381,7 +3232,6 @@
             "name": "Oracle WebLogic Server Security Management",
             "plugin_folder_name": "WebLogicSecurityMgmt",
             "doc_folder_name": "oracle-weblogic-server-security-management",
-            "documentation_name": "oracle-weblogic-server-security-management",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3409,7 +3259,6 @@
             "name": "IBM Business Process Manager (WebSphere BPM) for IBM UrbanCode Deploy",
             "plugin_folder_name": "WebSphereBPM",
             "doc_folder_name": "ibm-business-process-manager-websphere-bpm-2",
-            "documentation_name": "ibm-business-process-manager-websphere-bpm-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3452,7 +3301,6 @@
             "name": "IBM Business Process Manager (WebSphere BPM)",
             "plugin_folder_name": "WebSphereBPMSourceConfig",
             "doc_folder_name": "ibm-business-process-manager-websphere-bpm",
-            "documentation_name": "ibm-business-process-manager-websphere-bpm",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3484,7 +3332,6 @@
             "name": "IBM WebSphere Commerce",
             "plugin_folder_name": "WebSphereCommerce",
             "doc_folder_name": "ibm-websphere-commerce",
-            "documentation_name": "ibm-websphere-commerce",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3512,7 +3359,6 @@
             "name": "WebSphere Application Server \u2013 Configure",
             "plugin_folder_name": "WebSphereConfiguration",
             "doc_folder_name": "websphere-application-server-configure",
-            "documentation_name": "websphere-application-server-configure",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3606,7 +3452,6 @@
             "name": "IBM WebSphere Liberty",
             "plugin_folder_name": "WebSphereLiberty",
             "doc_folder_name": "ibm-websphere-liberty",
-            "documentation_name": "ibm-websphere-liberty",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3656,7 +3501,6 @@
             "name": "IBM-MQ",
             "plugin_folder_name": "WebSphereMQ",
             "doc_folder_name": "ibm-mq",
-            "documentation_name": "ibm-mq",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3688,7 +3532,6 @@
             "name": "IBM Integration Bus (formerly WebSphere Message Broker) \u2013 CMP",
             "plugin_folder_name": "WebSphereMessageBroker-CMP",
             "doc_folder_name": "ibm-integration-bus-formerly-websphere-message-broker-cmp",
-            "documentation_name": "ibm-integration-bus-formerly-websphere-message-broker-cmp",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3747,7 +3590,6 @@
             "name": "WebSphereMessageBrokerCMP",
             "plugin_folder_name": "WebSphereMessageBrokerCMP",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "WebSphereMessageBroker-CMP-6.424588.zip",
@@ -3767,7 +3609,6 @@
             "name": "IBM WebSphere Portal",
             "plugin_folder_name": "WebSpherePortal",
             "doc_folder_name": "ibm-websphere-portal",
-            "documentation_name": "ibm-websphere-portal",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3802,7 +3643,6 @@
             "name": "WebUtilities",
             "plugin_folder_name": "WebUtilities",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "web-utilities-1.446294.zip",
@@ -3815,7 +3655,6 @@
             "name": "WebSphere Application Server \u2013 Deployment",
             "plugin_folder_name": "Websphere",
             "doc_folder_name": "websphere-application-server-deployment",
-            "documentation_name": "websphere-application-server-deployment",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3889,7 +3728,6 @@
             "name": "WinRS Agent Install",
             "plugin_folder_name": "WinRSAgentInstall",
             "doc_folder_name": "winrs-agent-install",
-            "documentation_name": "winrs-agent-install",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3919,7 +3757,6 @@
             "name": "Microsoft Windows Failover Clusters",
             "plugin_folder_name": "WindowsFailoverCluster",
             "doc_folder_name": "microsoft-windows-failover-clusters",
-            "documentation_name": "microsoft-windows-failover-clusters",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3943,7 +3780,6 @@
             "name": "WindowsFailoverClusters",
             "plugin_folder_name": "WindowsFailoverClusters",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "WindowsFailoverCluster-3.455119.zip",
@@ -3955,7 +3791,6 @@
             "name": "Microsoft Windows System Tools",
             "plugin_folder_name": "WindowsSystemTools",
             "doc_folder_name": "microsoft-windows-system-tools",
-            "documentation_name": "microsoft-windows-system-tools",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -3994,7 +3829,6 @@
             "name": "CA SCM (formerly Harvest)",
             "plugin_folder_name": "air-plugin-CASCM",
             "doc_folder_name": "ca-scm-formerly-harvest",
-            "documentation_name": "ca-scm-formerly-harvest",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4014,7 +3848,6 @@
             "name": "IBM Rational Team Concert \u2013 SCM",
             "plugin_folder_name": "air-plugin-RTC-scm",
             "doc_folder_name": "ibm-rational-team-concert-scm",
-            "documentation_name": "ibm-rational-team-concert-scm",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4044,7 +3877,6 @@
             "name": "air-terraform",
             "plugin_folder_name": "air-terraform",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "air-terraform-12.786819.zip",
@@ -4056,7 +3888,6 @@
             "name": "IBM MobileFirst Platform (formerly Worklight)",
             "plugin_folder_name": "air-worklight",
             "doc_folder_name": "ibm-mobilefirst-platform-formerly-worklight",
-            "documentation_name": "ibm-mobilefirst-platform-formerly-worklight",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4093,7 +3924,6 @@
             "name": "IBM API Connect",
             "plugin_folder_name": "apiconnect",
             "doc_folder_name": "ibm-api-connect",
-            "documentation_name": "ibm-api-connect",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4132,7 +3962,6 @@
             "name": "IBM AppScan Enterprise",
             "plugin_folder_name": "appscan",
             "doc_folder_name": "ibm-appscan-enterprise",
-            "documentation_name": "ibm-appscan-enterprise",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4161,7 +3990,6 @@
             "name": "Aspera",
             "plugin_folder_name": "aspera",
             "doc_folder_name": "aspera",
-            "documentation_name": "aspera",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4185,7 +4013,6 @@
             "name": "Amazon Web Services (AWS) Lambda",
             "plugin_folder_name": "aws-lambda",
             "doc_folder_name": "amazon-web-services-aws-lambda",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "aws-lambda-1.920392.zip"
@@ -4196,7 +4023,6 @@
             "name": "IBM BigFix",
             "plugin_folder_name": "bigfix",
             "doc_folder_name": "ibm-bigfix",
-            "documentation_name": "ibm-bigfix",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4218,7 +4044,6 @@
             "name": "bluemix",
             "plugin_folder_name": "bluemix",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "bluemix-1.1100940.zip"
@@ -4229,7 +4054,6 @@
             "name": "IBM Bluemix Auto-Scaling",
             "plugin_folder_name": "bluemix-autoscale",
             "doc_folder_name": "ibm-bluemix-auto-scaling",
-            "documentation_name": "ibm-bluemix-auto-scaling",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4251,7 +4075,6 @@
             "name": "Cloud Foundry",
             "plugin_folder_name": "cloud-foundry",
             "doc_folder_name": "cloud-foundry",
-            "documentation_name": "cloud-foundry",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4297,7 +4120,6 @@
             "name": "IBM Containers",
             "plugin_folder_name": "cloud-foundry-ibm-containers",
             "doc_folder_name": "ibm-containers",
-            "documentation_name": "ibm-containers",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4324,7 +4146,6 @@
             "name": "IBM Cognos Analytics",
             "plugin_folder_name": "cognos-analytics",
             "doc_folder_name": "ibm-cognos-analytics",
-            "documentation_name": "ibm-cognos-analytics",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4350,7 +4171,6 @@
             "name": "cyberark",
             "plugin_folder_name": "cyberark",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "cyberark-3.976678.zip",
@@ -4362,7 +4182,6 @@
             "name": "IBM DataPower Configuration Manager",
             "plugin_folder_name": "datapower",
             "doc_folder_name": "ibm-datapower-configuration-manager",
-            "documentation_name": "ibm-datapower-configuration-manager",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4401,7 +4220,6 @@
             "name": "IBM InfoSphere DataStage",
             "plugin_folder_name": "datastage",
             "doc_folder_name": "ibm-infosphere-datastage",
-            "documentation_name": "ibm-infosphere-datastage",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4434,7 +4252,6 @@
             "name": "Docker Compose",
             "plugin_folder_name": "docker-compose",
             "doc_folder_name": "docker-compose",
-            "documentation_name": "docker-compose",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4463,7 +4280,6 @@
             "name": "Docker",
             "plugin_folder_name": "docker-plugin",
             "doc_folder_name": "docker",
-            "documentation_name": "docker",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4489,7 +4305,6 @@
             "name": "IBM UrbanCode Deploy General Utilites",
             "plugin_folder_name": "general-utilities",
             "doc_folder_name": "ibm-urbancode-deploy-general-utilites",
-            "documentation_name": "ibm-urbancode-deploy-general-utilites",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4515,7 +4330,6 @@
             "name": "HP LoadRunner",
             "plugin_folder_name": "hp-loadrunner",
             "doc_folder_name": "hp-loadrunner",
-            "documentation_name": "hp-loadrunner",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4539,7 +4353,6 @@
             "name": "iOS",
             "plugin_folder_name": "iOS",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "plugin-air-iOS-1.552148.zip",
@@ -4551,7 +4364,6 @@
             "name": "App Connect Enterprise",
             "plugin_folder_name": "ibm-ace",
             "doc_folder_name": "app-connect-enterprise",
-            "documentation_name": "app-connect-enterprise",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4580,7 +4392,6 @@
             "name": "ibm-asoc",
             "plugin_folder_name": "ibm-asoc",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "IBM-ASoC-UCD-10.1001143.zip",
@@ -4594,7 +4405,6 @@
             "name": "IBM Operational Decision Manager (ODM)",
             "plugin_folder_name": "ibm-odm",
             "doc_folder_name": "ibm-operational-decision-manager-odm",
-            "documentation_name": "ibm-operational-decision-manager-odm",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4629,7 +4439,6 @@
             "name": "IBM Operational Decision Manager (ODM) Source Config",
             "plugin_folder_name": "ibm-odm-source-config",
             "doc_folder_name": "ibm-operational-decision-manager-odm-source-config",
-            "documentation_name": "ibm-operational-decision-manager-odm-source-config",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4663,7 +4472,6 @@
             "name": "ibm-rtas",
             "plugin_folder_name": "ibm-rtas",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "plugins-ibm-rtas-1.1036707.zip",
@@ -4676,7 +4484,6 @@
             "name": "Microsoft IIS \u2013 Configure",
             "plugin_folder_name": "iis-configuration",
             "doc_folder_name": "microsoft-iis-configure",
-            "documentation_name": "microsoft-iis-configure",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4718,7 +4525,6 @@
             "name": "InfoSphere-ISD",
             "plugin_folder_name": "infosphere-isd",
             "doc_folder_name": "infosphere-isd",
-            "documentation_name": "infosphere-isd",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4739,7 +4545,6 @@
             "name": "z/OS Shell",
             "plugin_folder_name": "java-shell",
             "doc_folder_name": "z-os-shell",
-            "documentation_name": "z-os-shell",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4763,7 +4568,6 @@
             "name": "Jenkins Pipeline",
             "plugin_folder_name": "jenkins-pipeline-ud-plugin",
             "doc_folder_name": "jenkins-pipeline",
-            "documentation_name": "jenkins-pipeline",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4810,7 +4614,6 @@
             "name": "jenkins-ucr-plugin",
             "plugin_folder_name": "jenkins-ucr-plugin",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ibm-ucrelease-pipeline-1.919985.hpi"
@@ -4821,7 +4624,6 @@
             "name": "Jenkins Publisher",
             "plugin_folder_name": "jenkins-ud-plugin",
             "doc_folder_name": "jenkins-publisher",
-            "documentation_name": "jenkins-publisher",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4854,7 +4656,6 @@
             "name": "Kubernetes",
             "plugin_folder_name": "kubernetes",
             "doc_folder_name": "kubernetes",
-            "documentation_name": "kubernetes",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4906,7 +4707,6 @@
             "name": "maximo",
             "plugin_folder_name": "maximo",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "plugins-maximo-1.1088514.zip"
@@ -4917,7 +4717,6 @@
             "name": "Mesos Marathon",
             "plugin_folder_name": "mesos-marathon",
             "doc_folder_name": "mesos-marathon",
-            "documentation_name": "mesos-marathon",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4939,7 +4738,6 @@
             "name": "Mulesoft",
             "plugin_folder_name": "mulesoft",
             "doc_folder_name": "mulesoft",
-            "documentation_name": "mulesoft",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4959,7 +4757,6 @@
             "name": "Nexus",
             "plugin_folder_name": "nexus",
             "doc_folder_name": "nexus",
-            "documentation_name": "nexus",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -4982,7 +4779,6 @@
             "name": "Nexus Source Config",
             "plugin_folder_name": "nexus-source-config",
             "doc_folder_name": "nexus-source-config",
-            "documentation_name": "nexus-source-config",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5009,7 +4805,6 @@
             "name": "NuGet",
             "plugin_folder_name": "nuget-source-config",
             "doc_folder_name": "nuget",
-            "documentation_name": "nuget",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5046,7 +4841,6 @@
             "name": "HCL OneTest Server",
             "plugin_folder_name": "onetest-server",
             "doc_folder_name": "hcl-onetest-server",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "plugins-onetest-server-1.1036616.zip",
@@ -5061,7 +4855,6 @@
             "name": "OpenShift for IBM UrbanCode Deploy",
             "plugin_folder_name": "openshift",
             "doc_folder_name": "openshift-2",
-            "documentation_name": "openshift-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5099,7 +4892,6 @@
             "name": "IBM InfoSphere Optim",
             "plugin_folder_name": "optim",
             "doc_folder_name": "ibm-infosphere-optim",
-            "documentation_name": "ibm-infosphere-optim",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5119,7 +4911,6 @@
             "name": "Google Android SDK",
             "plugin_folder_name": "plugin-air-Android",
             "doc_folder_name": "google-android-sdk",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "plugin-air-Android-3.859578.zip",
@@ -5132,7 +4923,6 @@
             "name": "plugin-air-InstallationManager",
             "plugin_folder_name": "plugin-air-InstallationManager",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "plugin-air-InstallationManager-3.754150.zip"
@@ -5143,7 +4933,6 @@
             "name": "Oracle Service Bus Configuration Management",
             "plugin_folder_name": "plugin-air-OSB-Configuration-Management",
             "doc_folder_name": "oracle-service-bus-configuration-management",
-            "documentation_name": "oracle-service-bus-configuration-management",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5165,7 +4954,6 @@
             "name": "IBM Rational Team Concert Work Items",
             "plugin_folder_name": "plugin-air-RTC-WorkItems",
             "doc_folder_name": "ibm-rational-team-concert-work-items",
-            "documentation_name": "ibm-rational-team-concert-work-items",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5194,7 +4982,6 @@
             "name": "Microsoft TFS Work Items",
             "plugin_folder_name": "plugin-air-TFS-WorkItems",
             "doc_folder_name": "microsoft-tfs-work-items",
-            "documentation_name": "microsoft-tfs-work-items",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5219,7 +5006,6 @@
             "name": "Oracle WebLogic Integration Resource Management",
             "plugin_folder_name": "plugin-air-WLI-Resource-Management",
             "doc_folder_name": "oracle-weblogic-integration-resource-management",
-            "documentation_name": "oracle-weblogic-integration-resource-management",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5249,7 +5035,6 @@
             "name": "Oracle WebLogic Server Resource Management",
             "plugin_folder_name": "plugin-air-WLS-Resource-Management",
             "doc_folder_name": "oracle-weblogic-server-resource-management",
-            "documentation_name": "oracle-weblogic-server-resource-management",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5272,7 +5057,6 @@
             "name": "Oracle WebLogic Application Deployment",
             "plugin_folder_name": "plugin-air-WebLogic-Application-Deployment",
             "doc_folder_name": "oracle-weblogic-application-deployment",
-            "documentation_name": "oracle-weblogic-application-deployment",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5298,7 +5082,6 @@
             "name": "plugin-air-iOS",
             "plugin_folder_name": "plugin-air-iOS",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "plugin-air-iOS-3.861096.zip"
@@ -5309,7 +5092,6 @@
             "name": "PowerShell",
             "plugin_folder_name": "powershell-integration",
             "doc_folder_name": "powershell",
-            "documentation_name": "powershell",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5343,7 +5125,6 @@
             "name": "Resource Utilities",
             "plugin_folder_name": "resource-utilities",
             "doc_folder_name": "resource-utilities",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "Resource-Utilities-UCD-1.0.zip"
@@ -5354,7 +5135,6 @@
             "name": "Salesforce",
             "plugin_folder_name": "salesforce",
             "doc_folder_name": "salesforce",
-            "documentation_name": "salesforce",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5379,7 +5159,6 @@
             "name": "sourceconfig-azure",
             "plugin_folder_name": "sourceconfig-azure",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "plugins-sourceconfig-azure-1.1112501.zip"
@@ -5390,7 +5169,6 @@
             "name": "GitHub-Release",
             "plugin_folder_name": "sourceconfig-github-release",
             "doc_folder_name": "github-release",
-            "documentation_name": "github-release",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5413,7 +5191,6 @@
             "name": "Nexus Repository Manager V3",
             "plugin_folder_name": "sourceconfig-nexus-v3",
             "doc_folder_name": "nexus-repository-manager-v3",
-            "documentation_name": "nexus-repository-manager-v3",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5439,7 +5216,6 @@
             "name": "NPM",
             "plugin_folder_name": "sourceconfig-npm",
             "doc_folder_name": "npm",
-            "documentation_name": "npm",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5465,7 +5241,6 @@
             "name": "Sybase",
             "plugin_folder_name": "sybase",
             "doc_folder_name": "sybase",
-            "documentation_name": "sybase",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5489,7 +5264,6 @@
             "name": "tririga",
             "plugin_folder_name": "tririga",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "plugins-tririga-1.1030992.zip",
@@ -5501,7 +5275,6 @@
             "name": "IBM UrbanCode uBuild",
             "plugin_folder_name": "uBuild",
             "doc_folder_name": "ibm-urbancode-ubuild",
-            "documentation_name": "ibm-urbancode-ubuild",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5529,7 +5302,6 @@
             "name": "IBM UrbanCode Build",
             "plugin_folder_name": "uBuildSourceConfig",
             "doc_folder_name": "ibm-urbancode-build",
-            "documentation_name": "ibm-urbancode-build",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5565,7 +5337,6 @@
             "name": "IBM UrbanCode Deploy Applications",
             "plugin_folder_name": "uDeploy-Application",
             "doc_folder_name": "ibm-urbancode-deploy-applications",
-            "documentation_name": "ibm-urbancode-deploy-applications",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5607,7 +5378,6 @@
             "name": "IBM UrbanCode Deploy Components",
             "plugin_folder_name": "uDeploy-Component",
             "doc_folder_name": "ibm-urbancode-deploy-components",
-            "documentation_name": "ibm-urbancode-deploy-components",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5646,7 +5416,6 @@
             "name": "IBM UrbanCode Deploy Environments",
             "plugin_folder_name": "uDeploy-Environment",
             "doc_folder_name": "ibm-urbancode-deploy-environments",
-            "documentation_name": "ibm-urbancode-deploy-environments",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5688,7 +5457,6 @@
             "name": "IBM UrbanCode Deploy Process",
             "plugin_folder_name": "uDeploy-Process",
             "doc_folder_name": "ibm-urbancode-deploy-process",
-            "documentation_name": "ibm-urbancode-deploy-process",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5724,7 +5492,6 @@
             "name": "IBM UrbanCode Deploy Resources",
             "plugin_folder_name": "uDeploy-Resource",
             "doc_folder_name": "ibm-urbancode-deploy-resources",
-            "documentation_name": "ibm-urbancode-deploy-resources",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5767,7 +5534,6 @@
             "name": "IBM UrbanCode Deploy System",
             "plugin_folder_name": "uDeploy-System",
             "doc_folder_name": "ibm-urbancode-deploy-system",
-            "documentation_name": "ibm-urbancode-deploy-system",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5793,7 +5559,6 @@
             "name": "IBM UrbanCode Deploy Versions",
             "plugin_folder_name": "uDeploy-Version",
             "doc_folder_name": "ibm-urbancode-deploy-versions",
-            "documentation_name": "ibm-urbancode-deploy-versions",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5826,7 +5591,6 @@
             "name": "IBM UrbanCode Deploy Configuration Management",
             "plugin_folder_name": "uDeployConfigManagement",
             "doc_folder_name": "ibm-urbancode-deploy-configuration-management",
-            "documentation_name": "ibm-urbancode-deploy-configuration-management",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5865,7 +5629,6 @@
             "name": "IBM UrbanCode Release",
             "plugin_folder_name": "ucr-plugin",
             "doc_folder_name": "ibm-urbancode-release",
-            "documentation_name": "ibm-urbancode-release",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5891,7 +5654,6 @@
             "name": "Web Utilities",
             "plugin_folder_name": "web-utilities",
             "doc_folder_name": "web-utilities",
-            "documentation_name": "web-utilities",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5928,7 +5690,6 @@
             "name": "IBM Security Access Manager (WebSEAL)",
             "plugin_folder_name": "webseal",
             "doc_folder_name": "ibm-security-access-manager-webseal",
-            "documentation_name": "ibm-security-access-manager-webseal",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5948,7 +5709,6 @@
             "name": "WebSphere Application Server \u2013 Install",
             "plugin_folder_name": "websphere-install",
             "doc_folder_name": "websphere-application-server-install",
-            "documentation_name": "websphere-application-server-install",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -5979,7 +5739,6 @@
             "name": "zOS",
             "plugin_folder_name": "zOS",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "zos-deploy-1.531990.zip",
@@ -5996,8 +5755,7 @@
         {
             "name": "z/OS External Artifact Repository",
             "plugin_folder_name": "zOS-external-artifact-download",
-            "doc_folder_name": "external-artifact-repository",
-            "documentation_name": "external-artifact-repository-2",
+            "doc_folder_name": "external-artifact-repository-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -6028,7 +5786,6 @@
             "name": "z/OS File Source Config",
             "plugin_folder_name": "zOSFileSourceConfig",
             "doc_folder_name": "z-os-file-source-config",
-            "documentation_name": "z-os-file-source-config",
             "doc_tabs": [],
             "files": [
                 "zOSFileSourceConfig-1.839698.zip",
@@ -6045,7 +5802,6 @@
             "name": "z/OS Dataset Writer",
             "plugin_folder_name": "zos-dataset-writer",
             "doc_folder_name": "zos-dataset-writer",
-            "documentation_name": "zos-dataset-writer",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -6070,8 +5826,7 @@
         {
             "name": "z/OS Utility",
             "plugin_folder_name": "zos-deploy",
-            "doc_folder_name": "z-os-utility",
-            "documentation_name": "z-os-utility-2",
+            "doc_folder_name": "z-os-utility-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -6168,7 +5923,6 @@
             "name": "z/OS FTP Utility",
             "plugin_folder_name": "zos-ftp",
             "doc_folder_name": "z-os-ftp-utility",
-            "documentation_name": "z-os-ftp-utility",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -6189,7 +5943,6 @@
             "name": "IBM Integration Bus (IIB) plugin Deploy step for zOS",
             "plugin_folder_name": "zos-ibm-integration-bus-ucd",
             "doc_folder_name": "ibm-integration-bus-iib-plugin-deploy-step-for-zos",
-            "documentation_name": "ibm-integration-bus-iib-plugin-deploy-step-for-zos",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -6213,7 +5966,6 @@
             "name": "z/OS Multi Generate Artifact Information",
             "plugin_folder_name": "zos-multi-generate-artifact-info",
             "doc_folder_name": "z-os-utility-generate-artifact-information",
-            "documentation_name": "z-os-utility-generate-artifact-information",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -6245,7 +5997,6 @@
             "name": "zos-mvscommand-plugin",
             "plugin_folder_name": "zos-mvscommand-plugin",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "zOSMvsCommand-1.1013963.zip"
@@ -6256,7 +6007,6 @@
             "name": "z/OS USS Utility",
             "plugin_folder_name": "zos-replacetokens-uss",
             "doc_folder_name": "z-os-uss-utility",
-            "documentation_name": "z-os-uss-utility",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -6282,7 +6032,6 @@
             "name": "z/OS Management Facility",
             "plugin_folder_name": "zosmf",
             "doc_folder_name": "zos-management-facility",
-            "documentation_name": "zos-management-facility",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -6318,7 +6067,6 @@
             "name": "7-Zip",
             "plugin_folder_name": "",
             "doc_folder_name": "7-zip",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6327,7 +6075,6 @@
             "name": "Actifio",
             "plugin_folder_name": "",
             "doc_folder_name": "actifio",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6336,7 +6083,6 @@
             "name": "Ansible",
             "plugin_folder_name": "",
             "doc_folder_name": "ansible",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6345,7 +6091,6 @@
             "name": "Apache Hadoop",
             "plugin_folder_name": "",
             "doc_folder_name": "apache-hadoop",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6354,7 +6099,6 @@
             "name": "Apple Xcode",
             "plugin_folder_name": "",
             "doc_folder_name": "apple-xcode",
-            "documentation_name": "apple-xcode",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6363,7 +6107,6 @@
             "name": "Apprenda",
             "plugin_folder_name": "",
             "doc_folder_name": "apprenda",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6372,7 +6115,6 @@
             "name": "Avnet Talos",
             "plugin_folder_name": "",
             "doc_folder_name": "avnet-talos",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6381,7 +6123,6 @@
             "name": "Box",
             "plugin_folder_name": "",
             "doc_folder_name": "box",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6390,7 +6131,6 @@
             "name": "Cloudant",
             "plugin_folder_name": "",
             "doc_folder_name": "cloudant",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6399,7 +6139,6 @@
             "name": "CyberArk",
             "plugin_folder_name": "",
             "doc_folder_name": "cyberark",
-            "documentation_name": "cyberark",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -6421,7 +6160,6 @@
             "name": "Datical DB",
             "plugin_folder_name": "",
             "doc_folder_name": "datical-db",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6430,7 +6168,6 @@
             "name": "DBmaestro",
             "plugin_folder_name": "",
             "doc_folder_name": "dbmaestro",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6439,7 +6176,6 @@
             "name": "eggPlant",
             "plugin_folder_name": "",
             "doc_folder_name": "eggplant",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6448,7 +6184,6 @@
             "name": "Git Install",
             "plugin_folder_name": "",
             "doc_folder_name": "git-install",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6457,7 +6192,6 @@
             "name": "Gradle",
             "plugin_folder_name": "",
             "doc_folder_name": "gradle",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6466,7 +6200,6 @@
             "name": "IBM Db2 for z/OS Package",
             "plugin_folder_name": "",
             "doc_folder_name": "ibm-db2-for-z-os-package",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6475,7 +6208,6 @@
             "name": "IBM Globalization Pipeline",
             "plugin_folder_name": "",
             "doc_folder_name": "ibm-globalization-pipeline",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6484,7 +6216,6 @@
             "name": "IBM Installation Manager",
             "plugin_folder_name": "",
             "doc_folder_name": "ibm-installation-manager",
-            "documentation_name": "ibm-installation-manager",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -6502,7 +6233,6 @@
             "name": "IBM MaaS360",
             "plugin_folder_name": "",
             "doc_folder_name": "ibm-maas360",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6511,7 +6241,6 @@
             "name": "IBM MQ for z/OS \u2013 Generate MQSC Commands",
             "plugin_folder_name": "",
             "doc_folder_name": "ibm-mq-for-z-os-generate-mqsc-commands",
-            "documentation_name": "ibm-mq-for-z-os-generate-mqsc-commands",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -6533,7 +6262,6 @@
             "name": "IBM Rational Automation Framework for WebSphere",
             "plugin_folder_name": "",
             "doc_folder_name": "ibm-rational-automation-framework-for-websphere",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6542,7 +6270,6 @@
             "name": "IBM Rational ClearQuest",
             "plugin_folder_name": "",
             "doc_folder_name": "ibm-rational-clearquest",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6551,7 +6278,6 @@
             "name": "IBM Rational Quality Manager (RQM)",
             "plugin_folder_name": "",
             "doc_folder_name": "ibm-rational-quality-manager-rqm",
-            "documentation_name": "ibm-rational-quality-manager-rqm",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -6577,7 +6303,6 @@
             "name": "IBM Rational Team Concert \u2013 Build",
             "plugin_folder_name": "",
             "doc_folder_name": "ibm-rational-team-concert-build",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6586,7 +6311,6 @@
             "name": "IBM Sterling B2B Integrator",
             "plugin_folder_name": "",
             "doc_folder_name": "ibm-sterling-b2b-integrator",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6595,7 +6319,6 @@
             "name": "IBM VDP",
             "plugin_folder_name": "",
             "doc_folder_name": "ibm-vdp",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6604,7 +6327,6 @@
             "name": "IBM Workload Automation",
             "plugin_folder_name": "",
             "doc_folder_name": "ibm-workload-automation",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6613,7 +6335,6 @@
             "name": "IBM z/TPF Beta",
             "plugin_folder_name": "",
             "doc_folder_name": "ibm-z-tpf-beta",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6622,7 +6343,6 @@
             "name": "Informatica",
             "plugin_folder_name": "",
             "doc_folder_name": "informatica",
-            "documentation_name": "informatica",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -6644,7 +6364,6 @@
             "name": "JBoss-ON",
             "plugin_folder_name": "",
             "doc_folder_name": "jboss-on",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6653,7 +6372,6 @@
             "name": "Jenkins Job Manager",
             "plugin_folder_name": "",
             "doc_folder_name": "jenkins-job-manager",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6662,7 +6380,6 @@
             "name": "Liquibase",
             "plugin_folder_name": "",
             "doc_folder_name": "liquibase",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6671,7 +6388,6 @@
             "name": "LogiGear TestArchitect",
             "plugin_folder_name": "",
             "doc_folder_name": "logigear-testarchitect",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6680,7 +6396,6 @@
             "name": "Microsoft Visual Studio Team Services (VSTS)",
             "plugin_folder_name": "",
             "doc_folder_name": "microsoft-visual-studio-team-services-vsts",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6689,7 +6404,6 @@
             "name": "New Relic",
             "plugin_folder_name": "",
             "doc_folder_name": "new-relic",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6698,7 +6412,6 @@
             "name": "Node-RED",
             "plugin_folder_name": "",
             "doc_folder_name": "node-red",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6707,7 +6420,6 @@
             "name": "Node.js",
             "plugin_folder_name": "",
             "doc_folder_name": "node-js",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6716,7 +6428,6 @@
             "name": "Property Utils",
             "plugin_folder_name": "",
             "doc_folder_name": "property-utils",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6725,7 +6436,6 @@
             "name": "Puppet",
             "plugin_folder_name": "",
             "doc_folder_name": "puppet",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6734,7 +6444,6 @@
             "name": "Send SMTP Email",
             "plugin_folder_name": "",
             "doc_folder_name": "send-smtp-email",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6743,7 +6452,6 @@
             "name": "Siebel",
             "plugin_folder_name": "",
             "doc_folder_name": "siebel",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6752,7 +6460,6 @@
             "name": "Skytap Automation Pack",
             "plugin_folder_name": "",
             "doc_folder_name": "skytap-automation-pack",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6761,7 +6468,6 @@
             "name": "Slack",
             "plugin_folder_name": "",
             "doc_folder_name": "slack",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6770,7 +6476,6 @@
             "name": "Text Utility",
             "plugin_folder_name": "",
             "doc_folder_name": "text-utility",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6779,7 +6484,6 @@
             "name": "TIBCO",
             "plugin_folder_name": "",
             "doc_folder_name": "tibco",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6788,7 +6492,6 @@
             "name": "Venafi",
             "plugin_folder_name": "",
             "doc_folder_name": "venafi",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -6797,7 +6500,6 @@
             "name": "VMware AirWatch",
             "plugin_folder_name": "",
             "doc_folder_name": "vmware-airwatch",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"

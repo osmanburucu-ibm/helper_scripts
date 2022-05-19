@@ -8,6 +8,7 @@
             "name": "AccuRev",
             "plugin_folder_name": "AccuRev",
             "doc_folder_name": "accurev",
+            "documentation_name": "accurev",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -31,6 +32,7 @@
             "name": "AccuWork",
             "plugin_folder_name": "AccuWork",
             "doc_folder_name": "accuwork",
+            "documentation_name": "accuwork",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -56,6 +58,7 @@
             "name": "Ant",
             "plugin_folder_name": "Ant",
             "doc_folder_name": "ant",
+            "documentation_name": "ant",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -80,6 +83,7 @@
             "name": "Artifactory for IBM UrbanCode Build",
             "plugin_folder_name": "Artifactory",
             "doc_folder_name": "artifactory-2",
+            "documentation_name": "artifactory-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -107,6 +111,7 @@
             "name": "ClearCase Base Snapshot",
             "plugin_folder_name": "ClearCaseBaseSnapshot",
             "doc_folder_name": "clearcase-base-snapshot",
+            "documentation_name": "clearcase-base-snapshot",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -136,6 +141,7 @@
             "name": "ClearCase UCM",
             "plugin_folder_name": "ClearCaseUCM",
             "doc_folder_name": "clearcase-ucm",
+            "documentation_name": "clearcase-ucm",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -161,6 +167,7 @@
             "name": "ClearQuest",
             "plugin_folder_name": "ClearQuest",
             "doc_folder_name": "clearquest",
+            "documentation_name": "clearquest",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -183,6 +190,7 @@
             "name": "Clover",
             "plugin_folder_name": "Clover",
             "doc_folder_name": "clover",
+            "documentation_name": "clover",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -203,6 +211,7 @@
             "name": "Cobertura",
             "plugin_folder_name": "Cobertura",
             "doc_folder_name": "cobertura",
+            "documentation_name": "cobertura",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -226,6 +235,7 @@
             "name": "CodeStation",
             "plugin_folder_name": "CodeStation",
             "doc_folder_name": "codestation",
+            "documentation_name": "codestation",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -263,6 +273,7 @@
             "name": "CppUnit",
             "plugin_folder_name": "CppUnit",
             "doc_folder_name": "cppunit",
+            "documentation_name": "cppunit",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -284,6 +295,7 @@
             "name": "Cucumber",
             "plugin_folder_name": "Cucumber",
             "doc_folder_name": "cucumber",
+            "documentation_name": "cucumber",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -303,6 +315,7 @@
             "name": "Docker Build",
             "plugin_folder_name": "Docker",
             "doc_folder_name": "docker-build",
+            "documentation_name": "docker-build",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -326,6 +339,7 @@
             "name": "File System for IBM UrbanCode Build",
             "plugin_folder_name": "FileSystem",
             "doc_folder_name": "file-system-2",
+            "documentation_name": "file-system-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -349,6 +363,7 @@
             "name": "File Utils for IBM UrbanCode Build",
             "plugin_folder_name": "FileUtils",
             "doc_folder_name": "file-utils-2",
+            "documentation_name": "file-utils-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -373,6 +388,7 @@
             "name": "FindBugs",
             "plugin_folder_name": "FindBugs",
             "doc_folder_name": "findbugs",
+            "documentation_name": "findbugs",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -399,6 +415,7 @@
             "name": "Gerrit",
             "plugin_folder_name": "Gerrit",
             "doc_folder_name": "gerrit",
+            "documentation_name": "gerrit",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -418,6 +435,7 @@
             "name": "Git for IBM UrbanCode Build",
             "plugin_folder_name": "Git",
             "doc_folder_name": "git-2",
+            "documentation_name": "git-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -457,6 +475,7 @@
             "name": "Groovy for IBM UrbanCode Build",
             "plugin_folder_name": "Groovy",
             "doc_folder_name": "groovy-2",
+            "documentation_name": "groovy-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -483,6 +502,7 @@
             "name": "HP Fortify",
             "plugin_folder_name": "HPFortify",
             "doc_folder_name": "hp-fortify",
+            "documentation_name": "hp-fortify",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -505,6 +525,7 @@
             "name": "HP Quality Center",
             "plugin_folder_name": "HPQualityCenter",
             "doc_folder_name": "hp-quality-center",
+            "documentation_name": "hp-quality-center",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -533,6 +554,7 @@
             "name": "CA Harvest SCM",
             "plugin_folder_name": "Harvest",
             "doc_folder_name": "ca-harvest-scm",
+            "documentation_name": "ca-harvest-scm",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -559,6 +581,7 @@
             "name": "JIRA for IBM UrbanCode Build",
             "plugin_folder_name": "JIRA",
             "doc_folder_name": "jira-3",
+            "documentation_name": "jira-3",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -582,6 +605,7 @@
             "name": "JUnit for IBM UrbanCode Build",
             "plugin_folder_name": "JUnit",
             "doc_folder_name": "junit",
+            "documentation_name": "junit-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -607,6 +631,7 @@
             "name": "JaCoCo",
             "plugin_folder_name": "Jacoco",
             "doc_folder_name": "jacoco",
+            "documentation_name": "jacoco",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -632,6 +657,7 @@
             "name": "MSBuild",
             "plugin_folder_name": "MSBuild",
             "doc_folder_name": "msbuild",
+            "documentation_name": "msbuild",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -652,6 +678,7 @@
             "name": "MSTest",
             "plugin_folder_name": "MSTest",
             "doc_folder_name": "mstest",
+            "documentation_name": "mstest",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -676,6 +703,7 @@
             "name": "Make",
             "plugin_folder_name": "Make",
             "doc_folder_name": "make",
+            "documentation_name": "make",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -696,6 +724,7 @@
             "name": "Maven for IBM UrbanCode Build",
             "plugin_folder_name": "Maven",
             "doc_folder_name": "maven-2",
+            "documentation_name": "maven-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -719,6 +748,7 @@
             "name": "Mercurial",
             "plugin_folder_name": "Mercurial",
             "doc_folder_name": "mercurial",
+            "documentation_name": "mercurial",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -741,6 +771,7 @@
             "name": "Mocha",
             "plugin_folder_name": "Mocha",
             "doc_folder_name": "mocha",
+            "documentation_name": "mocha",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -760,6 +791,7 @@
             "name": "NAnt",
             "plugin_folder_name": "NAnt",
             "doc_folder_name": "nant",
+            "documentation_name": "nant",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -780,6 +812,7 @@
             "name": "NCover",
             "plugin_folder_name": "NCover",
             "doc_folder_name": "ncover",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "NCover-1.759854.zip"
@@ -790,6 +823,7 @@
             "name": "NPM for IBM UrbanCode Build",
             "plugin_folder_name": "NPM",
             "doc_folder_name": "npm-2",
+            "documentation_name": "npm-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -810,6 +844,7 @@
             "name": "NUnit",
             "plugin_folder_name": "NUnit",
             "doc_folder_name": "nunit",
+            "documentation_name": "nunit",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -832,6 +867,7 @@
             "name": "PMD",
             "plugin_folder_name": "PMD",
             "doc_folder_name": "pmd",
+            "documentation_name": "pmd",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -854,6 +890,7 @@
             "name": "Perforce",
             "plugin_folder_name": "Perforce",
             "doc_folder_name": "perforce",
+            "documentation_name": "perforce",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -886,6 +923,7 @@
             "name": "Preflight",
             "plugin_folder_name": "Preflight",
             "doc_folder_name": "preflight",
+            "documentation_name": "preflight",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -907,6 +945,7 @@
             "name": "QTP",
             "plugin_folder_name": "QTP",
             "doc_folder_name": "qtp",
+            "documentation_name": "qtp",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -927,6 +966,7 @@
             "name": "Rational Team Concert Work Items",
             "plugin_folder_name": "RTCWorkItems",
             "doc_folder_name": "rational-team-concert-work-items",
+            "documentation_name": "rational-team-concert-work-items",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -954,6 +994,7 @@
             "name": "Rake",
             "plugin_folder_name": "Rake",
             "doc_folder_name": "rake",
+            "documentation_name": "rake",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -974,6 +1015,7 @@
             "name": "Rally for IBM UrbanCode Build",
             "plugin_folder_name": "Rally",
             "doc_folder_name": "rally-3",
+            "documentation_name": "rally-3",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1001,6 +1043,7 @@
             "name": "IBM Security AppScan Source",
             "plugin_folder_name": "RationalAppScan",
             "doc_folder_name": "ibm-security-appscan-source",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "RationalAppScan-1.772903.zip"
@@ -1011,6 +1054,7 @@
             "name": "Rational Team Concert SCM",
             "plugin_folder_name": "RationalTeamConcert",
             "doc_folder_name": "rational-team-concert-scm",
+            "documentation_name": "rational-team-concert-scm",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1045,6 +1089,7 @@
             "name": "Report Publisher",
             "plugin_folder_name": "ReportPublisher",
             "doc_folder_name": "report-publisher",
+            "documentation_name": "report-publisher",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1070,6 +1115,7 @@
             "name": "Reporting",
             "plugin_folder_name": "Reporting",
             "doc_folder_name": "reporting",
+            "documentation_name": "reporting",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1093,6 +1139,7 @@
             "name": "Selenium for IBM UrbanCode Build",
             "plugin_folder_name": "Selenium",
             "doc_folder_name": "selenium-2",
+            "documentation_name": "selenium-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1117,6 +1164,7 @@
             "name": "Shell for IBM UrbanCode Build",
             "plugin_folder_name": "Shell",
             "doc_folder_name": "shell-2",
+            "documentation_name": "shell-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1139,6 +1187,7 @@
             "name": "SonarQube (formerly Sonar)",
             "plugin_folder_name": "Sonar",
             "doc_folder_name": "sonarqube-formerly-sonar",
+            "documentation_name": "sonarqube-formerly-sonar-deprecated",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1162,6 +1211,7 @@
             "name": "SonarQube",
             "plugin_folder_name": "SonarQube",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "SonarQube-1.772154.zip",
@@ -1173,6 +1223,7 @@
             "name": "Sonargraph",
             "plugin_folder_name": "Sonargraph",
             "doc_folder_name": "sonargraph",
+            "documentation_name": "sonargraph",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1195,6 +1246,7 @@
             "name": "Subversion for IBM UrbanCode Build",
             "plugin_folder_name": "Subversion",
             "doc_folder_name": "subversion-2",
+            "documentation_name": "subversion-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1219,6 +1271,7 @@
             "name": "Team Foundation Server",
             "plugin_folder_name": "TFS",
             "doc_folder_name": "team-foundation-server",
+            "documentation_name": "team-foundation-server",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1244,6 +1297,7 @@
             "name": "TFS Work Items",
             "plugin_folder_name": "TFS-WorkItems",
             "doc_folder_name": "tfs-work-items",
+            "documentation_name": "tfs-work-items",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1266,6 +1320,7 @@
             "name": "UCB-Velocity",
             "plugin_folder_name": "UCB-Velocity",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "urbancode-velocity-1.1027750.zip",
@@ -1279,6 +1334,7 @@
             "name": "UCB Utilities",
             "plugin_folder_name": "UCBUtils",
             "doc_folder_name": "ucb-utilities",
+            "documentation_name": "ucb-utilities",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1299,6 +1355,7 @@
             "name": "Visual Studio",
             "plugin_folder_name": "VisualStudio",
             "doc_folder_name": "visual-studio",
+            "documentation_name": "visual-studio",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1324,6 +1381,7 @@
             "name": "Xcode",
             "plugin_folder_name": "Xcode",
             "doc_folder_name": "xcode",
+            "documentation_name": "xcode",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1350,6 +1408,7 @@
             "name": "DevOps Insights \u2013 Deployment Risk Analytics (DRA)",
             "plugin_folder_name": "bluemix-deployment-risk-analytics",
             "doc_folder_name": "devops-insights-deployment-risk-analytics-dra",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "devops-insights-deployment-risk-analytics-ubuild-1.939632.zip"
@@ -1360,6 +1419,7 @@
             "name": "Checkstyle",
             "plugin_folder_name": "checkstyle",
             "doc_folder_name": "checkstyle",
+            "documentation_name": "checkstyle",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1381,6 +1441,7 @@
             "name": "digital-experience",
             "plugin_folder_name": "digital-experience",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "plugins-digital-experience-1.1071324.zip",
@@ -1392,6 +1453,7 @@
             "name": "dimensions",
             "plugin_folder_name": "dimensions",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "dimensions-2.752902.zip",
@@ -1403,6 +1465,7 @@
             "name": "IBM Dependency Based Build",
             "plugin_folder_name": "ibm-dbb",
             "doc_folder_name": "ibm-dependency-based-build",
+            "documentation_name": "ibm-dependency-based-build",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1423,6 +1486,7 @@
             "name": "IBM UrbanCode Deploy for IBM UrbanCode Build",
             "plugin_folder_name": "ibmucd",
             "doc_folder_name": "ibm-urbancode-deploy-2",
+            "documentation_name": "ibm-urbancode-deploy-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1467,6 +1531,7 @@
             "name": "jac",
             "plugin_folder_name": "jac",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "plugins-jac-1.1070875.zip"
@@ -1477,6 +1542,7 @@
             "name": "plugins-ucb-velocity",
             "plugin_folder_name": "plugins-ucb-velocity",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "plugins-ucb-velocity-1.1027120.zip"
@@ -1487,6 +1553,7 @@
             "name": "Salesforce",
             "plugin_folder_name": "salesforce",
             "doc_folder_name": "salesforce-2",
+            "documentation_name": "salesforce-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -1507,6 +1574,7 @@
             "name": "uDeploy",
             "plugin_folder_name": "uDeploy",
             "doc_folder_name": "",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "uDeploy-8.361123.zip",
@@ -1525,6 +1593,7 @@
             "name": "Gradle for IBM UrbanCode Build",
             "plugin_folder_name": "",
             "doc_folder_name": "gradle-2",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -1533,6 +1602,7 @@
             "name": "LogiGear TestArchitect for IBM UrbanCode Build",
             "plugin_folder_name": "",
             "doc_folder_name": "logigear-testarchitect-2",
+            "documentation_name": "",
             "doc_tabs": [],
             "files": [],
             "latestversion": "0"
@@ -1541,6 +1611,7 @@
             "name": "UrbanCode Velocity",
             "plugin_folder_name": "",
             "doc_folder_name": "urbancode-velocity",
+            "documentation_name": "urbancode-velocity",
             "doc_tabs": [
                 {
                     "name": "Overview",

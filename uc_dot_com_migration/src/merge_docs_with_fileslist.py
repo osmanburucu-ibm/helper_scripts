@@ -31,10 +31,11 @@ logger1.addHandler(ch)
 
 def get_plugin_docs (pluginfile, localalldocs):
     aplugin = {}
-    copyfields = [ucutil.NAME_PLUGIN_NAME, ucutil.NAME_PLUGIN_FOLDER_NAME, ucutil.NAME_DOC_FOLDER_NAME, ucutil.NAME_DOC_TABS, ucutil.NAME_PLUGIN_FILELIST_NAME, ucutil.NAME_PLUGIN_LATESTVERSION_NAME]
+    copyfields = [ucutil.NAME_PLUGIN_NAME, ucutil.NAME_PLUGIN_FOLDER_NAME, ucutil.NAME_DOC_FOLDER_NAME, ucutil.NAME_DOCUMENTATION_NAME, ucutil.NAME_DOC_TABS, ucutil.NAME_PLUGIN_FILELIST_NAME, ucutil.NAME_PLUGIN_LATESTVERSION_NAME]
     defaultvalues = {
         ucutil.NAME_PLUGIN_FOLDER_NAME:  pluginfile.get(ucutil.NAME_PLUGIN_FOLDER_NAME, ""),
         ucutil.NAME_DOC_FOLDER_NAME:  pluginfile.get(ucutil.NAME_DOC_FOLDER_NAME, ""),
+        ucutil.NAME_DOCUMENTATION_NAME:  pluginfile.get(ucutil.NAME_DOCUMENTATION_NAME, ""),
         ucutil.NAME_PLUGIN_FILELIST_NAME: pluginfile.get(ucutil.NAME_PLUGIN_FILELIST_NAME, []),
         ucutil.NAME_PLUGIN_LATESTVERSION_NAME: pluginfile.get(ucutil.NAME_PLUGIN_LATESTVERSION_NAME, "0"),
         ucutil.NAME_DOC_TABS: pluginfile.get(ucutil.NAME_DOC_TABS, []),

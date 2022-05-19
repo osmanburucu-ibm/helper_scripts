@@ -15,6 +15,33 @@ export EXPORT_PLUGIN_TYPE="" # "Build" | "Deploy" | "Release" | "Velocity"
 export PRODUCT_PLUGIN_TYPE="" # "UCB" | "UCD" | "UCR" | "UCD"
 export PLUGIN_SOURCE_TYPE="" # "ubuild" | "ibmucd" | "ibmucr" | "ibmucv"
 
+case $1 in
+    "UCD")
+        export EXPORT_PLUGIN_TYPE="Deploy" 
+        export PRODUCT_PLUGIN_TYPE="UCD" 
+        export PLUGIN_SOURCE_TYPE="ibmucd"
+        ;;
+    "UCV")
+        export EXPORT_PLUGIN_TYPE="Velocity"
+        export PRODUCT_PLUGIN_TYPE="UCV" 
+        export PLUGIN_SOURCE_TYPE="ibmucv"
+        ;;
+    "UCR")
+        export EXPORT_PLUGIN_TYPE="Release"
+        export PRODUCT_PLUGIN_TYPE="UCR" 
+        export PLUGIN_SOURCE_TYPE="ibmucr"
+        ;;
+    "UCB")
+        export EXPORT_PLUGIN_TYPE="Build"
+        export PRODUCT_PLUGIN_TYPE="UCB" 
+        export PLUGIN_SOURCE_TYPE="ubuild"
+        ;;
+    *)
+        echo "not a valid argument"
+        echo
+        ;;
+esac
+
 export PLUGINFILES_SOURCE_URL=$DEFAULT_PLUGINFILES_SOURCE_URL"/"$PLUGIN_SOURCE_TYPE
 export REPO_TARGET_FOLDER=$DEFAULT_REPO_TARGET_FOLDER"/"$PRODUCT_PLUGIN_TYPE
 export DOC_TARGET_FOLDER=$DEFAULT_DOC_TARGET_FOLDER"/"$PRODUCT_PLUGIN_TYPE

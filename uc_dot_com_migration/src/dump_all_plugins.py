@@ -88,8 +88,10 @@ def main():
     allplugins = []
     allplugins = getallplugins(source_url)
 
+    workfolder = config[ucutil.WORKING_FOLDER_LOCATION]
+
     adict = {"source_download_folder": source_url, "plugins": allplugins}
-    with open (f"{plugin_type}-allplugins.json", "w") as f:
+    with open (f"{workfolder}/{plugin_type}-allplugins.json", "w") as f:
         json.dump(adict,f, indent=4)
 
     os._exit(0)

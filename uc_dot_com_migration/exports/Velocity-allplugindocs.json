@@ -8,7 +8,7 @@
             "name": "Apache JMeter",
             "plugin_folder_name": "ucv-ext-jmeter",
             "doc_folder_name": "apache-jmeter-ucv",
-            "documentation_name": "",
+            "documentation_name": "jmeter",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -24,7 +24,7 @@
             "name": "Azure DevOps",
             "plugin_folder_name": "ucv-ext-azure",
             "doc_folder_name": "azure-devops-ucv",
-            "documentation_name": "",
+            "documentation_name": "azure-devops",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -40,7 +40,7 @@
             "name": "BitBucket Server",
             "plugin_folder_name": "ucv-ext-bitbucket-server",
             "doc_folder_name": "bitbucket-server-ucv",
-            "documentation_name": "",
+            "documentation_name": "bitbucket",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -56,7 +56,7 @@
             "name": "Black Duck",
             "plugin_folder_name": "ucv-ext-blackduck",
             "doc_folder_name": "black-duck-ucv",
-            "documentation_name": "",
+            "documentation_name": "black-duck",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -72,7 +72,7 @@
             "name": "Code Coverage",
             "plugin_folder_name": "ucv-ext-coverage-core",
             "doc_folder_name": "coverage-core-ucv",
-            "documentation_name": "",
+            "documentation_name": "code-coverage",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -88,7 +88,7 @@
             "name": "CollabNet VersionOne",
             "plugin_folder_name": "ucv-ext-versionone",
             "doc_folder_name": "collabnet-versionone-ucv",
-            "documentation_name": "",
+            "documentation_name": "collabnet-versionone",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -104,7 +104,7 @@
             "name": "Cucumber",
             "plugin_folder_name": "ucv-ext-cucumber",
             "doc_folder_name": "cucumber-ucv",
-            "documentation_name": "",
+            "documentation_name": "cucumber-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -120,7 +120,7 @@
             "name": "Digital.ai Agility",
             "plugin_folder_name": "ucv-ext-agility",
             "doc_folder_name": "digital-ai-agility",
-            "documentation_name": "",
+            "documentation_name": "digital-ai-agility",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -136,7 +136,7 @@
             "name": "GitHub",
             "plugin_folder_name": "ucv-ext-github",
             "doc_folder_name": "github-ucv",
-            "documentation_name": "",
+            "documentation_name": "github",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -152,7 +152,7 @@
             "name": "GitLab",
             "plugin_folder_name": "ucv-ext-gitlab",
             "doc_folder_name": "gitlab-ucv-3",
-            "documentation_name": "",
+            "documentation_name": "gitlab",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -168,7 +168,7 @@
             "name": "Handlebar Reporter",
             "plugin_folder_name": "ucv-ext-handlebars-reporter",
             "doc_folder_name": "handlebar-reporter",
-            "documentation_name": "",
+            "documentation_name": "handlebar-reporter",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -184,7 +184,7 @@
             "name": "HCL AppScan Enterprise (ASE)",
             "plugin_folder_name": "ucv-ext-appscan",
             "doc_folder_name": "hcl-appscan-enterprise-ucv",
-            "documentation_name": "",
+            "documentation_name": "appscan",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -200,7 +200,7 @@
             "name": "HCL AppScan on Cloud (ASoC)",
             "plugin_folder_name": "ucv-ext-asoc",
             "doc_folder_name": "hcl-appscan-on-cloud-ucv",
-            "documentation_name": "",
+            "documentation_name": "asoc",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -216,7 +216,7 @@
             "name": "HCL OneTest",
             "plugin_folder_name": "ucv-ext-onetest",
             "doc_folder_name": "hcl-onetest-ucv",
-            "documentation_name": "",
+            "documentation_name": "onetest",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -232,7 +232,7 @@
             "name": "HCL OneTest Server",
             "plugin_folder_name": "ucv-ext-onetest-server",
             "doc_folder_name": "hcl-onetest-server-ucv",
-            "documentation_name": "",
+            "documentation_name": "hcl-onetest-server",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -248,7 +248,7 @@
             "name": "IBM Engineering Workflow Management (EWM)",
             "plugin_folder_name": "ucv-ext-ewm",
             "doc_folder_name": "ibm-engineering-workflow-management-ucv",
-            "documentation_name": "",
+            "documentation_name": "ibm-rational-team-concert",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -264,7 +264,7 @@
             "name": "Jira",
             "plugin_folder_name": "ucv-ext-jira",
             "doc_folder_name": "jira-ucv",
-            "documentation_name": "",
+            "documentation_name": "jira-4",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -280,7 +280,7 @@
             "name": "JUnit",
             "plugin_folder_name": "ucv-ext-junit",
             "doc_folder_name": "junit-ucv",
-            "documentation_name": "",
+            "documentation_name": "junit-3",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -296,7 +296,7 @@
             "name": "Rally",
             "plugin_folder_name": "ucv-ext-rally",
             "doc_folder_name": "rally-ucv",
-            "documentation_name": "",
+            "documentation_name": "rally-4",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -312,7 +312,7 @@
             "name": "Rational Test Automation Server",
             "plugin_folder_name": "ucv-ext-rtas",
             "doc_folder_name": "rational-test-automation-server-ucv",
-            "documentation_name": "",
+            "documentation_name": "1-0-3",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -335,7 +335,7 @@
             "name": "ServiceNow",
             "plugin_folder_name": "ucv-ext-servicenow",
             "doc_folder_name": "servicenow-ucv",
-            "documentation_name": "",
+            "documentation_name": "servicenow-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -351,7 +351,7 @@
             "name": "SonarQube",
             "plugin_folder_name": "ucv-ext-sonarqube",
             "doc_folder_name": "sonarqube-ucv",
-            "documentation_name": "",
+            "documentation_name": "sonarqube-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -382,7 +382,7 @@
             "name": "TestNG",
             "plugin_folder_name": "ucv-ext-testng",
             "doc_folder_name": "testng-ucv",
-            "documentation_name": "",
+            "documentation_name": "testng",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -398,7 +398,7 @@
             "name": "Twistlock",
             "plugin_folder_name": "ucv-ext-twistlock",
             "doc_folder_name": "twistlock-ucv",
-            "documentation_name": "",
+            "documentation_name": "twistlock",
             "doc_tabs": [
                 {
                     "name": "Overview",

@@ -8,7 +8,6 @@
             "name": "Deployment Reports",
             "plugin_folder_name": "DeployReport",
             "doc_folder_name": "deployment-reports",
-            "documentation_name": "deployment-reports",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -37,7 +36,6 @@
             "name": "Rational Team Concert v6",
             "plugin_folder_name": "RTC",
             "doc_folder_name": "rational-team-concert-v6",
-            "documentation_name": "rational-team-concert-v6",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -73,7 +71,6 @@
             "name": "Rally",
             "plugin_folder_name": "Rally",
             "doc_folder_name": "rally",
-            "documentation_name": "rally",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -97,7 +94,6 @@
             "name": "jenkins-ucr-plugin",
             "plugin_folder_name": "jenkins-ucr-plugin",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ibm-ucrelease-pipeline-1.919098.hpi"
@@ -108,7 +104,6 @@
             "name": "reporting-ucd-plugin",
             "plugin_folder_name": "reporting-ucd-plugin",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "reporting-ucd-plugin-10.907592.zip"
@@ -119,7 +114,6 @@
             "name": "sync-ucd-plugin",
             "plugin_folder_name": "sync-ucd-plugin",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "sync-ucd-plugin-2.801577.zip",
@@ -131,7 +125,6 @@
             "name": "sync-ucr-plugin",
             "plugin_folder_name": "sync-ucr-plugin",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "sync-ucr-plugin-2.801192.zip",
@@ -143,7 +136,6 @@
             "name": "Jenkins for IBM UrbanCode Release",
             "plugin_folder_name": "ucr-jenkins-ci",
             "doc_folder_name": "jenkins-ucr-ci",
-            "documentation_name": "jenkins-for-ibm-urbancode-release",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -168,7 +160,6 @@
             "name": "Ansible Tower",
             "plugin_folder_name": "ucr-plugin-ansible",
             "doc_folder_name": "ansible-2",
-            "documentation_name": "ansible-tower",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -193,7 +184,6 @@
             "name": "ucr-plugin-deploy",
             "plugin_folder_name": "ucr-plugin-deploy",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ucr-plugin-deploy-1.670291.zip",
@@ -211,7 +201,6 @@
             "name": "HP Quality Center (ALM)",
             "plugin_folder_name": "ucr-plugin-hp-alm",
             "doc_folder_name": "hp-quality-center-alm",
-            "documentation_name": "hp-quality-center-alm",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -236,7 +225,6 @@
             "name": "ucr-plugin-jenkins",
             "plugin_folder_name": "ucr-plugin-jenkins",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ucr-plugin-jenkins-1.1078299.zip"
@@ -247,7 +235,6 @@
             "name": "Jira for IBM UrbanCode Release",
             "plugin_folder_name": "ucr-plugin-jira",
             "doc_folder_name": "jira-2",
-            "documentation_name": "jira",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -281,7 +268,6 @@
             "name": "CA Nolio",
             "plugin_folder_name": "ucr-plugin-nolio",
             "doc_folder_name": "nolio-2",
-            "documentation_name": "nolio-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -297,7 +283,6 @@
             "name": "ucr-plugin-servicenow",
             "plugin_folder_name": "ucr-plugin-servicenow",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "ucr-plugin-servicenow-1.958213.zip",
@@ -310,7 +295,6 @@
             "name": "Slack for IBM UrbanCode Release",
             "plugin_folder_name": "ucr-plugin-slack",
             "doc_folder_name": "slack-2",
-            "documentation_name": "slack-2",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -337,7 +321,6 @@
             "name": "Microsoft Team Foundation Server (TFS)",
             "plugin_folder_name": "ucr-plugin-tfs",
             "doc_folder_name": "microsoft-team-foundation-server-tfs",
-            "documentation_name": "microsoft-team-foundation-server-tfs",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -359,7 +342,6 @@
             "name": "ucr-plugin-uccloud",
             "plugin_folder_name": "ucr-plugin-uccloud",
             "doc_folder_name": "",
-            "documentation_name": "",
             "doc_tabs": [],
             "files": [
                 "cloud-sync-1.0.792001.jar",
@@ -374,7 +356,6 @@
             "name": "XL Deploy",
             "plugin_folder_name": "ucr-xl-deploy",
             "doc_folder_name": "xl-deploy",
-            "documentation_name": "xl-deploy",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -403,7 +384,6 @@
             "name": "IBM UrbanCode Deploy",
             "plugin_folder_name": "",
             "doc_folder_name": "ibm-urbancode-deploy",
-            "documentation_name": "ibm-urbancode-deploy",
             "doc_tabs": [
                 {
                     "name": "Overview",
@@ -425,7 +405,6 @@
             "name": "ServiceNow",
             "plugin_folder_name": "",
             "doc_folder_name": "servicenow-4",
-            "documentation_name": "servicenow-for-urbancode-release",
             "doc_tabs": [
                 {
                     "name": "Overview",
