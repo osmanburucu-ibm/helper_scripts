@@ -89,7 +89,7 @@ def content_to_md_OLD (soupcontent):
     
     return md(soup2)
 
-def content_to_md (soupcontent):
+def content_to_md (soupcontent, plugin):
     logger1.debug(f"content= {soupcontent}")
 
     # TODO: download all images into <local repo>/files/images directory and change the reference to this link!
@@ -114,6 +114,15 @@ def content_to_md (soupcontent):
     contents = contents.replace("\n</td>", "</td>")
     contents = contents.replace("${", "``${")
     contents = contents.replace("}", "}``")
+    # replace img src with local file name of image
+    list_of_src, list_of_images = download_all_images(plugin, soupcontent)
+    logger1.info(f"list_of_src={list_of_src}")
+    logger1.info(f"list_of_images={list_of_images}")
+    for index, value in enumerate(list_of_src):
+        filename_parts = list_of_images[index].split("/")
+        logger1.info (f"REPLACE {value} with {filename_parts[-1]}")
+        logger1.info (f"POSITION={contents.find(value)}")
+        contents = contents.replace(value, filename_parts[-1])
     contents = contents.replace("/wp-content/uploads/plugindocs/", "")
     logger1.info(f"content-replaced={contents}")
     soup2 = BeautifulSoup(contents, SOUP_PARSER)
@@ -193,10 +202,16 @@ def get_list_of_doc_tabs(plugin, actdoc):
 
     return list_of_doc_tabs
 
+def get_target_doc_path_from_plugin(config, plugin):
+    target_doc_folder = plugin.get(ucutil.NAME_PLUGIN_FOLDER_NAME).strip()
+    if (not target_doc_folder): target_doc_folder = plugin.get(ucutil.NAME_PLUGIN_NAME).strip()
+    
+    return get_target_doc_path(config, target_doc_folder)
+
 def create_doc_file(docname, soup, config, plugin):
     
     doc_title = f"{plugin[ucutil.NAME_PLUGIN_NAME]} - {docname}"
-    target_doc_path = get_target_doc_path(config, plugin)
+    target_doc_path = get_target_doc_path_from_plugin(config, plugin)
     doc_file_name = f"{target_doc_path}/{docname.lower()}.md"
     md_doc_file = MdUtils(file_name=doc_file_name, title=doc_title)
     md_doc_file.new_header(level=1, title=docname)
@@ -252,49 +267,48 @@ def get_content_for_doc(doc, plugin, soup):
     logger1.info(f"tab_id={tab_id}")
     if (tab_id):
         tab = soup.find("div", {"id":tab_id})
-        
-        download_all_images(doc, plugin, tab)
-        
-        md_content = content_to_md(tab)
+        md_content = content_to_md(tab, plugin)
         
     return md_content
     
     # target_doc_path = get_target_doc_path(config, plugin)
     # logger1.info(f"target doc path: {target_doc_path}")
-def download_all_images (doc, plugin, soup):
     
+def download_all_images (plugin, soup):
+    
+    list_of_src = []
+    list_of_images = []
     config = ucutil.get_config()
-    target_path = get_target_doc_path(config, plugin)
+    target_path = get_target_doc_path_from_plugin(config, plugin)
     
     all_imgs = soup.find_all('img')
     for image in all_imgs:
         logger1.info (f"image={image}")
-        b64 = False
         if image.has_attr('src'): 
+            lnk = image.get("src")
+            
             logger1.info (f"image has src attribute")
             # download image and convert to jpg
             imagepath=f"{target_path}"
             if not os.path.exists(imagepath):
                 os.makedirs(imagepath)
-            if "http" in image.get("src"):
-                lnk = image.get("src")
                 
-                # TEMPORARY
-                #continue
-            elif ("base64" in image.get("src")):
-                lnk = image['src']
-                b64 = True
-            else:
-                lnk = config.get(ucutil.UC_BASE_URL) + image['src']
-                
-                # TEMPORARY
-                #continue
-            if b64:
+            if "http" in lnk:
+                logger1.info("src is http(s)")
+            elif ("base64" in lnk):
                 logger1.info("src is Base64 image")
             else:
-                logger1.info(f"src={lnk}")
+                lnk = config.get(ucutil.UC_BASE_URL) + lnk
+            # remove size info from link
+            splitted_src = lnk.split("?")
+            if (len(splitted_src)>1):
+                lnk = splitted_src[0]
+            list_of_src.append(f"{lnk}")    
+            logger1.info(f"src={lnk}")
             filename = download_image(lnk, imagepath)
+            list_of_images.append(f"{filename}")
             logger1.info (f"filename={filename}")
+    return list_of_src, list_of_images
 
 def download_image(url, imagepath):
     filename = ""
@@ -368,7 +382,7 @@ def get_download_list(config, plugin):
 def create_plugin_landing_page(config, plugin):
     logger1.info (f"Creating landing page for Plug-In {plugin.get(ucutil.NAME_PLUGIN_NAME)}")
     
-    target_doc_path = get_target_doc_path(config, plugin)
+    target_doc_path = get_target_doc_path_from_plugin(config, plugin)
     logger1.info(f"target doc path: {target_doc_path}")
     
     md_content = get_landing_page_content(config, plugin)
@@ -414,7 +428,7 @@ def get_landing_page_content(config, plugin):
 
         landing_page_content = page_content
 
-    return content_to_md(landing_page_content)
+    return content_to_md(landing_page_content, plugin)
 
 def get_doc_not_found(docname):
     doc_not_found = """<!DOCTYPE html> 
@@ -431,11 +445,18 @@ def get_doc_not_found(docname):
     doc_not_found = doc_not_found.replace("DOCNAME", docname )
     return doc_not_found
 
-def get_target_doc_path(config, plugin):
-    target_doc_folder = plugin.get(ucutil.NAME_PLUGIN_FOLDER_NAME).strip()
-    if (not target_doc_folder): target_doc_folder = plugin.get(ucutil.NAME_PLUGIN_NAME).strip()
+def get_target_doc_path(config, target_doc_folder, level=ucutil.DOC_LEVEL_PLUGIN_DOCS):
 
-    return f"{config[ucutil.LOCAL_DOCREPO_LOCATION]}/{config[ucutil.DOC_TARGET_FOLDER]}/{target_doc_folder}"
+    target_doc_path = f"{config[ucutil.LOCAL_DOCREPO_LOCATION]}/{config[ucutil.DEFAULT_DOC_TARGET_FOLDER]}"
+    if level==ucutil.DOC_LEVEL_ALL_PLUGINS: return target_doc_path
+    
+    target_doc_path = f"{config[ucutil.LOCAL_DOCREPO_LOCATION]}/{config[ucutil.DOC_TARGET_FOLDER]}"
+    if level == ucutil.DOC_LEVEL_PLUGIN_README: return target_doc_path 
+    
+    if (level == ucutil.DOC_LEVEL_PLUGIN_DOCS) and (target_doc_folder):
+        target_doc_path = f"{target_doc_path}/{target_doc_folder}"
+        
+    return target_doc_path
 
 def main():
     adict = {}
@@ -445,17 +466,24 @@ def main():
     
     with open(f'{workfolder}/{config[ucutil.EXPORT_PLUGIN_TYPE]}-all.json', "r") as json_file:
         adict = json.load(json_file)
-
+    MDFile_name = get_target_doc_path(config, "", ucutil.DOC_LEVEL_PLUGIN_README)
+    IndexMDFile = MdUtils(file_name=f'{MDFile_name}/README',title=f'Welcome to UrbanCode {config[ucutil.EXPORT_PLUGIN_TYPE]} Plugins')
+    IndexMDFile.new_header(level=1, title='List of all Plugins')  # style is set 'atx' format by default. 
+    
     for plugin in adict[ucutil.NAME_PLUGIN_LIST_NAME]:
         # create_doc_files(config, plugin, all_files)
         # create only if doc_folder_name is provided
         # DEBUG only accurev-scm to check if download plugins work..
-        if (plugin.get(ucutil.NAME_DOC_FOLDER_NAME)): # == "accurev-scm"): 
+#        if (plugin.get(ucutil.NAME_DOC_FOLDER_NAME)): # == "accurev-scm"): 
+        if any(re.findall(r'cics|accurev', plugin.get(ucutil.NAME_DOC_FOLDER_NAME), re.IGNORECASE)): 
             landing_page_name = create_plugin_landing_page(config, plugin)
             list_of_docs = create_doc_files(config, plugin)
             logger1.debug(f"landing page={landing_page_name} and docs={list_of_docs} created")
+            IndexMDFile.new_header(level=2, title=f"{plugin.get(ucutil.NAME_PLUGIN_NAME)}") 
+            IndexMDFile.new_paragraph("---")
 
-    
+    IndexMDFile.new_table_of_contents(table_title='Contents', depth=3)
+    IndexMDFile.create_md_file()
     os._exit(0)
 
 
