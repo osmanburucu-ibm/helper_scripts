@@ -458,6 +458,13 @@ def get_target_doc_path(config, target_doc_folder, level=ucutil.DOC_LEVEL_PLUGIN
         
     return target_doc_path
 
+def get_plugin_abstract_from_md_file(plugin_file_name):
+    with open(plugin_file_name, "r") as md_file:
+        read_lines = [line.rstrip() for line in md_file]# md_file.readlines()[5:10]
+    logger1.info(f"read this lines {read_lines} from {plugin_file_name}")
+    lines = read_lines[5:10]
+    return " ".join(lines)
+
 def main():
     adict = {}
 
@@ -468,7 +475,7 @@ def main():
         adict = json.load(json_file)
     MDFile_name = get_target_doc_path(config, "", ucutil.DOC_LEVEL_PLUGIN_README)
     IndexMDFile = MdUtils(file_name=f'{MDFile_name}/README',title=f'Welcome to UrbanCode {config[ucutil.EXPORT_PLUGIN_TYPE]} Plugins')
-    IndexMDFile.new_header(level=1, title='List of all Plugins')  # style is set 'atx' format by default. 
+    #IndexMDFile.new_header(level=1, title='List of all Plugins')  # style is set 'atx' format by default. 
     
     for plugin in adict[ucutil.NAME_PLUGIN_LIST_NAME]:
         # create_doc_files(config, plugin, all_files)
@@ -480,8 +487,13 @@ def main():
             list_of_docs = create_doc_files(config, plugin)
             logger1.debug(f"landing page={landing_page_name} and docs={list_of_docs} created")
             IndexMDFile.new_header(level=2, title=f"{plugin.get(ucutil.NAME_PLUGIN_NAME)}") 
+            # get first paragraph from landing_page, add small navbar
+            # read README.md step over first 5 lines and use the next 5 for abstract
+            plugin_abstract = get_plugin_abstract_from_md_file(landing_page_name)
+            IndexMDFile.new_paragraph(plugin_abstract)
             IndexMDFile.new_paragraph("---")
-
+            # add navbar BACK to all plugins, go to top (contents), latest version, plugin docuumentation
+            
     IndexMDFile.new_table_of_contents(table_title='Contents', depth=3)
     IndexMDFile.create_md_file()
     os._exit(0)
