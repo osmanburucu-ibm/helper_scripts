@@ -147,44 +147,37 @@ def get_latest_version_info(config, plugin):
     return versionname, filename
 
 def get_nav_bar(config, plugin, actdoc, doc_level):    
-    number_of_columns = 1
-    nav_bar_data = ["Back to ..."]
-    
     if (doc_level == ucutil.DOC_LEVEL_ALL_PLUGINS):
         # TODO: no nav_bar on top level - check
         return 0, []
-   
+
+    nav_bar_data = ["Back to ...", ""]
     if (doc_level == ucutil.DOC_LEVEL_PRODUCT_PLUGINS):
-        # TODO: add other products to  nav_bar on Product level - check
-        nav_bar_data.append("")
-        nav_bar_row = ["[All Plugins](../index.md)", "[Top](#contents)"]
         nav_bar_data.append(f"{plugin.get(ucutil.NAME_PLUGIN_NAME)} ")
-        nav_bar_row.append (f"[Readme]({get_target_doc_path_from_plugin(config, plugin)}/README.md)")        
+        nav_bar_row = ["[All Plugins](../index.md)", "[Top](#contents)", f"[Readme]({get_target_doc_path_from_plugin(config, plugin)}/README.md)"]
     else:
-        nav_bar_row = ["[All Plugins](../../index.md)"]
-        nav_bar_data.append("")
-        nav_bar_row.append (f"[{config.get(ucutil.EXPORT_PLUGIN_TYPE)} Plugins](../README.md)")
-    
-#    if (doc_level == ucutil.DOC_LEVEL_PLUGIN_README):
+        nav_bar_row = ["[All Plugins](../../index.md)", f"[{config.get(ucutil.EXPORT_PLUGIN_TYPE)} Plugins](../README.md)"]
+
     nav_bar_data.append("Latest Version")
     plugin_version, plugin_link = get_latest_version_info(config, plugin)
     nav_bar_row.append(f"[{plugin_version}]({plugin_link})")
 
-    # nav_bar_row = ["[All Plugins](../../index.md)", "[UCD|UCV|UCR|UCB](../README)", "[PLUGIN.name Readme](README.md)", <list of docs minus act-doc>]
     if (doc_level==ucutil.DOC_LEVEL_PLUGIN_DOCS):
         nav_bar_data.append(f"{plugin.get(ucutil.NAME_PLUGIN_NAME)} ")
-        nav_bar_row.append (f"[Readme](README.md)")
-        
-    if (doc_level==ucutil.DOC_LEVEL_PLUGIN_DOCS) or (doc_level == ucutil.DOC_LEVEL_PLUGIN_README):
+        nav_bar_row.append("[Readme](README.md)")
+
+    if doc_level in [ucutil.DOC_LEVEL_PLUGIN_DOCS, ucutil.DOC_LEVEL_PLUGIN_README]:
         list_of_docs = get_list_of_doc_tabs(plugin, actdoc)
         for docname in list_of_docs:
             nav_bar_data.append("")
             nav_bar_row.append(f"[{docname}]({docname.lower()}.md)")
 
+    number_of_columns = 1
     number_of_columns = len(nav_bar_data)
     logger1.info(f"number_of_columns={number_of_columns} - nav_bar_rows={nav_bar_data} - nav_bar_rows={nav_bar_row} size={len(nav_bar_row)}")
     nav_bar_data.extend(nav_bar_row)
     logger1.info(f"number_of_columns={number_of_columns} - nav_bar={nav_bar_data} size={len(nav_bar_data)}")
+
     return number_of_columns, nav_bar_data
 
 def get_list_of_doc_tabs(plugin, actdoc):
@@ -472,36 +465,35 @@ def main():
     
     with open(f'{workfolder}/{config[ucutil.EXPORT_PLUGIN_TYPE]}-all.json', "r") as json_file:
         adict = json.load(json_file)
-    MDFile_name = get_target_doc_path(config, "", ucutil.DOC_LEVEL_PLUGIN_README)
-    IndexMDFile = MdUtils(file_name=f'{MDFile_name}/README',title=f'Welcome to UrbanCode {config[ucutil.EXPORT_PLUGIN_TYPE]} Plugins')
-    IndexMDFile.new_header(level=1, title='List of all Plugins')  # style is set 'atx' format by default. 
+    mdfile_name = get_target_doc_path(config, "", ucutil.DOC_LEVEL_PLUGIN_README)
+    prod_index_mdfile = MdUtils(file_name=f'{mdfile_name}/README',title=f'Welcome to UrbanCode {config[ucutil.EXPORT_PLUGIN_TYPE]} Plugins')
+    prod_index_mdfile.new_header(level=1, title='List of all Plugins')  # style is set 'atx' format by default. 
     
     for plugin in adict[ucutil.NAME_PLUGIN_LIST_NAME]:
         # create_doc_files(config, plugin, all_files)
         # create only if doc_folder_name is provided
         # DEBUG only accurev-scm to check if download plugins work..
-#        if (plugin.get(ucutil.NAME_DOC_FOLDER_NAME)): # == "accurev-scm"): 
-        if any(re.findall(r'cics|accurev', plugin.get(ucutil.NAME_DOC_FOLDER_NAME), re.IGNORECASE)): 
+        if (plugin.get(ucutil.NAME_DOC_FOLDER_NAME)):
+#        if any(re.findall(r'cics|accurev', plugin.get(ucutil.NAME_DOC_FOLDER_NAME), re.IGNORECASE)): 
             landing_page_name = create_plugin_landing_page(config, plugin)
             list_of_docs = create_doc_files(config, plugin)
             logger1.info(f"landing page={landing_page_name} and docs={list_of_docs} created")
-            IndexMDFile.new_header(level=2, title=f"{plugin.get(ucutil.NAME_PLUGIN_NAME)}") 
+            prod_index_mdfile.new_header(level=2, title=f"{plugin.get(ucutil.NAME_PLUGIN_NAME)}") 
             # get first paragraph from landing_page, add small navbar
             # read README.md step over first 5 lines and use the next 5 for abstract
             plugin_abstract = get_plugin_abstract_from_md_file(landing_page_name)
-            IndexMDFile.new_paragraph(plugin_abstract)
-            IndexMDFile.new_paragraph("---")
+            prod_index_mdfile.new_paragraph(plugin_abstract)
+            prod_index_mdfile.new_paragraph("---")
             number_of_columns, list_of_columns = get_nav_bar(config, plugin, "README", ucutil.DOC_LEVEL_PRODUCT_PLUGINS)
-            IndexMDFile.new_table(
+            prod_index_mdfile.new_table(
                 columns=number_of_columns,
                 rows=len(list_of_columns) // number_of_columns,
                 text=list_of_columns,
                 text_align='center',
-            )   
-
-            
-    IndexMDFile.new_table_of_contents(table_title='Contents', depth=3)
-    IndexMDFile.create_md_file()
+            )
+              
+    prod_index_mdfile.new_table_of_contents(table_title='Contents', depth=3)
+    prod_index_mdfile.create_md_file()
     os._exit(0)
 
 
