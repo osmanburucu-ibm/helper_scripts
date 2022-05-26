@@ -64,30 +64,30 @@ def get_list_of_files_from_repo(config):
             #afile.writelines(all_files)
     return all_files
 
-def content_to_md_OLD (soupcontent):
-    logger1.debug(f"content= {soupcontent}")
+# def content_to_md_OLD (soupcontent):
+#     logger1.debug(f"content= {soupcontent}")
 
-    # TODO: download all images into <local repo>/files/images directory and change the reference to this link!
-    # TODO: check if reference to urbancode.com or devworks and fix it!
-    for item in soupcontent.contents:
-        logger1.info(f"item={item}")
+#     # TODO: download all images into <local repo>/files/images directory and change the reference to this link!
+#     # TODO: check if reference to urbancode.com or devworks and fix it!
+#     for item in soupcontent.contents:
+#         logger1.info(f"item={item}")
      
-    contents = "".join(str(item) for item in soupcontent.contents)
-    logger1.info(f"contents-original={contents}")
-    # the tables are broken no idea why... try to fix it.. does not work well...
-    contents = contents.replace("</em></caption>", "</em></caption> <br/>\n <p></p> <br/>\n <p></p>")
-    contents = contents.replace("   ", "")
-    contents = contents.replace("  ", "") 
-    contents = contents.replace("<br/>\n", " ")
-    contents = contents.replace("\n </td>", "</td>")  
-    contents = contents.replace("\n</td>", "</td>")
-    contents = contents.replace("${", "``${")
-    contents = contents.replace("}", "}``")
+#     contents = "".join(str(item) for item in soupcontent.contents)
+#     logger1.info(f"contents-original={contents}")
+#     # the tables are broken no idea why... try to fix it.. does not work well...
+#     contents = contents.replace("</em></caption>", "</em></caption> <br/>\n <p></p> <br/>\n <p></p>")
+#     contents = contents.replace("   ", "")
+#     contents = contents.replace("  ", "") 
+#     contents = contents.replace("<br/>\n", " ")
+#     contents = contents.replace("\n </td>", "</td>")  
+#     contents = contents.replace("\n</td>", "</td>")
+#     contents = contents.replace("${", "``${")
+#     contents = contents.replace("}", "}``")
     
-    logger1.info(f"content-replaced={contents}")
-    soup2 = BeautifulSoup(contents, SOUP_PARSER)
+#     logger1.info(f"content-replaced={contents}")
+#     soup2 = BeautifulSoup(contents, SOUP_PARSER)
     
-    return md(soup2)
+#     return md(soup2)
 
 def content_to_md (soupcontent, plugin):
     logger1.debug(f"content= {soupcontent}")
@@ -156,36 +156,35 @@ def get_nav_bar(config, plugin, actdoc, doc_level):
    
     if (doc_level == ucutil.DOC_LEVEL_PRODUCT_PLUGINS):
         # TODO: add other products to  nav_bar on Product level - check
-        nav_bar_row = ["[All Plugins](../index.md)"]
-        
-        number_of_columns = len(nav_bar_data)
-        nav_bar_data.extend(nav_bar_row)
-        return number_of_columns, nav_bar_data
+        nav_bar_data.append("")
+        nav_bar_row = ["[All Plugins](../index.md)", "[Top](#contents)"]
+        nav_bar_data.append(f"{plugin.get(ucutil.NAME_PLUGIN_NAME)} ")
+        nav_bar_row.append (f"[Readme]({get_target_doc_path_from_plugin(config, plugin)}/README.md)")        
+    else:
+        nav_bar_row = ["[All Plugins](../../index.md)"]
+        nav_bar_data.append("")
+        nav_bar_row.append (f"[{config.get(ucutil.EXPORT_PLUGIN_TYPE)} Plugins](../README.md)")
     
-    nav_bar_row = ["[All Plugins](../../index.md)"]
-    
-    nav_bar_data.extend([""])
-    nav_bar_row.extend ([f"[{config.get(ucutil.EXPORT_PLUGIN_TYPE)} Plugins](../README.md)"])
-    
-    if (doc_level == ucutil.DOC_LEVEL_PLUGIN_README):
-        nav_bar_data.extend(["Latest Version"])
-        plugin_version, plugin_link = get_latest_version_info(config, plugin)
-        nav_bar_row.extend([f"[{plugin_version}]({plugin_link})"])
+#    if (doc_level == ucutil.DOC_LEVEL_PLUGIN_README):
+    nav_bar_data.append("Latest Version")
+    plugin_version, plugin_link = get_latest_version_info(config, plugin)
+    nav_bar_row.append(f"[{plugin_version}]({plugin_link})")
 
     # nav_bar_row = ["[All Plugins](../../index.md)", "[UCD|UCV|UCR|UCB](../README)", "[PLUGIN.name Readme](README.md)", <list of docs minus act-doc>]
     if (doc_level==ucutil.DOC_LEVEL_PLUGIN_DOCS):
-        nav_bar_data.extend([""])
-        nav_bar_row.extend ([f"[{plugin.get(ucutil.NAME_PLUGIN_NAME)} Readme](README.md)"])
+        nav_bar_data.append(f"{plugin.get(ucutil.NAME_PLUGIN_NAME)} ")
+        nav_bar_row.append (f"[Readme](README.md)")
         
-    list_of_docs = get_list_of_doc_tabs(plugin, actdoc)
-    
-    for docname in list_of_docs:
-        nav_bar_data.extend([""])
-        nav_bar_row.extend([f"[{docname}]({docname.lower()}.md)"])
+    if (doc_level==ucutil.DOC_LEVEL_PLUGIN_DOCS) or (doc_level == ucutil.DOC_LEVEL_PLUGIN_README):
+        list_of_docs = get_list_of_doc_tabs(plugin, actdoc)
+        for docname in list_of_docs:
+            nav_bar_data.append("")
+            nav_bar_row.append(f"[{docname}]({docname.lower()}.md)")
 
     number_of_columns = len(nav_bar_data)
+    logger1.info(f"number_of_columns={number_of_columns} - nav_bar_rows={nav_bar_data} - nav_bar_rows={nav_bar_row} size={len(nav_bar_row)}")
     nav_bar_data.extend(nav_bar_row)
-    
+    logger1.info(f"number_of_columns={number_of_columns} - nav_bar={nav_bar_data} size={len(nav_bar_data)}")
     return number_of_columns, nav_bar_data
 
 def get_list_of_doc_tabs(plugin, actdoc):
@@ -475,7 +474,7 @@ def main():
         adict = json.load(json_file)
     MDFile_name = get_target_doc_path(config, "", ucutil.DOC_LEVEL_PLUGIN_README)
     IndexMDFile = MdUtils(file_name=f'{MDFile_name}/README',title=f'Welcome to UrbanCode {config[ucutil.EXPORT_PLUGIN_TYPE]} Plugins')
-    #IndexMDFile.new_header(level=1, title='List of all Plugins')  # style is set 'atx' format by default. 
+    IndexMDFile.new_header(level=1, title='List of all Plugins')  # style is set 'atx' format by default. 
     
     for plugin in adict[ucutil.NAME_PLUGIN_LIST_NAME]:
         # create_doc_files(config, plugin, all_files)
@@ -485,14 +484,21 @@ def main():
         if any(re.findall(r'cics|accurev', plugin.get(ucutil.NAME_DOC_FOLDER_NAME), re.IGNORECASE)): 
             landing_page_name = create_plugin_landing_page(config, plugin)
             list_of_docs = create_doc_files(config, plugin)
-            logger1.debug(f"landing page={landing_page_name} and docs={list_of_docs} created")
+            logger1.info(f"landing page={landing_page_name} and docs={list_of_docs} created")
             IndexMDFile.new_header(level=2, title=f"{plugin.get(ucutil.NAME_PLUGIN_NAME)}") 
             # get first paragraph from landing_page, add small navbar
             # read README.md step over first 5 lines and use the next 5 for abstract
             plugin_abstract = get_plugin_abstract_from_md_file(landing_page_name)
             IndexMDFile.new_paragraph(plugin_abstract)
             IndexMDFile.new_paragraph("---")
-            # add navbar BACK to all plugins, go to top (contents), latest version, plugin docuumentation
+            number_of_columns, list_of_columns = get_nav_bar(config, plugin, "README", ucutil.DOC_LEVEL_PRODUCT_PLUGINS)
+            IndexMDFile.new_table(
+                columns=number_of_columns,
+                rows=len(list_of_columns) // number_of_columns,
+                text=list_of_columns,
+                text_align='center',
+            )   
+
             
     IndexMDFile.new_table_of_contents(table_title='Contents', depth=3)
     IndexMDFile.create_md_file()
