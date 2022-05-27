@@ -205,6 +205,11 @@ def create_doc_file(docname, soup, config, plugin):
     doc_title = f"{plugin[ucutil.NAME_PLUGIN_NAME]} - {docname}"
     target_doc_path = get_target_doc_path_from_plugin(config, plugin)
     doc_file_name = f"{target_doc_path}/{docname.lower()}.md"
+    
+    # do not create document if it exists and recreate is false
+    if (config.get(ucutil.RECREATE_DOC_FILES == "False") and os.path.exists(doc_file_name)):
+        return doc_file_name
+    
     md_doc_file = MdUtils(file_name=doc_file_name, title=doc_title)
     md_doc_file.new_header(level=1, title=docname)
     
@@ -232,6 +237,10 @@ def create_doc_file(docname, soup, config, plugin):
     return doc_file_name 
 
 def create_doc_files(config, plugin):
+    
+    if (config.get(ucutil.SKIP_DOC_FILES) == "True"):
+        return []
+    
     list_of_docs = get_list_of_doc_tabs(plugin, "")
 
     response = requests.get(f"{config[ucutil.PLUGIN_DOCUMENTATION_URL]}/{plugin[ucutil.NAME_DOCUMENTATION_NAME]}")
@@ -377,11 +386,17 @@ def create_plugin_landing_page(config, plugin):
     target_doc_path = get_target_doc_path_from_plugin(config, plugin)
     logger1.info(f"target doc path: {target_doc_path}")
     
-    md_content = get_landing_page_content(config, plugin)
-    
     doc_title = f"{plugin[ucutil.NAME_PLUGIN_NAME]}"
     landing_page_md_file_name = f"{target_doc_path}/README.md" # {doc_title}.md  # -> plugin.get(ucutil.NAME_PLUGIN_NAME)
+    
+    # do not create plugin landing page if it exists and recreate is false
+    logger1.info(f"landing_page_md_file_name={landing_page_md_file_name}")
+    logger1.info(f"RECREATE_PLUGIN_DOC_FILE={config.get(ucutil.RECREATE_PLUGIN_DOC_FILE)}")
+    if (config.get(ucutil.RECREATE_PLUGIN_DOC_FILE) == "False") and os.path.exists(landing_page_md_file_name):
+        return landing_page_md_file_name
+    
     landing_page_md_file = MdUtils(file_name=landing_page_md_file_name, title=doc_title)            
+    md_content = get_landing_page_content(config, plugin)
     landing_page_md_file.new_paragraph(md_content)
     
     number_of_columns, list_of_columns = get_nav_bar(config, plugin, "README", ucutil.DOC_LEVEL_PLUGIN_README)
@@ -451,6 +466,7 @@ def get_target_doc_path(config, target_doc_folder, level=ucutil.DOC_LEVEL_PLUGIN
     return target_doc_path
 
 def get_plugin_abstract_from_md_file(plugin_file_name):
+    # TODO: check after line 4 for text and check up to line 10 if navbar is read! -> Artifactory Source Config show 1 line 
     with open(plugin_file_name, "r") as md_file:
         read_lines = [line.rstrip() for line in md_file]# md_file.readlines()[5:10]
     logger1.info(f"read this lines {read_lines} from {plugin_file_name}")
@@ -461,18 +477,21 @@ def main():
     adict = {}
 
     config = ucutil.get_config()
+    logger1.debug(f"config={config}")
     workfolder = config[ucutil.WORKING_FOLDER_LOCATION]
     
     with open(f'{workfolder}/{config[ucutil.EXPORT_PLUGIN_TYPE]}-all.json', "r") as json_file:
         adict = json.load(json_file)
+        
+    allpluginslist = sorted(adict[ucutil.NAME_PLUGIN_LIST_NAME], key=lambda x: x["name"])
+    # for plugin in allpluginslist:
+    #     logger1.info(f"pluginname={plugin['name']}")
+    # os._exit(0)
     mdfile_name = get_target_doc_path(config, "", ucutil.DOC_LEVEL_PLUGIN_README)
     prod_index_mdfile = MdUtils(file_name=f'{mdfile_name}/README',title=f'Welcome to UrbanCode {config[ucutil.EXPORT_PLUGIN_TYPE]} Plugins')
     prod_index_mdfile.new_header(level=1, title='List of all Plugins')  # style is set 'atx' format by default. 
     
-    for plugin in adict[ucutil.NAME_PLUGIN_LIST_NAME]:
-        # create_doc_files(config, plugin, all_files)
-        # create only if doc_folder_name is provided
-        # DEBUG only accurev-scm to check if download plugins work..
+    for plugin in allpluginslist: # adict[ucutil.NAME_PLUGIN_LIST_NAME]:
         if (plugin.get(ucutil.NAME_DOC_FOLDER_NAME)):
 #        if any(re.findall(r'cics|accurev', plugin.get(ucutil.NAME_DOC_FOLDER_NAME), re.IGNORECASE)): 
             landing_page_name = create_plugin_landing_page(config, plugin)

@@ -75,6 +75,12 @@ UC_BASE_URL="UC_BASE_URL"
 
 DEFAULT_DOC_TARGET_FOLDER="DEFAULT_DOC_TARGET_FOLDER"
 
+RECREATE_DOC_FILES="RECREATE_DOC_FILES"
+RECREATE_PLUGIN_DOC_FILE="RECREATE_PLUGIN_DOC_FILE"
+RECREATE_PRODUCT_INDEX_FILE="RECREATE_PRODUCT_INDEX_FILE"
+SKIP_DOC_FILES="SKIP_DOC_FILES"
+
+
 def get_config():
     return {
         GITHUB_API_URL: os.getenv("GITHUB_API_URL", "https://api.github.com"),
@@ -95,7 +101,11 @@ def get_config():
         UPLOAD_FILES_TO_REPO: os.getenv("UPLOAD_FILES_TO_REPO", "False"),
         LOCAL_REPOSITORY_LOCATION: os.getenv("LOCAL_REPOSITORY_LOCATION", ""),
         LOCAL_DOCREPO_LOCATION: os.getenv("LOCAL_DOCREPO_LOCATION"),
-        WORKING_FOLDER_LOCATION: os.getenv("WORKING_FOLDER_LOCATION", "exports")
+        WORKING_FOLDER_LOCATION: os.getenv("WORKING_FOLDER_LOCATION", "exports"),
+        RECREATE_DOC_FILES: os.getenv(RECREATE_DOC_FILES, "True"),
+        RECREATE_PLUGIN_DOC_FILE: os.getenv(RECREATE_PLUGIN_DOC_FILE, "True"),
+        RECREATE_PRODUCT_INDEX_FILE: os.getenv(RECREATE_PRODUCT_INDEX_FILE, "True"),
+        SKIP_DOC_FILES: os.getenv(SKIP_DOC_FILES, "False")
     }
 
 # TODO: x.yyyy also check yyyy ! f.e. 6.86 is higher than 6.111 in this function, should be 6.111 higher!
@@ -165,6 +175,19 @@ def getversionnumber(elem, forsort=False):
             x = x + allnumparts[i] if forsort else f"{x}.{allnumparts[i]}"
     logger1.info(x)
     return x
+
+def get_target_doc_path(config, target_doc_folder, level=DOC_LEVEL_PLUGIN_DOCS):
+    
+    target_doc_path = f"{config[LOCAL_DOCREPO_LOCATION]}/{config[DEFAULT_DOC_TARGET_FOLDER]}"
+    if level==DOC_LEVEL_ALL_PLUGINS: return target_doc_path
+    
+    target_doc_path = f"{config[LOCAL_DOCREPO_LOCATION]}/{config[DOC_TARGET_FOLDER]}"
+    if level == DOC_LEVEL_PLUGIN_README: return target_doc_path 
+    
+    if (level == DOC_LEVEL_PLUGIN_DOCS) and (target_doc_folder):
+        target_doc_path = f"{target_doc_path}/{target_doc_folder}"
+        
+    return target_doc_path
 
 def main():
 
