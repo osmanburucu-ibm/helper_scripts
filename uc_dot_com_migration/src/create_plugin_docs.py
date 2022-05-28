@@ -64,52 +64,20 @@ def get_list_of_files_from_repo(config):
             #afile.writelines(all_files)
     return all_files
 
-# def content_to_md_OLD (soupcontent):
-#     logger1.debug(f"content= {soupcontent}")
-
-#     # TODO: download all images into <local repo>/files/images directory and change the reference to this link!
-#     # TODO: check if reference to urbancode.com or devworks and fix it!
-#     for item in soupcontent.contents:
-#         logger1.info(f"item={item}")
-     
-#     contents = "".join(str(item) for item in soupcontent.contents)
-#     logger1.info(f"contents-original={contents}")
-#     # the tables are broken no idea why... try to fix it.. does not work well...
-#     contents = contents.replace("</em></caption>", "</em></caption> <br/>\n <p></p> <br/>\n <p></p>")
-#     contents = contents.replace("   ", "")
-#     contents = contents.replace("  ", "") 
-#     contents = contents.replace("<br/>\n", " ")
-#     contents = contents.replace("\n </td>", "</td>")  
-#     contents = contents.replace("\n</td>", "</td>")
-#     contents = contents.replace("${", "``${")
-#     contents = contents.replace("}", "}``")
-    
-#     logger1.info(f"content-replaced={contents}")
-#     soup2 = BeautifulSoup(contents, SOUP_PARSER)
-    
-#     return md(soup2)
-
 def content_to_md (soupcontent, plugin):
     logger1.debug(f"content= {soupcontent}")
 
     # TODO: download all images into <local repo>/files/images directory and change the reference to this link!
     # TODO: check if reference to urbancode.com or devworks and fix it!
-
-    # all_imgs = soupcontent.find_all('img', src=True)
-    # for image in all_imgs:
-    #       logger1.info(f"image.src={image['src']}")
-          
+         
     contents = "".join(str(item) for item in soupcontent.contents)
     logger1.info(f"contents-original={contents}")
     # the tables are broken no idea why... try to fix it.. does not work well...
    # contents = contents.replace("</em></caption>", "</em></caption> <br/>\n <p></p> <br/>\n <p></p>")
     contents = re.sub(r'<caption style=.*</caption>', '', contents)
     
-    # contents = contents.replace("   ", "")
-    # contents = contents.replace("  ", "") 
     contents = contents.replace("<br/>\n", " ")
     contents = contents.replace("<br/>", " ")    
-    #contents = contents.replace(">\n", ">")
     contents = contents.replace("\n </td>", "</td>")  
     contents = contents.replace("\n</td>", "</td>")
     contents = contents.replace("${", "``${")
@@ -274,11 +242,7 @@ def get_content_for_doc(doc, plugin, soup):
         
     return md_content
     
-    # target_doc_path = get_target_doc_path(config, plugin)
-    # logger1.info(f"target doc path: {target_doc_path}")
-    
 def download_all_images (plugin, soup):
-    
     list_of_src = []
     list_of_images = []
     config = ucutil.get_config()
@@ -290,7 +254,7 @@ def download_all_images (plugin, soup):
         if image.has_attr('src'): 
             lnk = image.get("src")
             
-            logger1.info (f"image has src attribute")
+            logger1.info ("image has src attribute")
             # download image and convert to jpg
             imagepath=f"{target_path}"
             if not os.path.exists(imagepath):
@@ -330,7 +294,7 @@ def download_image(url, imagepath):
             filename = imagepathname if (os.path.exists(imagepathname)) else wget.download(url, imagepath)
         else:
             filename = "url_image_not_found"
-    except requests.exceptions.RequestException as e:
+    except requests.exceptions.RequestException:
         filename = "url_not_reachable"
     return filename
 
@@ -340,7 +304,6 @@ def b64_download(img_data, imagepath):
     if "jpg" in img_data: imgextension = ".jpg"
     if "jpeg" in img_data: imgextension = ".jpg"
     if "svg" in img_data: imgextension = ".svg"
-    #if "pdf" in img_data: imgextension = ".pdf"
     if "gif" in img_data: imgextension = ".gif"
     
     #logger1.info (f"data={img_data}")
@@ -486,9 +449,7 @@ def main():
         adict = json.load(json_file)
         
     allpluginslist = sorted(adict[ucutil.NAME_PLUGIN_LIST_NAME], key=lambda x: x["name"])
-    # for plugin in allpluginslist:
-    #     logger1.info(f"pluginname={plugin['name']}")
-    # os._exit(0)
+    
     mdfile_name = get_target_doc_path(config, "", ucutil.DOC_LEVEL_PLUGIN_README)
     prod_index_mdfile = MdUtils(file_name=f'{mdfile_name}/README',title=f'Welcome to UrbanCode {config[ucutil.EXPORT_PLUGIN_TYPE]} Plugins')
     prod_index_mdfile.new_header(level=1, title='List of all Plugins')  # style is set 'atx' format by default. 
