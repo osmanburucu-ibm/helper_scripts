@@ -154,7 +154,7 @@ def get_nav_bar(config, plugin, actdoc, doc_level):
     nav_bar_data = ["Back to ...", ""]
     if (doc_level == ucutil.DOC_LEVEL_PRODUCT_PLUGINS):
         nav_bar_data.append(f"{plugin.get(ucutil.NAME_PLUGIN_NAME)} ")
-        nav_bar_row = ["[All Plugins](../index.md)", "[Top](#contents)", f"[Readme]({get_target_doc_path_from_plugin(config, plugin)}/README.md)"]
+        nav_bar_row = ["[All Plugins](../index.md)", "[Top](#contents)", f"[Readme]({get_target_doc_path_from_plugin(config, plugin, doc_level)}/README.md)"]
     else:
         nav_bar_row = ["[All Plugins](../../index.md)", f"[{config.get(ucutil.EXPORT_PLUGIN_TYPE)} Plugins](../README.md)"]
 
@@ -194,11 +194,13 @@ def get_list_of_doc_tabs(plugin, actdoc):
 
     return list_of_doc_tabs
 
-def get_target_doc_path_from_plugin(config, plugin):
+def get_target_doc_path_from_plugin(config, plugin, level=ucutil.DOC_LEVEL_PLUGIN_DOCS):
     target_doc_folder = plugin.get(ucutil.NAME_PLUGIN_FOLDER_NAME).strip()
     if (not target_doc_folder): target_doc_folder = plugin.get(ucutil.NAME_PLUGIN_NAME).strip()
     
-    return get_target_doc_path(config, target_doc_folder)
+    if (level == ucutil.DOC_LEVEL_PRODUCT_PLUGINS): return target_doc_folder
+    
+    return get_target_doc_path(config, target_doc_folder, level)
 
 def create_doc_file(docname, soup, config, plugin):
     
@@ -502,7 +504,7 @@ def main():
             # read README.md step over first 5 lines and use the next 5 for abstract
             plugin_abstract = get_plugin_abstract_from_md_file(landing_page_name)
             prod_index_mdfile.new_paragraph(plugin_abstract)
-            prod_index_mdfile.new_paragraph("---")
+            prod_index_mdfile.new_paragraph("---\n  ")
             number_of_columns, list_of_columns = get_nav_bar(config, plugin, "README", ucutil.DOC_LEVEL_PRODUCT_PLUGINS)
             prod_index_mdfile.new_table(
                 columns=number_of_columns,
