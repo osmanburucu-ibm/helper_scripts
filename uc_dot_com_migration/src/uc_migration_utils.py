@@ -116,44 +116,46 @@ def getversionnumber2(elem):
 def get_allnumparts(elem) -> list:
     split_tup = os.path.splitext(elem.replace("_", "-"))
     logger1.info(split_tup)
-    splitchar = ""
-    if (":" in str(split_tup[0])):
-        splitchar = ":"
-    elif ("-" in str(split_tup[0])):
-        splitchar = "-"
-    else:
-        splitchar = "|"
+    splitchar = get_split_char(split_tup)
 
     parts = split_tup[0].split(splitchar)
     logger1.info (f"parts={parts}")
-    # if the parts are more than 2 concat from second entry to last with . and create a new allnumparts
     numpartslength = len(parts)
     if numpartslength > 2:
         newstring = ""
         logger1.info(f"len(parts) = {len(parts)}")
         if ("v" in parts[-1]):
             newstring = parts[-1].replace("v", "")
-        else:
-            if parts[-1].replace(".","").isnumeric():
-#                newstring = parts[-1]
-#            else:
-                for i in range(1, len(parts)):
-                    if ("b" in parts[i]): continue
-                    if parts[i].replace(".","").isnumeric():
-                        logger1.info(f"isnumeric part {parts[i]}")
-                        if newstring == "":
-                            newstring = parts[i]
-                        else:
-                            newstring += f".{parts[i]}"
-                    logger1.info(f"newstring = {newstring}")
+        elif parts[-1].replace(".","").isnumeric():
+            newstring = get_versionnumber_parts(parts)
         parts[-1] = newstring
     if parts[-1].replace(".","").isnumeric():
         allnumparts = parts[-1].split(".") if numpartslength >= 2 else ["0"]
     else:
         allnumparts = ["0"]
-    
+
     logger1.info(f"allnumparts={allnumparts}")
     return allnumparts
+
+def get_versionnumber_parts(parts, newstring=""):
+    for i in range(1, len(parts)):
+        if ("b" in parts[i]): continue
+        if parts[i].replace(".","").isnumeric():
+            logger1.info(f"isnumeric part {parts[i]}")
+            if newstring == "":
+                newstring = parts[i]
+            else:
+                newstring += f".{parts[i]}"
+        logger1.info(f"newstring = {newstring}")
+    return newstring
+
+def get_split_char(split_tup):
+    if (":" in str(split_tup[0])):
+        return ":"
+    elif "-" in str(split_tup[0]):
+        return "-"
+    else:
+        return "|"
 
 def getversionnumber(elem, forsort=False):
     logger1.info(elem)
