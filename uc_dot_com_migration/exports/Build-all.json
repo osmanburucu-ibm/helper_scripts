@@ -1405,7 +1405,7 @@
             "latestversion": "5.1098513"
         },
         {
-            "name": "DevOps Insights \u2013 Deployment Risk Analytics (DRA)",
+            "name": "DevOps Insights - Deployment Risk Analytics (DRA)",
             "plugin_folder_name": "bluemix-deployment-risk-analytics",
             "doc_folder_name": "devops-insights-deployment-risk-analytics-dra",
             "documentation_name": "",

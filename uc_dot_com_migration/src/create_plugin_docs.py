@@ -164,6 +164,7 @@ def get_list_of_doc_tabs(plugin, actdoc):
 
 def get_target_doc_path_from_plugin(config, plugin, level=ucutil.DOC_LEVEL_PLUGIN_DOCS):
     target_doc_folder = plugin.get(ucutil.NAME_PLUGIN_FOLDER_NAME).strip()
+    if (not target_doc_folder): target_doc_folder = plugin.get(ucutil.NAME_DOC_FOLDER_NAME).strip()
     if (not target_doc_folder): target_doc_folder = plugin.get(ucutil.NAME_PLUGIN_NAME).strip()
     
     if (level == ucutil.DOC_LEVEL_PRODUCT_PLUGINS): return target_doc_folder

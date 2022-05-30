@@ -790,7 +790,7 @@
             "latestversion": "24.1107123"
         },
         {
-            "name": "FileNet \u2013 IBM Case Manager",
+            "name": "FileNet - IBM Case Manager",
             "plugin_folder_name": "FileNet-CaseManager",
             "doc_folder_name": "filenet-ibm-case-manager",
             "documentation_name": "filenet-ibm-case-manager",
@@ -3509,7 +3509,7 @@
             "latestversion": "6.1100872"
         },
         {
-            "name": "WebSphere Application Server \u2013 Configure",
+            "name": "WebSphere Application Server - Configure",
             "plugin_folder_name": "WebSphereConfiguration",
             "doc_folder_name": "websphere-application-server-configure",
             "documentation_name": "websphere-application-server-configure",
@@ -3685,7 +3685,7 @@
             "latestversion": "12.1100959"
         },
         {
-            "name": "IBM Integration Bus (formerly WebSphere Message Broker) \u2013 CMP",
+            "name": "IBM Integration Bus (formerly WebSphere Message Broker) - CMP",
             "plugin_folder_name": "WebSphereMessageBroker-CMP",
             "doc_folder_name": "ibm-integration-bus-formerly-websphere-message-broker-cmp",
             "documentation_name": "ibm-integration-bus-formerly-websphere-message-broker-cmp",
@@ -3812,7 +3812,7 @@
             "latestversion": "3.641566"
         },
         {
-            "name": "WebSphere Application Server \u2013 Deployment",
+            "name": "WebSphere Application Server - Deployment",
             "plugin_folder_name": "Websphere",
             "doc_folder_name": "websphere-application-server-deployment",
             "documentation_name": "websphere-application-server-deployment",
@@ -4011,7 +4011,7 @@
             "latestversion": "3.860070"
         },
         {
-            "name": "IBM Rational Team Concert \u2013 SCM",
+            "name": "IBM Rational Team Concert - SCM",
             "plugin_folder_name": "air-plugin-RTC-scm",
             "doc_folder_name": "ibm-rational-team-concert-scm",
             "documentation_name": "ibm-rational-team-concert-scm",
@@ -4673,7 +4673,7 @@
             "latestversion": "2.1095866"
         },
         {
-            "name": "Microsoft IIS \u2013 Configure",
+            "name": "Microsoft IIS - Configure",
             "plugin_folder_name": "iis-configuration",
             "doc_folder_name": "microsoft-iis-configure",
             "documentation_name": "microsoft-iis-configure",
@@ -5945,7 +5945,7 @@
             "latestversion": "1.769633"
         },
         {
-            "name": "WebSphere Application Server \u2013 Install",
+            "name": "WebSphere Application Server - Install",
             "plugin_folder_name": "websphere-install",
             "doc_folder_name": "websphere-application-server-install",
             "documentation_name": "websphere-application-server-install",
@@ -6508,7 +6508,7 @@
             "latestversion": "0"
         },
         {
-            "name": "IBM MQ for z/OS \u2013 Generate MQSC Commands",
+            "name": "IBM MQ for z/OS - Generate MQSC Commands",
             "plugin_folder_name": "",
             "doc_folder_name": "ibm-mq-for-z-os-generate-mqsc-commands",
             "documentation_name": "ibm-mq-for-z-os-generate-mqsc-commands",
@@ -6574,7 +6574,7 @@
             "latestversion": "0"
         },
         {
-            "name": "IBM Rational Team Concert \u2013 Build",
+            "name": "IBM Rational Team Concert - Build",
             "plugin_folder_name": "",
             "doc_folder_name": "ibm-rational-team-concert-build",
             "documentation_name": "",
