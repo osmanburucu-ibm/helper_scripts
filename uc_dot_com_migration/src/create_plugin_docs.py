@@ -1,7 +1,6 @@
 import json
 import os
-import string
-from github import Github
+
 from mdutils.mdutils import MdUtils
 import logging
 import requests
@@ -39,30 +38,6 @@ logger1.addHandler(ch)
 # Create shorthand method for conversion
 def md(soup, **options):
     return markdownify.MarkdownConverter(**options).convert_soup(soup)
-
-def get_list_of_files_from_repo(config):
-    all_files = []
-    workfolder = config[ucutil.WORKING_FOLDER_LOCATION]
-    allfilesname = f'{workfolder}/{config[ucutil.EXPORT_PLUGIN_TYPE]}-all_files.txt'
-    if os.path.exists(allfilesname):
-        with open(allfilesname, "r") as afile:
-            all_files.extend(line[:-1] for line in afile)
-    else:
-        g = Github(config[ucutil.GITHUB_TOKEN])
-        repo = g.get_repo(config[ucutil.GITHUB_TARGET_REPO])
-        contents = repo.get_contents("")
-        with open(allfilesname, "w") as afile:
-            while contents:
-                file_content = contents.pop(0)
-                if file_content.type == "dir":
-                    contents.extend(repo.get_contents(file_content.path))
-                else:
-                    logger1.info(f"ALL_FILES={file_content} - {file_content.path} - {file_content.download_url} -  {file_content.size} - {file_content.url}")
-                    all_files.append(str(file_content.download_url))
-                    afile.write(str(file_content.download_url))
-                    afile.write("\n")
-            #afile.writelines(all_files)
-    return all_files
 
 def content_to_md (soupcontent, plugin):
     logger1.debug(f"content= {soupcontent}")
@@ -102,83 +77,10 @@ def content_to_md (soupcontent, plugin):
   
     return md(soup2)
 
-
-def get_latest_version_info(config, plugin):
-    versionname = plugin["latestversion"]
-    logger1.info(f"Plugin={plugin.get(ucutil.NAME_PLUGIN_NAME)} LatestVersion={versionname}")
-
-    filename = next((file for file in plugin["files"] if (versionname in file)), "")
-    logger1.info(f"filename={filename}")
-
-    if filename:     
-        all_files = get_list_of_files_from_repo(config)
-        target_file_name = next((file for file in all_files if (filename in file)), "")
-        logger1.info(f"link={target_file_name}")
-        filename = target_file_name
-
-    return versionname, filename
-
-def get_nav_bar(config, plugin, actdoc, doc_level):    
-    if (doc_level == ucutil.DOC_LEVEL_ALL_PLUGINS):
-        # TODO: no nav_bar on top level - check
-        return 0, []
-
-    nav_bar_data = ["Back to ...", ""]
-    if (doc_level == ucutil.DOC_LEVEL_PRODUCT_PLUGINS):
-        nav_bar_data.append(f"{plugin.get(ucutil.NAME_PLUGIN_NAME)} ")
-        nav_bar_row = ["[All Plugins](../index.md)", "[Top](#contents)", f"[Readme]({get_target_doc_path_from_plugin(config, plugin, doc_level)}/README.md)"]
-    else:
-        nav_bar_row = ["[All Plugins](../../index.md)", f"[{config.get(ucutil.EXPORT_PLUGIN_TYPE)} Plugins](../README.md)"]
-
-    nav_bar_data.append("Latest Version")
-    plugin_version, plugin_link = get_latest_version_info(config, plugin)
-    nav_bar_row.append(f"[{plugin_version}]({plugin_link})")
-
-    if (doc_level==ucutil.DOC_LEVEL_PLUGIN_DOCS):
-        nav_bar_data.append(f"{plugin.get(ucutil.NAME_PLUGIN_NAME)} ")
-        nav_bar_row.append("[Readme](README.md)")
-
-    if doc_level in [ucutil.DOC_LEVEL_PLUGIN_DOCS, ucutil.DOC_LEVEL_PLUGIN_README]:
-        list_of_docs = get_list_of_doc_tabs(plugin, actdoc)
-        for docname in list_of_docs:
-            nav_bar_data.append("")
-            nav_bar_row.append(f"[{docname}]({docname.lower()}.md)")
-
-    number_of_columns = 1
-    number_of_columns = len(nav_bar_data)
-    logger1.info(f"number_of_columns={number_of_columns} - nav_bar_rows={nav_bar_data} - nav_bar_rows={nav_bar_row} size={len(nav_bar_row)}")
-    nav_bar_data.extend(nav_bar_row)
-    logger1.info(f"number_of_columns={number_of_columns} - nav_bar={nav_bar_data} size={len(nav_bar_data)}")
-
-    return number_of_columns, nav_bar_data
-
-def get_list_of_doc_tabs(plugin, actdoc):
-    list_of_doc_tabs = []
-
-    for doctab in plugin.get(ucutil.NAME_DOC_TABS):
-        logger1.info(f"doctabs: {doctab}")
-        docname = doctab.get("name", "")
-        if (actdoc != docname): list_of_doc_tabs.append(docname)
-
-    # add Downloads tab!
-    if (actdoc != ucutil.DOWNLOADS_DOCNAME) and (len(plugin.get(ucutil.NAME_PLUGIN_FILELIST_NAME)) > 0):
-        list_of_doc_tabs.append(ucutil.DOWNLOADS_DOCNAME)
-
-    return list_of_doc_tabs
-
-def get_target_doc_path_from_plugin(config, plugin, level=ucutil.DOC_LEVEL_PLUGIN_DOCS):
-    target_doc_folder = plugin.get(ucutil.NAME_PLUGIN_FOLDER_NAME).strip()
-    if (not target_doc_folder): target_doc_folder = plugin.get(ucutil.NAME_DOC_FOLDER_NAME).strip()
-    if (not target_doc_folder): target_doc_folder = plugin.get(ucutil.NAME_PLUGIN_NAME).strip()
-    
-    if (level == ucutil.DOC_LEVEL_PRODUCT_PLUGINS): return target_doc_folder
-    
-    return get_target_doc_path(config, target_doc_folder, level)
-
 def create_doc_file(docname, soup, config, plugin):
     
     doc_title = f"{plugin[ucutil.NAME_PLUGIN_NAME]} - {docname}"
-    target_doc_path = get_target_doc_path_from_plugin(config, plugin)
+    target_doc_path = ucutil.get_target_doc_path_from_plugin(config, plugin)
     doc_file_name = f"{target_doc_path}/{docname.lower()}.md"
     
     # do not create document if it exists and recreate is false
@@ -197,7 +99,7 @@ def create_doc_file(docname, soup, config, plugin):
         md_doc_file.new_paragraph(doc_content)
     
     # add nav bar
-    number_of_columns, list_of_columns = get_nav_bar(config, plugin, docname, ucutil.DOC_LEVEL_PLUGIN_DOCS)
+    number_of_columns, list_of_columns = ucutil.get_nav_bar(config, plugin, docname, ucutil.DOC_LEVEL_PLUGIN_DOCS)
     md_doc_file.new_table(
         columns=number_of_columns,
         rows=len(list_of_columns) // number_of_columns,
@@ -213,7 +115,7 @@ def create_doc_file(docname, soup, config, plugin):
 
 def create_doc_files(config, plugin):
     
-    list_of_docs = get_list_of_doc_tabs(plugin, "")
+    list_of_docs = ucutil.get_list_of_doc_tabs(plugin, "")
 
     if (config.get(ucutil.SKIP_DOC_FILES) == "False"):
         response = requests.get(f"{config[ucutil.PLUGIN_DOCUMENTATION_URL]}/{plugin[ucutil.NAME_DOCUMENTATION_NAME]}")
@@ -250,7 +152,7 @@ def download_all_images (plugin, soup):
     list_of_src = []
     list_of_images = []
     config = ucutil.get_config()
-    target_path = get_target_doc_path_from_plugin(config, plugin)
+    target_path = ucutil.get_target_doc_path_from_plugin(config, plugin)
     
     all_imgs = soup.find_all('img')
     for image in all_imgs:
@@ -333,7 +235,7 @@ def get_file_download_link(config, filename):
     logger1.info(f"Filename={filename}")
     link = ""
     if (filename):
-        all_files = get_list_of_files_from_repo(config)
+        all_files = ucutil.get_list_of_files_from_repo(config)
         for file in all_files:
             if (filename in str(file)): link = str(file)
     
@@ -352,7 +254,7 @@ def get_download_list(config, plugin):
 def create_plugin_landing_page(config, plugin):
     logger1.info (f"Creating landing page for Plug-In {plugin.get(ucutil.NAME_PLUGIN_NAME)}")
     
-    target_doc_path = get_target_doc_path_from_plugin(config, plugin)
+    target_doc_path = ucutil.get_target_doc_path_from_plugin(config, plugin)
     logger1.info(f"target doc path: {target_doc_path}")
     
     doc_title = f"{plugin[ucutil.NAME_PLUGIN_NAME]}"
@@ -368,7 +270,7 @@ def create_plugin_landing_page(config, plugin):
     md_content = get_landing_page_content(config, plugin)
     landing_page_md_file.new_paragraph(md_content)
     
-    number_of_columns, list_of_columns = get_nav_bar(config, plugin, "README", ucutil.DOC_LEVEL_PLUGIN_README)
+    number_of_columns, list_of_columns = ucutil.get_nav_bar(config, plugin, "README", ucutil.DOC_LEVEL_PLUGIN_README)
     landing_page_md_file.new_table(
         columns=number_of_columns,
         rows=len(list_of_columns) // number_of_columns,
@@ -421,37 +323,13 @@ def get_doc_not_found(docname):
     doc_not_found = doc_not_found.replace("DOCNAME", docname )
     return doc_not_found
 
-def get_target_doc_path(config, target_doc_folder, level=ucutil.DOC_LEVEL_PLUGIN_DOCS):
-
-    target_doc_path = f"{config[ucutil.LOCAL_DOCREPO_LOCATION]}/{config[ucutil.DEFAULT_DOC_TARGET_FOLDER]}"
-    if level==ucutil.DOC_LEVEL_ALL_PLUGINS: return target_doc_path
-    
-    target_doc_path = f"{config[ucutil.LOCAL_DOCREPO_LOCATION]}/{config[ucutil.DOC_TARGET_FOLDER]}"
-    if level == ucutil.DOC_LEVEL_PLUGIN_README: return target_doc_path 
-    
-    if (level == ucutil.DOC_LEVEL_PLUGIN_DOCS) and (target_doc_folder):
-        target_doc_path = f"{target_doc_path}/{target_doc_folder}"
-        
-    return target_doc_path
-
 def get_plugin_abstract_from_md_file(plugin_file_name):
-    # TODO: check after line 4 for text and check up to line 10 if navbar is read! -> Artifactory Source Config show 1 line 
     with open(plugin_file_name, "r") as md_file:
         read_lines = [line.rstrip() for line in md_file]# md_file.readlines()[5:10]
     logger1.info(f"read this lines {read_lines} from {plugin_file_name}")
-    lines = read_lines[5:10]
-    doubleemptyline=0
-    newlines = ""
-    for idx in range(len(lines)):
-        logger1.info(f"line={lines[idx].strip()}")
-        if (lines[idx].strip() == ""):
-            if (idx > 0) : 
-                doubleemptyline = doubleemptyline +1
-            continue
-        if doubleemptyline < 2:
-            newlines = f"{newlines}{lines[idx]}"
-    logger1.info(f"newlines={newlines}")
-    return newlines
+    return ucutil.extract_abstract(read_lines)
+
+
 
 def main():
     adict = {}
@@ -465,7 +343,7 @@ def main():
         
     allpluginslist = sorted(adict[ucutil.NAME_PLUGIN_LIST_NAME], key=lambda x: x["name"])
     
-    mdfile_name = get_target_doc_path(config, "", ucutil.DOC_LEVEL_PLUGIN_README)
+    mdfile_name = ucutil.get_target_doc_path(config, "", ucutil.DOC_LEVEL_PLUGIN_README)
     prod_index_mdfile = MdUtils(file_name=f'{mdfile_name}/README',title=f'Welcome to UrbanCode {config[ucutil.EXPORT_PLUGIN_TYPE]} Plugins')
     prod_index_mdfile.new_header(level=1, title='List of all Plugins')  # style is set 'atx' format by default. 
     
@@ -481,7 +359,7 @@ def main():
             plugin_abstract = get_plugin_abstract_from_md_file(landing_page_name)
             prod_index_mdfile.new_paragraph(plugin_abstract)
             prod_index_mdfile.new_paragraph("---\n  ")
-            number_of_columns, list_of_columns = get_nav_bar(config, plugin, "README", ucutil.DOC_LEVEL_PRODUCT_PLUGINS)
+            number_of_columns, list_of_columns = ucutil.get_nav_bar(config, plugin, "README", ucutil.DOC_LEVEL_PRODUCT_PLUGINS)
             prod_index_mdfile.new_table(
                 columns=number_of_columns,
                 rows=len(list_of_columns) // number_of_columns,

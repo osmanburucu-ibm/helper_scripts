@@ -4,6 +4,8 @@ import os
 from decimal import Decimal
 from posixpath import split
 from unicodedata import decimal
+from github import Github
+import json
 
 from pyparsing import nums
 
@@ -108,6 +110,42 @@ def get_config():
         SKIP_DOC_FILES: os.getenv(SKIP_DOC_FILES, "False")
     }
 
+def get_all_plugins_list(global_allpluginslist):
+    if (len(global_allpluginslist) == 0):
+        adict = {}
+        config = get_config()
+        workfolder = config[WORKING_FOLDER_LOCATION]
+
+        with open(f'{workfolder}/{config[EXPORT_PLUGIN_TYPE]}-all.json', "r") as json_file:
+            adict = json.load(json_file)
+
+        global_allpluginslist = sorted(adict[NAME_PLUGIN_LIST_NAME], key=lambda x: x["name"])
+    return global_allpluginslist
+
+def get_list_of_files_from_repo(config):
+    all_files = []
+    workfolder = config[WORKING_FOLDER_LOCATION]
+    allfilesname = f'{workfolder}/{config[EXPORT_PLUGIN_TYPE]}-all_files.txt'
+    if os.path.exists(allfilesname):
+        with open(allfilesname, "r") as afile:
+            all_files.extend(line[:-1] for line in afile)
+    else:
+        g = Github(config[GITHUB_TOKEN])
+        repo = g.get_repo(config[GITHUB_TARGET_REPO])
+        contents = repo.get_contents("")
+        with open(allfilesname, "w") as afile:
+            while contents:
+                file_content = contents.pop(0)
+                if file_content.type == "dir":
+                    contents.extend(repo.get_contents(file_content.path))
+                else:
+                    logger1.info(f"ALL_FILES={file_content} - {file_content.path} - {file_content.download_url} -  {file_content.size} - {file_content.url}")
+                    all_files.append(str(file_content.download_url))
+                    afile.write(str(file_content.download_url))
+                    afile.write("\n")
+            #afile.writelines(all_files)
+    return all_files
+
 # TODO: x.yyyy also check yyyy ! f.e. 6.86 is higher than 6.111 in this function, should be 6.111 higher!
 # TODO: Check that the versionnumber makes sense, as there are several "version naming" conventions used!
 def getversionnumber2(elem):
@@ -190,6 +228,105 @@ def get_target_doc_path(config, target_doc_folder, level=DOC_LEVEL_PLUGIN_DOCS):
         target_doc_path = f"{target_doc_path}/{target_doc_folder}"
         
     return target_doc_path
+
+def extract_abstract(read_lines):
+    lines = read_lines[5:10]
+    doubleemptyline=0
+    newlines = []
+    for idx in range(len(lines)):
+        logger1.info(f"line={lines[idx].strip()}")
+        if (lines[idx].strip() == ""):
+            if (idx > 0) : 
+                doubleemptyline = doubleemptyline +1
+                logger1.info(f"doubleemptyline={doubleemptyline}")
+            continue
+        # ignore table lines
+        if (lines[idx][0] =="|"): continue
+        if ("---" in lines[idx].strip()): 
+            newlines[-1] = ""
+            continue
+            
+        if ("===" in lines[idx].strip()): 
+            newlines[-1] = ""
+            continue
+        
+        newlines.append(lines[idx])
+    logger1.info(f"newlines={newlines}")
+    
+    return "".join(newlines).strip()
+
+def get_latest_version_info(config, plugin):
+    versionname = plugin["latestversion"]
+    logger1.info(f"Plugin={plugin.get(NAME_PLUGIN_NAME)} LatestVersion={versionname}")
+
+    filename = next((file for file in plugin["files"] if (versionname in file)), "")
+    logger1.info(f"filename={filename}")
+
+    if filename:     
+        all_files = get_list_of_files_from_repo(config)
+        target_file_name = next((file for file in all_files if (filename in file)), "")
+        logger1.info(f"link={target_file_name}")
+        filename = target_file_name
+
+    return versionname, filename
+
+def get_target_doc_path_from_plugin(config, plugin, level=DOC_LEVEL_PLUGIN_DOCS):
+    target_doc_folder = plugin.get(NAME_PLUGIN_FOLDER_NAME).strip()
+    if (not target_doc_folder): target_doc_folder = plugin.get(NAME_DOC_FOLDER_NAME).strip()
+    if (not target_doc_folder): target_doc_folder = plugin.get(NAME_PLUGIN_NAME).strip()
+    
+    if (level == DOC_LEVEL_PRODUCT_PLUGINS): return target_doc_folder
+    
+    return get_target_doc_path(config, target_doc_folder, level)
+
+def get_list_of_doc_tabs(plugin, actdoc):
+    list_of_doc_tabs = []
+
+    for doctab in plugin.get(NAME_DOC_TABS):
+        logger1.info(f"doctabs: {doctab}")
+        docname = doctab.get("name", "")
+        if (actdoc != docname): list_of_doc_tabs.append(docname)
+
+    # add Downloads tab!
+    if (actdoc != DOWNLOADS_DOCNAME) and (len(plugin.get(NAME_PLUGIN_FILELIST_NAME)) > 0):
+        list_of_doc_tabs.append(DOWNLOADS_DOCNAME)
+
+    return list_of_doc_tabs
+
+
+def get_nav_bar(config, plugin, actdoc, doc_level):    
+    if (doc_level == DOC_LEVEL_ALL_PLUGINS):
+        # TODO: no nav_bar on top level - check
+        return 0, []
+
+    nav_bar_data = ["Back to ...", ""]
+    if (doc_level == DOC_LEVEL_PRODUCT_PLUGINS):
+        nav_bar_data.append(f"{plugin.get(NAME_PLUGIN_NAME)} ")
+        nav_bar_row = ["[All Plugins](../index.md)", "[Top](#contents)", f"[Readme]({get_target_doc_path_from_plugin(config, plugin, doc_level)}/README.md)"]
+    else:
+        nav_bar_row = ["[All Plugins](../../index.md)", f"[{config.get(EXPORT_PLUGIN_TYPE)} Plugins](../README.md)"]
+
+    nav_bar_data.append("Latest Version")
+    plugin_version, plugin_link = get_latest_version_info(config, plugin)
+    nav_bar_row.append(f"[{plugin_version}]({plugin_link})")
+
+    if (doc_level==DOC_LEVEL_PLUGIN_DOCS):
+        nav_bar_data.append(f"{plugin.get(NAME_PLUGIN_NAME)} ")
+        nav_bar_row.append("[Readme](README.md)")
+
+    if doc_level in [DOC_LEVEL_PLUGIN_DOCS, DOC_LEVEL_PLUGIN_README]:
+        list_of_docs = get_list_of_doc_tabs(plugin, actdoc)
+        for docname in list_of_docs:
+            nav_bar_data.append("")
+            nav_bar_row.append(f"[{docname}]({docname.lower()}.md)")
+
+    number_of_columns = 1
+    number_of_columns = len(nav_bar_data)
+    logger1.info(f"number_of_columns={number_of_columns} - nav_bar_rows={nav_bar_data} - nav_bar_rows={nav_bar_row} size={len(nav_bar_row)}")
+    nav_bar_data.extend(nav_bar_row)
+    logger1.info(f"number_of_columns={number_of_columns} - nav_bar={nav_bar_data} size={len(nav_bar_data)}")
+
+    return number_of_columns, nav_bar_data
 
 def main():
 
