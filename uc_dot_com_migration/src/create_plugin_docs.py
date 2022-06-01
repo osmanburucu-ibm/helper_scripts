@@ -74,8 +74,12 @@ def content_to_md (soupcontent, plugin):
     logger1.info(f"contents-original={contents}")
     # the tables are broken no idea why... try to fix it.. does not work well...
    # contents = contents.replace("</em></caption>", "</em></caption> <br/>\n <p></p> <br/>\n <p></p>")
+    contents = contents.replace("  ", "")
+    contents = contents.replace("  ", "")
+    contents = contents.replace("  ", "")
+    contents = contents.replace("  ", "")
+    contents = contents.replace("<br/>\n", " ")
     contents = re.sub(r'<caption style=.*</caption>', '', contents)
-    
     contents = contents.replace("<br/>\n", " ")
     contents = contents.replace("<br/>", " ")    
     contents = contents.replace("\n </td>", "</td>")  
@@ -209,18 +213,17 @@ def create_doc_file(docname, soup, config, plugin):
 
 def create_doc_files(config, plugin):
     
-    if (config.get(ucutil.SKIP_DOC_FILES) == "True"):
-        return []
-    
     list_of_docs = get_list_of_doc_tabs(plugin, "")
 
-    response = requests.get(f"{config[ucutil.PLUGIN_DOCUMENTATION_URL]}/{plugin[ucutil.NAME_DOCUMENTATION_NAME]}")
-    soup = BeautifulSoup(response.text, SOUP_PARSER)
-    for doc in list_of_docs:
-        logger1.debug(f"doc={doc}")
-        # create a doc!
-        doc_file_name = create_doc_file(doc, soup, config, plugin)
-        logger1.info(f"{doc_file_name} created")
+    if (config.get(ucutil.SKIP_DOC_FILES) == "False"):
+        response = requests.get(f"{config[ucutil.PLUGIN_DOCUMENTATION_URL]}/{plugin[ucutil.NAME_DOCUMENTATION_NAME]}")
+        soup = BeautifulSoup(response.text, SOUP_PARSER)
+        for doc in list_of_docs:
+            logger1.debug(f"doc={doc}")
+            # create a doc!
+            doc_file_name = create_doc_file(doc, soup, config, plugin)
+            logger1.info(f"{doc_file_name} created")
+
     return list_of_docs
 
 def get_content_for_doc(doc, plugin, soup):
@@ -437,7 +440,18 @@ def get_plugin_abstract_from_md_file(plugin_file_name):
         read_lines = [line.rstrip() for line in md_file]# md_file.readlines()[5:10]
     logger1.info(f"read this lines {read_lines} from {plugin_file_name}")
     lines = read_lines[5:10]
-    return " ".join(lines)
+    doubleemptyline=0
+    newlines = ""
+    for idx in range(len(lines)):
+        logger1.info(f"line={lines[idx].strip()}")
+        if (lines[idx].strip() == ""):
+            if (idx > 0) : 
+                doubleemptyline = doubleemptyline +1
+            continue
+        if doubleemptyline < 2:
+            newlines = f"{newlines}{lines[idx]}"
+    logger1.info(f"newlines={newlines}")
+    return newlines
 
 def main():
     adict = {}
@@ -457,7 +471,7 @@ def main():
     
     for plugin in allpluginslist: # adict[ucutil.NAME_PLUGIN_LIST_NAME]:
         if (plugin.get(ucutil.NAME_DOC_FOLDER_NAME)):
-#        if any(re.findall(r'cics|accurev', plugin.get(ucutil.NAME_DOC_FOLDER_NAME), re.IGNORECASE)): 
+#        if any(re.findall(r'cics|accurev|ca', plugin.get(ucutil.NAME_DOC_FOLDER_NAME), re.IGNORECASE)): 
             landing_page_name = create_plugin_landing_page(config, plugin)
             list_of_docs = create_doc_files(config, plugin)
             logger1.info(f"landing page={landing_page_name} and docs={list_of_docs} created")
