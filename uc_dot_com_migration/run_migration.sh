@@ -21,6 +21,9 @@ case $2 in
     "CREATE-DOCS")
         python3 src/create_plugin_docs.py
         ;;
+    "REBUILD-INDEX")
+        python3 src/create_index_file.py
+        ;;
     "DO-DUMP-DOCS-MERGE")
         python3 src/dump_all_plugin_docs.py
         python3 src/merge_docs_with_fileslist.py
@@ -39,6 +42,12 @@ case $2 in
         python3 src/dump_all_plugin_docs.py
         python3 src/merge_docs_with_fileslist.py
         python3 src/create_plugin_docs.py
+        ;;
+    "ADD-TO-GIT")
+        python3 src/add_to_git_from_local_repo.py
+        ;;
+    "FIX-DIR-NAMES")
+        python3 src/fix_plugin_dir_names.py
         ;;
     *)
         echo "not a valid argument"

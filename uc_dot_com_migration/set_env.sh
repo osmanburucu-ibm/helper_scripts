@@ -54,3 +54,9 @@ export GITHUB_USERNAME=""
 export GITHUB_TOKEN=""
 export GITHUB_API_URL="https://api.github.com"
 export GITHUB_TARGET_REPO=""
+
+# Needed for Re-Creation runs
+export RECREATE_PRODUCT_INDEX_FILE="True"
+export RECREATE_PLUGIN_DOC_FILE="True"
+export RECREATE_DOC_FILES="True"
+export SKIP_DOC_FILES="False" 
