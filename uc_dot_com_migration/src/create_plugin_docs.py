@@ -332,16 +332,11 @@ def get_plugin_abstract_from_md_file(plugin_file_name):
 
 
 def main():
-    adict = {}
 
     config = ucutil.get_config()
     logger1.debug(f"config={config}")
-    workfolder = config[ucutil.WORKING_FOLDER_LOCATION]
     
-    with open(f'{workfolder}/{config[ucutil.EXPORT_PLUGIN_TYPE]}-all.json', "r") as json_file:
-        adict = json.load(json_file)
-        
-    allpluginslist = sorted(adict[ucutil.NAME_PLUGIN_LIST_NAME], key=lambda x: x["name"])
+    allpluginslist = ucutil.get_all_plugins_list(allpluginslist)
     
     mdfile_name = ucutil.get_target_doc_path(config, "", ucutil.DOC_LEVEL_PLUGIN_README)
     prod_index_mdfile = MdUtils(file_name=f'{mdfile_name}/README',title=f'Welcome to UrbanCode {config[ucutil.EXPORT_PLUGIN_TYPE]} Plugins')

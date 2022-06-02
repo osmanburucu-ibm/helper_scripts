@@ -71,7 +71,11 @@ def main():
     alldirs=os.listdir(rootdir)
     alldirs.sort()
     logger1.info(f"alldirs={alldirs}")
-    for plugindir in alldirs:
+    global_allpluginslist = ucutil.get_all_plugins_list(global_allpluginslist)
+    
+#    for plugindir in alldirs:
+    for plugin in global_allpluginslist:
+        plugindir = ucutil.get_target_doc_path_from_plugin(config, plugin, level=ucutil.DOC_LEVEL_PRODUCT_PLUGINS)
         logger1.info(f"plugindir={plugindir}")
         if os.path.isdir(f"{rootdir}/{plugindir}"):
             plugin_name, plugin_content = get_name_and_content_from_md(f"{rootdir}/{plugindir}/README.md")

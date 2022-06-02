@@ -110,8 +110,8 @@ def get_config():
         SKIP_DOC_FILES: os.getenv(SKIP_DOC_FILES, "False")
     }
 
-def get_all_plugins_list(global_allpluginslist):
-    if (len(global_allpluginslist) == 0):
+def get_all_plugins_list(all_plugins_list):
+    if (len(all_plugins_list) == 0):
         adict = {}
         config = get_config()
         workfolder = config[WORKING_FOLDER_LOCATION]
@@ -119,8 +119,8 @@ def get_all_plugins_list(global_allpluginslist):
         with open(f'{workfolder}/{config[EXPORT_PLUGIN_TYPE]}-all.json', "r") as json_file:
             adict = json.load(json_file)
 
-        global_allpluginslist = sorted(adict[NAME_PLUGIN_LIST_NAME], key=lambda x: x["name"])
-    return global_allpluginslist
+        all_plugins_list = sorted(adict[NAME_PLUGIN_LIST_NAME], key=lambda x: x["name"])
+    return all_plugins_list
 
 def get_list_of_files_from_repo(config):
     all_files = []
@@ -253,7 +253,7 @@ def extract_abstract(read_lines):
         newlines.append(lines[idx])
     logger1.info(f"newlines={newlines}")
     
-    return "".join(newlines).strip()
+    return " ".join(newlines).strip()
 
 def get_latest_version_info(config, plugin):
     versionname = plugin["latestversion"]
