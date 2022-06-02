@@ -42,6 +42,7 @@ case $2 in
         python3 src/dump_all_plugin_docs.py
         python3 src/merge_docs_with_fileslist.py
         python3 src/create_plugin_docs.py
+        python3 src/create_index_file.py
         ;;
     "ADD-TO-GIT")
         python3 src/add_to_git_from_local_repo.py
