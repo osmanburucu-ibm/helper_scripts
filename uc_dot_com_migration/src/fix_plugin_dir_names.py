@@ -39,12 +39,8 @@ logger1.addHandler(ch)
 def main():
     config = ucutil.get_config()
 
-    workfolder = config[ucutil.WORKING_FOLDER_LOCATION]
-
-    with open(f'{workfolder}/{config[ucutil.EXPORT_PLUGIN_TYPE]}-all.json', "r") as json_file:
-        adict = json.load(json_file)    
-
-    allpluginslist = sorted(adict[ucutil.NAME_PLUGIN_LIST_NAME], key=lambda x: x["name"])
+    allpluginslist = []
+    allpluginslist = ucutil.get_all_plugins_list(allpluginslist)
 
     mdfile_name = f'{ucutil.get_target_doc_path(config, "", ucutil.DOC_LEVEL_PLUGIN_README)}/README.md'
     logger1.info(f"mdfile_name={mdfile_name}")
@@ -63,9 +59,9 @@ def main():
 
             # rename folder
             if (os.path.isdir(wrong_doc_folder_name)): 
-                os.rename(wrong_doc_folder_name, new_doc_folder_name)
+                os.rename(wrong_doc_folder_name, f"{wrong_doc_folder_name}_WRONG")
+                os.rename(f"{wrong_doc_folder_name}_WRONG", new_doc_folder_name)
             else:
-                if (os.path.isdir(new_doc_folder_name))
                 logger1.info(f"directory not found {wrong_doc_folder_name}")
             # replace in README.md in folder from wrong name to new name
             readme_file_text = readme_file_text.replace(f"{wrong_name}/README.md", f"{new_name}/README.md", 1)
