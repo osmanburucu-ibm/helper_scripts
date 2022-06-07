@@ -60,3 +60,9 @@ export RECREATE_PRODUCT_INDEX_FILE="True"
 export RECREATE_PLUGIN_DOC_FILE="True"
 export RECREATE_DOC_FILES="True"
 export SKIP_DOC_FILES="False" 
+
+# if wordpress exports are used
+# for example EXPORTED_DOCS_PATH="exports/WP_exports/"
+export EXPORTED_DOCS_PATH=""
+export EXPORTED_ALL_PLUGINS_LIST="plugins.urbancode.WordPress.xml"
+export EXPORTED_PLUGIN_DOCS="plugin-docs.urbancode.WordPress.xml"

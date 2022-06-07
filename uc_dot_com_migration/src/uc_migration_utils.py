@@ -82,6 +82,9 @@ RECREATE_PLUGIN_DOC_FILE="RECREATE_PLUGIN_DOC_FILE"
 RECREATE_PRODUCT_INDEX_FILE="RECREATE_PRODUCT_INDEX_FILE"
 SKIP_DOC_FILES="SKIP_DOC_FILES"
 
+EXPORTED_DOCS_PATH="EXPORTED_DOCS_PATH"
+EXPORTED_ALL_PLUGINS_LIST="EXPORTED_ALL_PLUGINS_LIST"
+EXPORTED_PLUGIN_DOCS="EXPORTED_PLUGIN_DOCS"
 
 def get_config():
     return {
@@ -107,7 +110,10 @@ def get_config():
         RECREATE_DOC_FILES: os.getenv(RECREATE_DOC_FILES, "True"),
         RECREATE_PLUGIN_DOC_FILE: os.getenv(RECREATE_PLUGIN_DOC_FILE, "True"),
         RECREATE_PRODUCT_INDEX_FILE: os.getenv(RECREATE_PRODUCT_INDEX_FILE, "True"),
-        SKIP_DOC_FILES: os.getenv(SKIP_DOC_FILES, "False")
+        SKIP_DOC_FILES: os.getenv(SKIP_DOC_FILES, "False"),
+        EXPORTED_DOCS_PATH: os.getenv(EXPORTED_DOCS_PATH, "exports/WP_exports"),
+        EXPORTED_ALL_PLUGINS_LIST: os.getenv(EXPORTED_ALL_PLUGINS_LIST, "plugins.urbancode.WordPress.xml"),
+        EXPORTED_PLUGIN_DOCS: os.getenv(EXPORTED_PLUGIN_DOCS, "plugin-docs.urbancode.WordPress.xml")
     }
 
 def get_all_plugins_list(all_plugins_list):
