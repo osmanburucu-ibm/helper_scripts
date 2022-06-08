@@ -50,6 +50,12 @@ case $2 in
     "FIX-DIR-NAMES")
         python3 src/fix_plugin_dir_names.py
         ;;
+    "DUMP-URLS")
+        python3 src/dump_all_urls.py
+        ;;
+    "CHECK-URLS")
+        python3 src/check_all_urls.py
+        ;;
     *)
         echo "not a valid argument"
         echo
