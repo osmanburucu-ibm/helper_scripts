@@ -3101,10 +3101,9 @@
                 "uDeploy-Resource-79.1107192.zip",
                 "ucd-uDeploy-Resource-80.1128767.zip",
                 "ucd-uDeploy-Resource-81.1131560.zip",
-                "ucd-uDeploy-Resource-82.1132357.zip",
-                "ucd-uDeploy-Resource-83.1133534.zip"
+                "ucd-uDeploy-Resource-82.1132357.zip"
             ],
-            "latestversion": "83.1133534"
+            "latestversion": "82.1132357"
         },
         {
             "plugin_folder_name": "uDeploy-System",

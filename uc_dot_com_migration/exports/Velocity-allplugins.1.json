@@ -37,10 +37,9 @@
                 "ucv-ext-asoc:1.0.24.tar",
                 "ucv-ext-asoc:2.0.1.tar",
                 "ucv-ext-asoc:3.0.1.tar",
-                "ucv-ext-asoc:3.0.5.tar",
-                "ucv-ext-asoc:3.0.9.tar"
+                "ucv-ext-asoc:3.0.5.tar"
             ],
-            "latestversion": "3.0.9"
+            "latestversion": "3.0.5"
         },
         {
             "plugin_folder_name": "ucv-ext-azure",
@@ -65,10 +64,9 @@
                 "ucv-ext-bitbucket-cloud:1.0.7.tar",
                 "ucv-ext-bitbucket-cloud:1.0.8.tar",
                 "ucv-ext-bitbucket-cloud:1.0.15.tar",
-                "ucv-ext-bitbucket-cloud:1.0.16.tar",
-                "ucv-ext-bitbucket-cloud:1.0.22.tar"
+                "ucv-ext-bitbucket-cloud:1.0.16.tar"
             ],
-            "latestversion": "1.0.22"
+            "latestversion": "1.0.16"
         },
         {
             "plugin_folder_name": "ucv-ext-bitbucket-server",
@@ -86,10 +84,9 @@
             "plugin_folder_name": "ucv-ext-blackduck",
             "files": [
                 "ucv-ext-blackduck:1.0.4.tar",
-                "ucv-ext-blackduck:1.0.17.tar",
-                "ucv-ext-blackduck:1.0.21.tar"
+                "ucv-ext-blackduck:1.0.17.tar"
             ],
-            "latestversion": "1.0.21"
+            "latestversion": "1.0.17"
         },
         {
             "plugin_folder_name": "ucv-ext-bottleneck-detection",
@@ -105,28 +102,24 @@
                 "ucv-ext-circleci:1.0.3.tar",
                 "ucv-ext-circleci:1.0.6.tar",
                 "ucv-ext-circleci:1.0.13.tar",
-                "ucv-ext-circleci:1.0.16.tar",
-                "ucv-ext-circleci:1.0.18.tar"
+                "ucv-ext-circleci:1.0.16.tar"
             ],
-            "latestversion": "1.0.18"
+            "latestversion": "1.0.16"
         },
         {
             "plugin_folder_name": "ucv-ext-coverage-core",
             "files": [
-                "ucv-ext-coverage-core:1.0.30.tar",
-                "ucv-ext-coverage-core:1.0.38.tar"
+                "ucv-ext-coverage-core:1.0.30.tar"
             ],
-            "latestversion": "1.0.38"
+            "latestversion": "1.0.30"
         },
         {
             "plugin_folder_name": "ucv-ext-cucumber",
             "files": [
                 "ucv-ext-cucumber:1.0.7.tar",
-                "ucv-ext-cucumber:1.0.8.tar",
-                "ucv-ext-cucumber:1.0.33.tar",
-                "ucv-ext-cucumber:1.0.34.tar"
+                "ucv-ext-cucumber:1.0.8.tar"
             ],
-            "latestversion": "1.0.34"
+            "latestversion": "1.0.8"
         },
         {
             "plugin_folder_name": "ucv-ext-dependabot",
@@ -140,18 +133,16 @@
             "files": [
                 "ucv-ext-ewm:1.0.2.tar",
                 "ucv-ext-ewm:1.1.15.tar",
-                "ucv-ext-ewm:1.1.22.tar",
-                "ucv-ext-ewm:1.1.24.tar"
+                "ucv-ext-ewm:1.1.22.tar"
             ],
-            "latestversion": "1.1.24"
+            "latestversion": "1.1.22"
         },
         {
             "plugin_folder_name": "ucv-ext-fortify-ssc",
             "files": [
-                "ucv-ext-fortify-ssc:1.0.1.tar",
-                "ucv-ext-fortify-ssc:1.0.7.tar"
+                "ucv-ext-fortify-ssc:1.0.1.tar"
             ],
-            "latestversion": "1.0.7"
+            "latestversion": "1.0.1"
         },
         {
             "plugin_folder_name": "ucv-ext-github",
@@ -167,10 +158,9 @@
                 "ucv-ext-github:1.1.22.tar",
                 "ucv-ext-github:1.2.24.tar",
                 "ucv-ext-github:1.2.25.tar",
-                "ucv-ext-github:1.3.29.tar",
-                "ucv-ext-github:1.3.31.tar"
+                "ucv-ext-github:1.3.29.tar"
             ],
-            "latestversion": "1.3.31"
+            "latestversion": "1.3.29"
         },
         {
             "plugin_folder_name": "ucv-ext-gitlab",
@@ -188,10 +178,9 @@
                 "ucv-ext-gitlab:2.0.36.tar",
                 "ucv-ext-gitlab:2.0.37.tar",
                 "ucv-ext-gitlab:2.0.50.tar",
-                "ucv-ext-gitlab:2.0.53.tar",
-                "ucv-ext-gitlab:2.1.55.tar"
+                "ucv-ext-gitlab:2.0.53.tar"
             ],
-            "latestversion": "2.1.55"
+            "latestversion": "2.0.53"
         },
         {
             "plugin_folder_name": "ucv-ext-handlebars-reporter",
@@ -201,10 +190,9 @@
                 "ucv-ext-handlebars-reporter:0.0.30.tar",
                 "ucv-ext-handlebars-reporter:0.0.38.tar",
                 "ucv-ext-handlebars-reporter:0.0.39.tar",
-                "ucv-ext-handlebars-reporter:0.0.41.tar",
-                "ucv-ext-handlebars-reporter:0.0.59.tar"
+                "ucv-ext-handlebars-reporter:0.0.41.tar"
             ],
-            "latestversion": "0.0.59"
+            "latestversion": "0.0.41"
         },
         {
             "plugin_folder_name": "ucv-ext-jira",
@@ -240,19 +228,17 @@
             "plugin_folder_name": "ucv-ext-jmeter",
             "files": [
                 "ucv-ext-jmeter:1.0.38.tar",
-                "ucv-ext-jmeter:1.0.55.tar",
-                "ucv-ext-jmeter:1.0.56.tar"
+                "ucv-ext-jmeter:1.0.55.tar"
             ],
-            "latestversion": "1.0.56"
+            "latestversion": "1.0.55"
         },
         {
             "plugin_folder_name": "ucv-ext-junit",
             "files": [
                 "ucv-ext-junit:1.0.38.tar",
-                "ucv-ext-junit:1.0.66.tar",
-                "ucv-ext-junit:1.0.72.tar"
+                "ucv-ext-junit:1.0.66.tar"
             ],
-            "latestversion": "1.0.72"
+            "latestversion": "1.0.66"
         },
         {
             "plugin_folder_name": "ucv-ext-leankit",
@@ -266,10 +252,9 @@
             "files": [
                 "ucv-ext-onetest:1.0.8.tar",
                 "ucv-ext-onetest:1.0.12.tar",
-                "ucv-ext-onetest:1.0.30.tar",
-                "ucv-ext-onetest:1.0.33.tar"
+                "ucv-ext-onetest:1.0.30.tar"
             ],
-            "latestversion": "1.0.33"
+            "latestversion": "1.0.30"
         },
         {
             "plugin_folder_name": "ucv-ext-onetest-server",
@@ -288,10 +273,9 @@
                 "ucv-ext-rally:1.0.25.tar",
                 "ucv-ext-rally:1.0.30.tar",
                 "ucv-ext-rally:1.0.33.tar",
-                "ucv-ext-rally:1.0.34.tar",
-                "ucv-ext-rally:1.0.39.tar"
+                "ucv-ext-rally:1.0.34.tar"
             ],
-            "latestversion": "1.0.39"
+            "latestversion": "1.0.34"
         },
         {
             "plugin_folder_name": "ucv-ext-rtas",
@@ -348,19 +332,17 @@
         {
             "plugin_folder_name": "ucv-ext-testng",
             "files": [
-                "ucv-ext-testng:1.0.13.tar",
-                "ucv-ext-testng:1.0.38.tar"
+                "ucv-ext-testng:1.0.13.tar"
             ],
-            "latestversion": "1.0.38"
+            "latestversion": "1.0.13"
         },
         {
             "plugin_folder_name": "ucv-ext-twistlock",
             "files": [
                 "ucv-ext-twistlock:1.0.39.tar",
-                "ucv-ext-twistlock:1.0.43.tar",
-                "ucv-ext-twistlock:1.0.44.tar"
+                "ucv-ext-twistlock:1.0.43.tar"
             ],
-            "latestversion": "1.0.44"
+            "latestversion": "1.0.43"
         },
         {
             "plugin_folder_name": "ucv-ext-versionone",

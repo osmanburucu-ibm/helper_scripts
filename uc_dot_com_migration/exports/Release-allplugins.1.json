@@ -1,0 +1,201 @@
+{
+    "source_download_folder": "https://www.urbancode.com/uc-downloads/plugins/ibmucr",
+    "plugins": [
+        {
+            "plugin_folder_name": "DeployReport",
+            "files": [
+                "ucr-plugin-deployment-reports-2.636808.zip",
+                "ucr-plugin-deployment-reports-2.674415.zip",
+                "ucr-plugin-deployment-reports-4.953656.zip",
+                "ucr-plugin-deployment-reports-4.953915.zip",
+                "ucr-plugin-deployment-reports-7.987383.zip",
+                "ucr-plugin-deployment-reports-7.1018228.zip"
+            ],
+            "latestversion": "7.1018228"
+        },
+        {
+            "plugin_folder_name": "RTC",
+            "files": [
+                "ucr-plugin-rtc-1.615897.zip",
+                "ucr-plugin-rtc-1.751917.zip",
+                "ucr-plugin-rtc-1.773952.zip",
+                "ucr-plugin-rtc-1.785495.zip",
+                "ucr-plugin-rtc-2.623457.zip",
+                "ucr-plugin-rtc-2.629106.zip",
+                "ucr-plugin-rtc-3.671039.zip",
+                "ucr-plugin-rtc-3.674599.zip",
+                "ucr-plugin-rtc-3.785496.zip",
+                "ucr-plugin-rtc-3.788779.zip",
+                "ucr-plugin-rtc-3.801190.zip",
+                "ucr-plugin-rtc-3.801427.zip",
+                "ucr-plugin-rtc-3.969559.zip"
+            ],
+            "latestversion": "3.969559"
+        },
+        {
+            "plugin_folder_name": "Rally",
+            "files": [
+                "ucr-plugin-rally-2.690437.zip"
+            ],
+            "latestversion": "2.690437"
+        },
+        {
+            "plugin_folder_name": "jenkins-ucr-plugin",
+            "files": [
+                "ibm-ucrelease-pipeline-1.919098.hpi"
+            ],
+            "latestversion": "1.919098"
+        },
+        {
+            "plugin_folder_name": "reporting-ucd-plugin",
+            "files": [
+                "reporting-ucd-plugin-10.907592.zip"
+            ],
+            "latestversion": "10.907592"
+        },
+        {
+            "plugin_folder_name": "sync-ucd-plugin",
+            "files": [
+                "sync-ucd-plugin-2.801577.zip",
+                "sync-ucd-plugin-4.869522.zip"
+            ],
+            "latestversion": "4.869522"
+        },
+        {
+            "plugin_folder_name": "sync-ucr-plugin",
+            "files": [
+                "sync-ucr-plugin-2.801192.zip",
+                "sync-ucr-plugin-9.956642.zip"
+            ],
+            "latestversion": "9.956642"
+        },
+        {
+            "plugin_folder_name": "ucr-jenkins-ci",
+            "files": [
+                "plugins-ucr-jenkins-ci-1.1112892.zip",
+                "plugins-ucr-jenkins-ci-2.1124702.zip"
+            ],
+            "latestversion": "2.1124702"
+        },
+        {
+            "plugin_folder_name": "ucr-plugin-ansible",
+            "files": [
+                "ucr-plugin-ansible-tower-1.1079811.zip",
+                "ucr-plugin-ansible-tower-2.1106038.zip"
+            ],
+            "latestversion": "2.1106038"
+        },
+        {
+            "plugin_folder_name": "ucr-plugin-deploy",
+            "files": [
+                "ucr-plugin-deploy-1.670291.zip",
+                "ucr-plugin-deploy-1.674622.zip",
+                "ucr-plugin-deploy-1.692839.zip",
+                "ucr-plugin-deploy-1.757442.zip",
+                "ucr-plugin-deploy-1.782064.zip",
+                "ucr-plugin-deploy-1.933451.zip",
+                "ucr-plugin-deploy-1.946637.zip",
+                "ucr-plugin-deploy-1.1053195.zip"
+            ],
+            "latestversion": "1.1053195"
+        },
+        {
+            "plugin_folder_name": "ucr-plugin-hp-alm",
+            "files": [
+                "HP-ALM-1.782317.zip",
+                "HP-ALM-1.810058.zip",
+                "HP-ALM-1.827219.zip",
+                "HP-ALM-3.927684.zip",
+                "HP-ALM-4.931916.zip",
+                "HP-ALM-5.942932.zip"
+            ],
+            "latestversion": "5.942932"
+        },
+        {
+            "plugin_folder_name": "ucr-plugin-jenkins",
+            "files": [
+                "ucr-plugin-jenkins-1.1078299.zip"
+            ],
+            "latestversion": "1.1078299"
+        },
+        {
+            "plugin_folder_name": "ucr-plugin-jira",
+            "files": [
+                "ucr-plugin-jira-1.834579.zip",
+                "ucr-plugin-jira-2.869688.zip",
+                "ucr-plugin-jira-5.927256.zip",
+                "ucr-plugin-jira-6.932936.zip",
+                "ucr-plugin-jira-7.953688.zip",
+                "ucr-plugin-jira-8.953913.zip",
+                "ucr-plugin-jira-9.978511.zip",
+                "ucr-plugin-jira-10.983756.zip",
+                "ucr-plugin-jira-11.991598.zip",
+                "ucr-plugin-jira-12.1012976.zip",
+                "ucr-plugin-jira-14.1035074.zip",
+                "ucr-plugin-jira-15.1036688.zip",
+                "ucr-plugin-jira-16.1065284.zip",
+                "ucr-plugin-jira-17.1070184.zip",
+                "ucr-plugin-jira-18.1079383.zip"
+            ],
+            "latestversion": "18.1079383"
+        },
+        {
+            "plugin_folder_name": "ucr-plugin-nolio",
+            "files": [
+                "ucr-plugin-nolio-4.1036957.zip"
+            ],
+            "latestversion": "4.1036957"
+        },
+        {
+            "plugin_folder_name": "ucr-plugin-servicenow",
+            "files": [
+                "ucr-plugin-servicenow-1.958213.zip",
+                "ucr-plugin-servicenow-6.958218.zip",
+                "ucr-plugin-servicenow-7.1007909.zip"
+            ],
+            "latestversion": "7.1007909"
+        },
+        {
+            "plugin_folder_name": "ucr-plugin-slack",
+            "files": [
+                "ucr-plugin-slack-1.1027116.zip",
+                "ucr-plugin-slack-2.1033741.zip",
+                "ucr-plugin-slack-2.1070743.zip",
+                "ucr-plugin-slack-3.1105509.zip"
+            ],
+            "latestversion": "3.1105509"
+        },
+        {
+            "plugin_folder_name": "ucr-plugin-tfs",
+            "files": [
+                "ucr-plugin-tfs-2.836018.zip",
+                "ucr-plugin-tfs-3.882972.zip",
+                "ucr-plugin-tfs-5.953540.zip"
+            ],
+            "latestversion": "5.953540"
+        },
+        {
+            "plugin_folder_name": "ucr-plugin-uccloud",
+            "files": [
+                "cloud-sync-1.0.792001.jar",
+                "ucr-plugin-uccloud-1.755836.zip",
+                "ucr-plugin-mobile-1.755925.zip",
+                "ucr-plugin-mobile-1.759332.zip",
+                "ucr-plugin-mobile-1.767382.zip"
+            ],
+            "latestversion": "1.767382"
+        },
+        {
+            "plugin_folder_name": "ucr-xl-deploy",
+            "files": [
+                "plugins-ucr-xl-deploy-1.1015971.zip",
+                "plugins-ucr-xl-deploy-2.1028099.zip",
+                "plugins-ucr-xl-deploy-3.1034152.zip",
+                "plugins-ucr-xl-deploy-4.1034706.zip",
+                "plugins-ucr-xl-deploy-5.1035313.zip",
+                "plugins-ucr-xl-deploy-6.1039808.zip"
+            ],
+            "latestversion": "6.1039808"
+        }
+    ]
+}
