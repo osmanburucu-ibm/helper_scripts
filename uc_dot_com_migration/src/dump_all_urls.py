@@ -29,7 +29,7 @@ logger1 = logging.getLogger(script_name)
 logger1.addHandler(fh)
 logger1.addHandler(ch)
 
-HREF_REGEX = r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+' 
+HREF_REGEX = r'http[s]?://(?:[a-zA-Z]|\d|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+' 
 
 def get_fixed_url (url):
     if url[-1] == ".": url = url[:-1]
