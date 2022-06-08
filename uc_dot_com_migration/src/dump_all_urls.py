@@ -6,7 +6,7 @@ import uc_migration_utils as ucutil
 
 
 SOUP_PARSER = "lxml" #"html.parser"
-script_name = "check_all_urls"
+script_name = "dump_all_urls"
 
 logging.basicConfig()
 logging.root.setLevel(logging.INFO)
@@ -36,6 +36,19 @@ def get_fixed_url (url):
     if url[-1] == ")": url = url[:-1]
     return url
 
+def get_all_urls_in_file(subdir,file):
+    urls_in_file=[]
+    if (pathlib.Path(file).suffix != ".md"):
+        return urls_in_file
+    if ("downloads.md" in file): return urls_in_file
+    
+    logger1.info(f"Checking {subdir}/{file}")
+    with open (f"{subdir}/{file}") as f:
+        for line in f:
+            if urls := re.findall(HREF_REGEX, line):
+                urls_in_file.append(urls)
+    return urls_in_file
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
 def main():
@@ -45,20 +58,8 @@ def main():
     logger1.info(f"Rootdir={rootdir}")
     all_urls = []
     for subdir, dirs, files in os.walk(rootdir):
-#        logger1.info(f"subdir={subdir}")
-
-        dir_parts=subdir.split("/")
         for file in files:
-            if (".DS_Store" in file): continue
-            if (pathlib.Path(file).suffix != ".md"): continue
-            if ("downloads.md" in file): continue
-            logger1.info(f"Checking {subdir}/{file}")
-            with open (f"{subdir}/{file}") as f:
-                urls_in_file=[]
-                for line in f:
-                    if urls := re.findall(HREF_REGEX, line):
-                        urls_in_file.append(urls)
-
+            urls_in_file = get_all_urls_in_file(subdir,file)
             test=["",""]
             for url in urls_in_file:
                 if not url: continue
@@ -68,8 +69,8 @@ def main():
                 test[0]=f"{subdir}/{file}"
                 test[1]=get_fixed_url(url[0])
                 logger1.info(f"test={test}")
-            if (test[0]): all_urls.append(test)
-    # logger1.info(f"all_urls={all_urls}")
+                all_urls.append(test)
+            
     workfolder = config[ucutil.WORKING_FOLDER_LOCATION]
     plugin_type = config[ucutil.EXPORT_PLUGIN_TYPE]
     all_urls_header = ['file', 'url', 'active', 'new_url']
