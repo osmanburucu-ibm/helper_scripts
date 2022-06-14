@@ -29,12 +29,16 @@ logger1 = logging.getLogger(script_name)
 logger1.addHandler(fh)
 logger1.addHandler(ch)
 
-HREF_REGEX = r'http[s]?://(?:[a-zA-Z]|\d|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+' 
-
+HREF_REGEX = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))" #r'http[s]?://(?:[a-zA-Z]|\d|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+' 
+# r'(https?://[^\s]+)
 def get_fixed_url (url):
-    if url[-1] == ".": url = url[:-1]
-    if url[-1] == ")": url = url[:-1]
-    return url
+    fixed_url = url
+    if fixed_url[-1] == ".": fixed_url = fixed_url[:-1]
+    if fixed_url[-1] == ")": fixed_url = fixed_url[:-1]
+    if fixed_url[-1] == ">": fixed_url = fixed_url[:-1]
+    if fixed_url[-1] == "*": fixed_url = fixed_url[:-1]
+    if fixed_url[-1] == "*": fixed_url = fixed_url[:-1]
+    return fixed_url
 
 def get_all_urls_in_file(subdir,file):
     urls_in_file=[]
@@ -46,7 +50,12 @@ def get_all_urls_in_file(subdir,file):
     with open (f"{subdir}/{file}") as f:
         for line in f:
             if urls := re.findall(HREF_REGEX, line):
-                urls_in_file.append(urls)
+                logger1.info(f"urls={urls}")
+                for ur in urls:
+                    logger1.info(f"ur={ur}")
+                    for u in ur:
+                        logger1.info(f"u={u}")
+                        if u: urls_in_file.append(u)
     return urls_in_file
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
@@ -59,15 +68,18 @@ def main():
     all_urls = []
     for subdir, dirs, files in os.walk(rootdir):
         for file in files:
+            # Debug
+#            if ("WebSphereConfiguration" not in subdir): continue
             urls_in_file = get_all_urls_in_file(subdir,file)
-            test=["",""]
             for url in urls_in_file:
+                test=["",""]
+                logger1.info(f"urls_in_file_url={url}")
                 if not url: continue
                 # skip url links to known plugin file repos
-                if (any("https://raw.githubusercontent.com/UrbanCode/IBM-UC" in u for u in url)): continue
+                if ("https://raw.githubusercontent.com/UrbanCode/IBM-UC" in url): continue
                 logger1.info(f"append={url}")
                 test[0]=f"{subdir}/{file}"
-                test[1]=get_fixed_url(url[0])
+                test[1]=url # get_fixed_url(url)
                 logger1.info(f"test={test}")
                 all_urls.append(test)
             
