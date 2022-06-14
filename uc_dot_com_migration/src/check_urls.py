@@ -36,6 +36,8 @@ def check_if_active(url):
     except (requests.exceptions.ConnectionError, requests.exceptions.ReadTimeout):
         return "NOT REACHABLE"
     
+    if get.status_code == 301:
+        return "NO 301"
     return "YES" if get.status_code == 200 else f"NO {get.status_code}"
 
 def main():
