@@ -15,7 +15,7 @@ logging.basicConfig(format="[%(filename)s:%(lineno)s - %(funcName)20s() ] %(mess
 logging.basicConfig(level=logging.INFO)
 
 # create file handler which logs even debug messages
-fh = logging.FileHandler(f"{__name__}.log")
+fh = logging.FileHandler(f"{__name__}.log", 'w+')
 fh.setLevel(logging.DEBUG)
 # create console handler with a higher log level
 ch = logging.StreamHandler()
@@ -86,6 +86,8 @@ EXPORTED_DOCS_PATH="EXPORTED_DOCS_PATH"
 EXPORTED_ALL_PLUGINS_LIST="EXPORTED_ALL_PLUGINS_LIST"
 EXPORTED_PLUGIN_DOCS="EXPORTED_PLUGIN_DOCS"
 
+PRODUCT_PLUGIN_TYPE="PRODUCT_PLUGIN_TYPE"
+
 def get_config():
     return {
         GITHUB_API_URL: os.getenv("GITHUB_API_URL", "https://api.github.com"),
@@ -113,7 +115,8 @@ def get_config():
         SKIP_DOC_FILES: os.getenv(SKIP_DOC_FILES, "False"),
         EXPORTED_DOCS_PATH: os.getenv(EXPORTED_DOCS_PATH, "exports/WP_exports"),
         EXPORTED_ALL_PLUGINS_LIST: os.getenv(EXPORTED_ALL_PLUGINS_LIST, "plugins.urbancode.WordPress.xml"),
-        EXPORTED_PLUGIN_DOCS: os.getenv(EXPORTED_PLUGIN_DOCS, "plugin-docs.urbancode.WordPress.xml")
+        EXPORTED_PLUGIN_DOCS: os.getenv(EXPORTED_PLUGIN_DOCS, "plugin-docs.urbancode.WordPress.xml"),
+        PRODUCT_PLUGIN_TYPE:os.getenv(PRODUCT_PLUGIN_TYPE, ""),
     }
 
 def get_all_plugins_list(all_plugins_list):
@@ -158,7 +161,13 @@ def getversionnumber2(elem):
     return Decimal(getversionnumber(elem, True))
 
 def get_allnumparts(elem) -> list:
-    split_tup = os.path.splitext(elem.replace("_", "-"))
+
+    if ("http" in elem): 
+        split_tup = elem.split("/")
+        new_elem = split_tup[-1]
+    else: new_elem = elem
+     
+    split_tup = os.path.splitext(new_elem.replace("_", "-"))
     logger1.info(split_tup)
     splitchar = get_split_char(split_tup)
 
