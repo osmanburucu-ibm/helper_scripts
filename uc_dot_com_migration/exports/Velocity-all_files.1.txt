@@ -2,6 +2,8 @@ https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/README.md
 https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/UrbanCode_Deploy_Plugin_Terms_and_Conditions.md
 https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/UrbanCode_General_Plugin_Terms_and_Conditions.md
 https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/ibm-plugins-terms-and-conditions.txt
+https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/docs/_config.yml
+https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/docs/index.md
 https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/files/CICS/sw-devops-Launch-L3-vsm.json
 https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/files/ucv-ext-agility/ucv-ext-agility-1.0.11.tar.zip
 https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/files/ucv-ext-agility/ucv-ext-agility-1.0.20.tar.zip
@@ -18,7 +20,6 @@ https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/files/ucv-ext-a
 https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/files/ucv-ext-asoc/ucv-ext-asoc-2.0.1.tar.zip
 https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/files/ucv-ext-asoc/ucv-ext-asoc-3.0.1.tar.zip
 https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/files/ucv-ext-asoc/ucv-ext-asoc-3.0.5.tar.zip
-https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/files/ucv-ext-asoc/ucv-ext-asoc.3.0.9.tar.zip
 https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/files/ucv-ext-azure/ucv-ext-azure-2.0.14.tar.zip
 https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/files/ucv-ext-azure/ucv-ext-azure-2.0.17.tar.zip
 https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/files/ucv-ext-azure/ucv-ext-azure-2.0.4.tar.zip

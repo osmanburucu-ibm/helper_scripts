@@ -8,7 +8,39 @@ export RECREATE_PLUGIN_DOC_FILE="False"
 export RECREATE_DOC_FILES="False"
 export SKIP_DOC_FILES="True"
 
+export DEFAULT_LOCAL_REPOSITORY_LOCATION="~/RnD/Source/PLUGINS"
+
 case $2 in
+    "DUMP-REPO")
+        case $1 in
+            "UCD")
+                export GITHUB_TARGET_REPO="UrbanCode/IBM-UCD-PLUGINS"
+                export LOCAL_REPOSITORY_LOCATION=$DEFAULT_LOCAL_REPOSITORY_LOCATION"/IBM-UCD-PLUGINS"
+                ;;
+            "UCV")
+                export GITHUB_TARGET_REPO="UrbanCode/IBM-UCV-PLUGINS"
+                export LOCAL_REPOSITORY_LOCATION=$DEFAULT_LOCAL_REPOSITORY_LOCATION"/IBM-UCV-PLUGINS"
+                ;;
+            "UCR")
+                export GITHUB_TARGET_REPO="UrbanCode/IBM-UCR-PLUGINS"
+                export LOCAL_REPOSITORY_LOCATION=$DEFAULT_LOCAL_REPOSITORY_LOCATION"/IBM-UCR-PLUGINS"
+                ;;
+            "UCB")
+                export GITHUB_TARGET_REPO="UrbanCode/IBM-UCB-PLUGINS"
+                export LOCAL_REPOSITORY_LOCATION=$DEFAULT_LOCAL_REPOSITORY_LOCATION"/IBM-UCB-PLUGINS"
+                ;;
+            "DOCS")
+                export GITHUB_TARGET_REPO="UrbanCode/IBM-UCx-PLUGIN-DOCS"
+                export LOCAL_REPOSITORY_LOCATION=$DEFAULT_LOCAL_REPOSITORY_LOCATION"/IBM-UCx-PLUGIN-DOCS"
+                ;;
+            *)
+                echo "not a valid argument"
+                echo
+                ;;
+        esac
+
+        python3 src/dump_all_files_list_from_repo.py
+        ;;
     "DUMP-PLUGINS")
         python3 src/dump_all_plugins.py
         ;;

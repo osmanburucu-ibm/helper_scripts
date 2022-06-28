@@ -2,6 +2,8 @@ https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/README.md
 https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/UrbanCode_Deploy_Plugin_Terms_and_Conditions.md
 https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/UrbanCode_General_Plugin_Terms_and_Conditions.md
 https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/ibm-plugins-terms-and-conditions.txt
+https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/docs/_config.yml
+https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/docs/index.md
 https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/files/DeployReport/ucr-plugin-deployment-reports-2.636808.zip
 https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/files/DeployReport/ucr-plugin-deployment-reports-2.674415.zip
 https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/files/DeployReport/ucr-plugin-deployment-reports-4.953656.zip
@@ -70,12 +72,8 @@ https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/files/ucr-plugi
 https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/files/ucr-plugin-slack/ucr-plugin-slack-2.1033741.zip
 https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/files/ucr-plugin-slack/ucr-plugin-slack-2.1070743.zip
 https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/files/ucr-plugin-slack/ucr-plugin-slack-3.1105509.zip
-https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/files/ucr-plugin-tfs/ucr-plugin-tfs-2.836018.zip
 https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/files/ucr-plugin-tfs/ucr-plugin-tfs-3.882972.zip
 https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/files/ucr-plugin-tfs/ucr-plugin-tfs-5.953540.zip
-https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/files/ucr-plugin-uccloud/cloud-sync-1.0.792001.zip.001
-https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/files/ucr-plugin-uccloud/cloud-sync-1.0.792001.zip.002
-https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/files/ucr-plugin-uccloud/cloud-sync-1.0.792001.zip.003
 https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/files/ucr-plugin-uccloud/ucr-plugin-mobile-1.755925.zip
 https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/files/ucr-plugin-uccloud/ucr-plugin-mobile-1.759332.zip
 https://raw.githubusercontent.com/UrbanCode/IBM-UCR-PLUGINS/main/files/ucr-plugin-uccloud/ucr-plugin-mobile-1.767382.zip

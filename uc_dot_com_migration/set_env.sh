@@ -15,6 +15,27 @@ export EXPORT_PLUGIN_TYPE="" # "Build" | "Deploy" | "Release" | "Velocity"
 export PRODUCT_PLUGIN_TYPE="" # "UCB" | "UCD" | "UCR" | "UCD"
 export PLUGIN_SOURCE_TYPE="" # "ubuild" | "ibmucd" | "ibmucr" | "ibmucv"
 
+export UPLOAD_FILES_TO_REPO="False"
+export LOCAL_REPOSITORY_LOCATION=""
+export LOCAL_DOCREPO_LOCATION=""
+
+export GITHUB_USERNAME=""
+export GITHUB_TOKEN=""
+export GITHUB_API_URL="https://api.github.com"
+export GITHUB_TARGET_REPO=""
+
+# Needed for Re-Creation runs
+export RECREATE_PRODUCT_INDEX_FILE="True"
+export RECREATE_PLUGIN_DOC_FILE="True"
+export RECREATE_DOC_FILES="True"
+export SKIP_DOC_FILES="False" 
+
+# if wordpress exports are used
+# for example EXPORTED_DOCS_PATH="exports/WP_exports/"
+export EXPORTED_DOCS_PATH=""
+export EXPORTED_ALL_PLUGINS_LIST="plugins.urbancode.WordPress.xml"
+export EXPORTED_PLUGIN_DOCS="plugin-docs.urbancode.WordPress.xml"
+
 case $1 in
     "UCD")
         export EXPORT_PLUGIN_TYPE="Deploy" 
@@ -46,23 +67,3 @@ export PLUGINFILES_SOURCE_URL=$DEFAULT_PLUGINFILES_SOURCE_URL"/"$PLUGIN_SOURCE_T
 export REPO_TARGET_FOLDER=$DEFAULT_REPO_TARGET_FOLDER"/"$PRODUCT_PLUGIN_TYPE
 export DOC_TARGET_FOLDER=$DEFAULT_DOC_TARGET_FOLDER"/"$PRODUCT_PLUGIN_TYPE
 
-export UPLOAD_FILES_TO_REPO="False"
-export LOCAL_REPOSITORY_LOCATION=""
-export LOCAL_DOCREPO_LOCATION=""
-
-export GITHUB_USERNAME=""
-export GITHUB_TOKEN=""
-export GITHUB_API_URL="https://api.github.com"
-export GITHUB_TARGET_REPO=""
-
-# Needed for Re-Creation runs
-export RECREATE_PRODUCT_INDEX_FILE="True"
-export RECREATE_PLUGIN_DOC_FILE="True"
-export RECREATE_DOC_FILES="True"
-export SKIP_DOC_FILES="False" 
-
-# if wordpress exports are used
-# for example EXPORTED_DOCS_PATH="exports/WP_exports/"
-export EXPORTED_DOCS_PATH=""
-export EXPORTED_ALL_PLUGINS_LIST="plugins.urbancode.WordPress.xml"
-export EXPORTED_PLUGIN_DOCS="plugin-docs.urbancode.WordPress.xml"
