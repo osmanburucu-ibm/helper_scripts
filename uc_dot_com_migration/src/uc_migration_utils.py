@@ -166,8 +166,12 @@ def get_allnumparts(elem) -> list:
         split_tup = elem.split("/")
         new_elem = split_tup[-1]
     else: new_elem = elem
-     
-    split_tup = os.path.splitext(new_elem.replace("_", "-"))
+    new_elem = new_elem.replace("_", "-")
+    if (".tar.zip" in new_elem):
+        split_tup = new_elem.split(".tar.zip")
+    elif (".tar.7z" in new_elem):
+        split_tup = new_elem.split(".tar.7z")
+    else: split_tup = os.path.splitext(new_elem)
     logger1.info(split_tup)
     splitchar = get_split_char(split_tup)
 
@@ -258,13 +262,20 @@ def extract_abstract(read_lines):
         # ignore table lines
         if (lines[idx][0] =="|"): continue
         if ("---" in lines[idx].strip()): 
-            newlines[-1] = ""
+#            newlines[-1] = ""
             continue
             
         if ("===" in lines[idx].strip()): 
-            newlines[-1] = ""
+#            newlines[-1] = ""
             continue
+        if ("Available Steps" in lines[idx].strip()): 
+            return " ".join(newlines).strip()
         
+        if ("**Platform Support**" in lines[idx].strip()): 
+            return " ".join(newlines).strip()
+        
+        if (lines[idx][0] == "*"): continue
+            
         newlines.append(lines[idx])
     logger1.info(f"newlines={newlines}")
     
@@ -308,8 +319,13 @@ def get_list_of_doc_tabs(plugin, actdoc):
 
     return list_of_doc_tabs
 
+def get_all_files(act_dir):
+    config = get_config()
+    all_files = get_list_of_files_from_repo(config)
+    search_string=f"/main/files/{act_dir}/"
+    return [str(file) for file in all_files if (search_string in str(file))]
 
-def get_nav_bar(config, plugin, actdoc, doc_level):    
+def get_nav_bar(config, plugin, actdoc, doc_level, act_dir=""):    
     if (doc_level == DOC_LEVEL_ALL_PLUGINS):
         # TODO: no nav_bar on top level - check
         return 0, []
@@ -322,7 +338,12 @@ def get_nav_bar(config, plugin, actdoc, doc_level):
         nav_bar_row = ["[All Plugins](../../index.md)", f"[{config.get(EXPORT_PLUGIN_TYPE)} Plugins](../README.md)"]
 
     nav_bar_data.append("Latest Version")
-    plugin_version, plugin_link = get_latest_version_info(config, plugin)
+    if (act_dir)and (all_files := get_all_files(act_dir)):
+            all_files.sort(key=getversionnumber2)
+            plugin_version = getversionnumber(all_files[-1].split("/")[-1])
+            plugin_link=all_files[-1]
+    else:
+        plugin_version, plugin_link = get_latest_version_info(config, plugin)
     nav_bar_row.append(f"[{plugin_version}]({plugin_link})")
 
     if (doc_level==DOC_LEVEL_PLUGIN_DOCS):

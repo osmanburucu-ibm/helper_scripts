@@ -82,16 +82,11 @@ def update_latest_version(file_content, latest_version, latest_url, all_files):
         
     return new_file_content
     
-def get_all_files(act_dir):
-    config = ucutil.get_config()
-    all_files = ucutil.get_list_of_files_from_repo(config)
-    search_string=f"/main/files/{act_dir}/"
-    return [str(file) for file in all_files if (search_string in str(file))]
 
 def update_downloads_list(sub_dir, act_dir):
     if not os.path.exists(f"{sub_dir}/downloads.md"): return
     
-    if all_files := get_all_files(act_dir):
+    if all_files := ucutil.get_all_files(act_dir):
         all_files.sort(key=ucutil.getversionnumber2)
         latest_version = ucutil.getversionnumber(all_files[-1].split("/")[-1])
         latest_url=all_files[-1]

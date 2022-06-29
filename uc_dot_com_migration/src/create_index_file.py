@@ -13,7 +13,7 @@ logging.basicConfig(format="[%(filename)s:%(lineno)s - %(funcName)20s() ] %(mess
 logging.basicConfig(level=logging.INFO)
 
 # create file handler which logs even debug messages
-fh = logging.FileHandler(f"{script_name}.log")
+fh = logging.FileHandler(f"{script_name}.log", "w+")
 fh.setLevel(logging.DEBUG)
 # create console handler with a higher log level
 ch = logging.StreamHandler()
@@ -85,9 +85,9 @@ def main():
             prod_index_mdfile.new_header(level=2, title=f"{plugin_name}")
         
             plugin_abstract = ucutil.extract_abstract(plugin_content)
-            prod_index_mdfile.new_paragraph(plugin_abstract)
-            prod_index_mdfile.new_paragraph("---\n  ")
-            number_of_columns, list_of_columns = ucutil.get_nav_bar(config, plugin, "README", ucutil.DOC_LEVEL_PRODUCT_PLUGINS)
+            prod_index_mdfile.new_paragraph(plugin_abstract.strip())
+            prod_index_mdfile.new_paragraph("---\n")
+            number_of_columns, list_of_columns = ucutil.get_nav_bar(config, plugin, "README", ucutil.DOC_LEVEL_PRODUCT_PLUGINS, act_dir=plugindir)
             prod_index_mdfile.new_table(
                 columns=number_of_columns,
                 rows=len(list_of_columns) // number_of_columns,
