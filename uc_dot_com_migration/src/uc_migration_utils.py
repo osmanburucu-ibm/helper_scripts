@@ -248,6 +248,17 @@ def get_target_doc_path(config, target_doc_folder, level=DOC_LEVEL_PLUGIN_DOCS):
         
     return target_doc_path
 
+def get_new_nav_line(file_line_item, latest_version, latest_url):
+    last_line_splitted=file_line_item.split("|")
+    logger1.info(f"last_line_splitted={last_line_splitted}")
+    new_last_line="|"
+    for index, item in enumerate(last_line_splitted):
+        if (item in ["","\n"]): continue
+        new_item = f"[{latest_version}]({latest_url})" if (index == 3) else f"{item}"
+        new_last_line = new_last_line + str(new_item) + "|"
+    logger1.info(f"new_last_line={new_last_line}")
+    return new_last_line
+
 def extract_abstract(read_lines):
     lines = read_lines[5:10]
     doubleemptyline=0
