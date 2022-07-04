@@ -88,6 +88,8 @@ EXPORTED_PLUGIN_DOCS="EXPORTED_PLUGIN_DOCS"
 
 PRODUCT_PLUGIN_TYPE="PRODUCT_PLUGIN_TYPE"
 
+BLOGS_DIR="BLOGS_DIR"
+
 def get_config():
     return {
         GITHUB_API_URL: os.getenv("GITHUB_API_URL", "https://api.github.com"),
@@ -117,6 +119,7 @@ def get_config():
         EXPORTED_ALL_PLUGINS_LIST: os.getenv(EXPORTED_ALL_PLUGINS_LIST, "plugins.urbancode.WordPress.xml"),
         EXPORTED_PLUGIN_DOCS: os.getenv(EXPORTED_PLUGIN_DOCS, "plugin-docs.urbancode.WordPress.xml"),
         PRODUCT_PLUGIN_TYPE:os.getenv(PRODUCT_PLUGIN_TYPE, ""),
+        BLOGS_DIR:os.getenv(BLOGS_DIR,"~/Rnd/Blogs")
     }
 
 def get_all_plugins_list(all_plugins_list):
@@ -271,25 +274,11 @@ def extract_abstract(read_lines):
                 logger1.info(f"doubleemptyline={doubleemptyline}")
             continue
         # ignore table lines
-        if (lines[idx][0] =="|"): continue
-        if ("---" in lines[idx].strip()): 
-#            newlines[-1] = ""
-            continue
-            
-        if ("===" in lines[idx].strip()): 
-#            newlines[-1] = ""
-            continue
-        if ("Available Steps" in lines[idx].strip()): 
+        if lines[idx][0] in ["|", "*"]: continue
+        if ("---" in lines[idx].strip()) or ("===" in lines[idx].strip()): continue
+        if ("Available Steps" in lines[idx].strip()) or ("**Platform Support**" in lines[idx].strip()): 
             return " ".join(newlines).strip()
-        
-        if ("**Platform Support**" in lines[idx].strip()): 
-            return " ".join(newlines).strip()
-        
-        if (lines[idx][0] == "*"): continue
-            
         newlines.append(lines[idx])
-    logger1.info(f"newlines={newlines}")
-    
     return " ".join(newlines).strip()
 
 def get_latest_version_info(config, plugin):

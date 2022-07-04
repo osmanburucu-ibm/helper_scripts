@@ -42,20 +42,19 @@ def get_fixed_url (url):
 
 def get_all_urls_in_file(subdir,file):
     urls_in_file=[]
-    if (pathlib.Path(file).suffix != ".md"):
+    if (pathlib.Path(file).suffix != ".md") or ("downloads.md" in file):
         return urls_in_file
-    if ("downloads.md" in file): return urls_in_file
-    
     logger1.info(f"Checking {subdir}/{file}")
     with open (f"{subdir}/{file}") as f:
         for line in f:
             if urls := re.findall(HREF_REGEX, line):
-                logger1.info(f"urls={urls}")
-                for ur in urls:
-                    logger1.info(f"ur={ur}")
-                    for u in ur:
-                        logger1.info(f"u={u}")
-                        if u: urls_in_file.append(u)
+                urls_in_file.extend(urls)
+                logger1.debug(f"urls={urls}")
+                # for ur in urls:
+                #     logger1.info(f"ur={ur}")
+                #     for u in ur:
+                #         logger1.info(f"u={u}")
+                #         if u: urls_in_file.append(u)
     return urls_in_file
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
