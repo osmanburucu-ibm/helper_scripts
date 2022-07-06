@@ -58,16 +58,19 @@ def md(soup, **options):
 
 def copy_image_to_target(targetdir, image_name, blogs_dir, image_path):
     new_image_name = image_name
-    if not os.path.exists(f"{targetdir}/{image_name}"):
-        if os.path.exists(f"{blogs_dir}/media/{image_path}/{image_name}"): 
-            shutil.copyfile(f"{blogs_dir}/media/{image_path}/{image_name}", f"{targetdir}/{image_name}")
-        elif x := re.match("-\d*?x\d*?\.png", image_name):
-            logger1.info(f"image regex found {image_name}")
-            isplit = image_name.split(x.group[0])
-            iextension=Path(image_name).suffix
-            new_image_name=f"{isplit[0]}.{iextension}"
-            logger1.info(f"new_image_name={new_image_name}")
-            copy_image_to_target(targetdir, new_image_name, blogs_dir, image_path)
+    logger1.info(f"first new_image_name={new_image_name}")
+    if not os.path.exists(f"{targetdir}/{new_image_name}"):
+        if os.path.exists(f"{blogs_dir}/media/{image_path}/{new_image_name}"): 
+            shutil.copyfile(f"{blogs_dir}/media/{image_path}/{new_image_name}", f"{targetdir}/{new_image_name}")
+        else: 
+            logger1.info(f"image not found {new_image_name}")
+            if x := re.search("(-\d+?x\d+?\.png)", new_image_name):
+                logger1.info(f"image regex found {new_image_name}")
+                isplit = new_image_name.split(x[0])
+                iextension=Path(new_image_name).suffix
+                new_image_name=f"{isplit[0]}{iextension}"
+                logger1.info(f"new new_image_name={new_image_name}")
+                copy_image_to_target(targetdir, new_image_name, blogs_dir, image_path)
     return new_image_name
 
 def get_publishing_date(ablog):
@@ -106,7 +109,7 @@ def create_dir_and_files(ablog):
     ablog_content = replace_links_in_content(ablog_content)
     
     
-    new_content = f"<!DOCTYPE html>\n<html><head><title>{ablog['title']}</title></head>\n<body>\n<p><b>This article was originaly published in {d}</b></p>\n{ablog_content}\n</body>\n</html>\n"
+    new_content = f"<!DOCTYPE html>\n<html><head><title>{ablog['title']}</title></head>\n<body>\n<p><b>This article was originaly published in {d}</b></p>\n<p><h1>{ablog['title']}</h1></b>{ablog_content}\n</body>\n</html>\n"
     with open(f"{targetdir}/content.html", "w") as afile:
         afile.write(new_content)
     
