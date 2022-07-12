@@ -33,7 +33,7 @@ logger1.addHandler(ch)
 def main():
     config = ucutil.get_config()
     DRY_RUN= config[ucutil.DEBUG_DRY_RUN]
-    repo_dir =config[ucutil.LOCAL_DOCREPO_LOCATION]
+    repo_dir =config[ucutil.LOCAL_REPOSITORY_LOCATION]
     logger1.info (f"Repo-dir={repo_dir}")
     repo = Repo(repo_dir)    
     
