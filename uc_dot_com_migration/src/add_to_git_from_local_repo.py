@@ -1,6 +1,5 @@
-import os, sys
+import os
 from git import Repo
-from github import Github
 import logging
 import uc_migration_utils as ucutil
 
