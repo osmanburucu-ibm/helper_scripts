@@ -37,7 +37,8 @@ def main():
     logger1.info (f"Repo-dir={repo_dir}")
     repo = Repo(repo_dir)    
     
-    rootdir=ucutil.get_target_doc_path(config, "", level=ucutil.DOC_LEVEL_PLUGIN_README)
+    # rootdir=ucutil.get_target_doc_path(config, "", level=ucutil.DOC_LEVEL_PLUGIN_README)
+    rootdir=f"{repo_dir}/files"
     logger1.info(f"Rootdir={rootdir}")
     for subdir, dirs, files in os.walk(rootdir):
         logger1.info(f"subdir={subdir}")
