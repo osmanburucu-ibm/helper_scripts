@@ -109,7 +109,7 @@ def create_dir_and_files(ablog):
     ablog_content = replace_links_in_content(ablog_content)
     
     
-    new_content = f"<!DOCTYPE html>\n<html><head><title>{ablog['title']}</title></head>\n<body>\n<p><b>This article was originaly published in {d}</b></p>\n<p><h1>{ablog['title']}</h1></b>{ablog_content}\n</body>\n</html>\n"
+    new_content = f"<!DOCTYPE html>\n<html><head><title>{ablog['title']}</title></head>\n<body>\n<p><b>This article was originaly published in {d}</b></p>\n<p><h1>{ablog['title']}</h1></p>{ablog_content}\n</body>\n</html>\n"
     with open(f"{targetdir}/content.html", "w") as afile:
         afile.write(new_content)
     
