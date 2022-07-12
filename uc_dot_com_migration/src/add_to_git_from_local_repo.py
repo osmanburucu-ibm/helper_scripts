@@ -33,7 +33,7 @@ logger1.addHandler(ch)
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 def main():
     config = ucutil.get_config()
-    
+    DRY_RUN= config[ucutil.DEBUG_DRY_RUN]
     repo_dir =config[ucutil.LOCAL_DOCREPO_LOCATION]
     logger1.info (f"Repo-dir={repo_dir}")
     repo = Repo(repo_dir)    
@@ -49,17 +49,21 @@ def main():
             if (".DS_Store" in file): continue
             rval = ""
             logger1.info(f"adding {subdir}/{file}")
-            rval = repo.git.add(f"{subdir}/{file}")
+            if (DRY_RUN == "True"): rval =f"DRY_RUN"
+            else: rval = repo.git.add(f"{subdir}/{file}")
             logger1.info (f"add-return={rval}")
         
         # debug
         
         logger1.info(f"adding folder {dir_parts[-1]}")
         try:    
-            rval = repo.index.commit(f"adding {dir_parts[-1]}")
+            if (DRY_RUN == "True"): rval =f"DRY_RUN"
+            else: rval = repo.index.commit(f"adding {dir_parts[-1]}")
             logger1.info (f"commit-return={rval}")
-            origin = repo.remote("origin")
-            rval = origin.push().raise_if_error()
+            if (DRY_RUN == "True"): rval =f"DRY_RUN"
+            else:            
+                origin = repo.remote("origin")
+                rval = origin.push().raise_if_error()
             logger1.info (f"push-return={rval}")
 
         except Exception as ex:

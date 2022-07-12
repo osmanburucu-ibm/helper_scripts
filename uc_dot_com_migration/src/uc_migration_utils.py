@@ -89,6 +89,7 @@ EXPORTED_PLUGIN_DOCS="EXPORTED_PLUGIN_DOCS"
 PRODUCT_PLUGIN_TYPE="PRODUCT_PLUGIN_TYPE"
 
 BLOGS_DIR="BLOGS_DIR"
+DEBUG_DRY_RUN="DEBUG_DRY_RUN"
 
 def get_config():
     return {
@@ -119,6 +120,7 @@ def get_config():
         EXPORTED_ALL_PLUGINS_LIST: os.getenv(EXPORTED_ALL_PLUGINS_LIST, "plugins.urbancode.WordPress.xml"),
         EXPORTED_PLUGIN_DOCS: os.getenv(EXPORTED_PLUGIN_DOCS, "plugin-docs.urbancode.WordPress.xml"),
         PRODUCT_PLUGIN_TYPE:os.getenv(PRODUCT_PLUGIN_TYPE, ""),
+        DEBUG_DRY_RUN:os.getenv(DEBUG_DRY_RUN, "False"),
         BLOGS_DIR:os.getenv(BLOGS_DIR,"~/Rnd/Blogs")
     }
 
