@@ -6,6 +6,7 @@ from posixpath import split
 from unicodedata import decimal
 from github import Github
 import json
+import openpyxl
 
 from pyparsing import nums
 
@@ -89,6 +90,12 @@ EXPORTED_PLUGIN_DOCS="EXPORTED_PLUGIN_DOCS"
 PRODUCT_PLUGIN_TYPE="PRODUCT_PLUGIN_TYPE"
 
 BLOGS_DIR="BLOGS_DIR"
+BLOGS_FILE_NAME="BLOGS_FILE_NAME"
+
+URL_ORIGINAL_LINK="URL_ORIGINAL_LINK"
+URL_NEW_LINK="URL_NEW_LINK"
+URL_NEW_YES="URL_NEW_YES"
+
 DEBUG_DRY_RUN="DEBUG_DRY_RUN"
 
 def get_config():
@@ -121,7 +128,8 @@ def get_config():
         EXPORTED_PLUGIN_DOCS: os.getenv(EXPORTED_PLUGIN_DOCS, "plugin-docs.urbancode.WordPress.xml"),
         PRODUCT_PLUGIN_TYPE:os.getenv(PRODUCT_PLUGIN_TYPE, ""),
         DEBUG_DRY_RUN:os.getenv(DEBUG_DRY_RUN, "False"),
-        BLOGS_DIR:os.getenv(BLOGS_DIR,"~/Rnd/Blogs")
+        BLOGS_DIR:os.getenv(BLOGS_DIR,"~/Rnd/Blogs"),
+        BLOGS_FILE_NAME:os.getenv(BLOGS_FILE_NAME, "MERGED-all_urls.xlsx")
     }
 
 def get_all_plugins_list(all_plugins_list):
@@ -366,6 +374,32 @@ def get_nav_bar(config, plugin, actdoc, doc_level, act_dir=""):
 
     return number_of_columns, nav_bar_data
 
+
+def get_list_of_replacable_links():
+    config = get_config()
+    
+    list_of_replacable_links=[]
+    # load excel with its path
+    wrkbk = openpyxl.load_workbook(f"{config[BLOGS_DIR]}/{config[BLOGS_FILE_NAME]}")
+    sh = wrkbk.active
+    
+    # iterate through excel and display data
+    for i in range(2, sh.max_row+1):
+        url_dict={URL_ORIGINAL_LINK:"", URL_NEW_YES:"", URL_NEW_LINK:""}
+        for j in range(1, sh.max_column+1):
+            cell_obj = sh.cell(row=i, column=j)
+            logger1.debug(f"Row: {i} - Cell: {j} - DATA: {str(cell_obj.value)}")
+            if j==1: url_dict[URL_ORIGINAL_LINK]=str(cell_obj.value)
+            if j==3: url_dict[URL_NEW_YES]=str(cell_obj.value).lower()
+            if (j==4 and url_dict[URL_NEW_YES].lower() =="yes"):
+                url_dict[URL_NEW_LINK]=str(cell_obj.value)
+                break
+        logger1.debug(f"url_dict={url_dict}")        
+        if url_dict[URL_NEW_LINK]: 
+            logger1.debug(f"Original-Link={url_dict[URL_ORIGINAL_LINK]} - Replace-Link={url_dict[URL_NEW_LINK]}")
+            list_of_replacable_links.append(url_dict)
+    wrkbk.close()
+    return list_of_replacable_links
 def main():
 
     print ("Utility Functions for urbancode.com migration project")    
