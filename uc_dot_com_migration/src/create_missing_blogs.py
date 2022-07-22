@@ -93,7 +93,6 @@ def create_dir_and_files(ablog, all_replacable_links):
     config = ucutil.get_config()
     blogs_dir = config[ucutil.BLOGS_DIR]
     
-    #  x = f'{allnumparts[0]}.' if forsort else f'{allnumparts[0]}'
     if ("/" in ablog['title']): sanitized_title=ablog['title'].replace("/", "")
     else: sanitized_title=ablog['title']
   
@@ -114,12 +113,7 @@ def create_dir_and_files(ablog, all_replacable_links):
              
     d = get_publishing_date(ablog)
     
-    # # DEBUG
-    # if (ablog['link']=="https://www.urbancode.com/resource/creating-a-websphere-application-server-with-a-snippet/"):
-    #     logger1.info(f"DEBUG: OLD Content={ablog_content}")
     ablog_content = replace_links_in_content(ablog_content, all_replacable_links)
-    # if (ablog['link']=="https://www.urbancode.com/resource/creating-a-websphere-application-server-with-a-snippet/"):
-    #     logger1.info(f"DEBUG: NEW Content={ablog_content}")
     # TODO: check if URLs in content which are not in my list and add them!!!!
     
     new_content = f"<!DOCTYPE html>\n<html><head><title>{ablog['title']}</title></head>\n<body>\n<p><b>This article was originaly published in {d}</b></p>\n<p><h1>{ablog['title']}</h1></p>\n<p>{ablog_content}\n</p></body>\n</html>\n"
@@ -127,7 +121,6 @@ def create_dir_and_files(ablog, all_replacable_links):
         afile.write(new_content)
     
     md_doc_file = MdUtils(f"{targetdir}/content.md", title=ablog['title'])
-    #md_doc_file.new_header(level=1, title=docname)
     soup2 = BeautifulSoup(new_content, "html.parser")
    
     md_doc_file.new_paragraph(md(soup2))
@@ -155,9 +148,9 @@ def process_all_images(blogs_dir, targetdir, ablogcontent, regex_image_type):
         logger1.debug(f"Target={targetdir}/{image_name}")
         image_path = Path(image_with_path).parent.absolute()
         logger1.debug(f"image_path={image_path}")
-        ablog_content=ablog_content.replace(f"{str(image_path)}/", "")
+        ablog_content = ablog_content.replace(f"{str(image_path)}/", "")
         ablog_content = re.sub(CAPTION_RE_START, "\n", ablog_content, flags=re.MULTILINE)
-        ablog_content = re.sub(CAPTION_RE_END, "\n", ablog_content, flags=re.MULTILINE)
+        ablog_content = ablog_content.replace(CAPTION_RE_END, "\n") # re.sub(CAPTION_RE_END, "\n", ablog_content, flags=re.MULTILINE)
        
         new_image_name = copy_image_to_target(targetdir, image_name, blogs_dir, image_path)               
         if (new_image_name != image_name):
@@ -177,53 +170,6 @@ def create_blog(orig_link, my_dict, all_replacable_links):
             logger1.info(f"Title={ablog['title']}")
             create_dir_and_files(ablog, all_replacable_links)
     
-# def get_list_of_replacable_links_XLS():
-#     config = ucutil.get_config()
-#     blogs_dir = config[ucutil.BLOGS_DIR]
-    
-#     list_of_replacable_links=[]
-#     # load excel with its path
-#     wrkbk = openpyxl.load_workbook(f"{blogs_dir}/MERGED-all_urls.xlsx")
-#     sh = wrkbk.active
-    
-#     # iterate through excel and display data
-#     for i in range(2, sh.max_row+1):
-#         # print("\n")
-#         # print("Row ", i, " data :")
-#         orig_link=""
-#         for j in range(1, sh.max_column+1):
-#             cell_obj = sh.cell(row=i, column=j)
-#             print (f"{cell_obj.value} - ")
-#             if j==1: 
-#                 orig_link=cell_obj.value
-#                 continue
-#             if j==2: continue
-#             if (j==3):
-#                 logger1.debug(f"j==3 DATA:{str(cell_obj.value).lower()}")
-#                 if (str(cell_obj.value).lower() =="yes"):
-#                     replace_link=cell_obj.value
-#                     continue
-#                 else:
-#                     orig_link = ""
-#                     break
-#             if (j==4 and replace_link.lower()=="yes"):
-#                 replace_link=cell_obj.value
-#                 break
-#             if (j > 4):
-#                 orig_link = ""
-#                 break
-                
-#         if orig_link: 
-#             logger1.debug(f"Original-Link={orig_link} - Replace-Link={replace_link}")
-#             entry=[orig_link, replace_link]
-#             list_of_replacable_links.append(entry)
-#     wrkbk.close()
-#     # add some additional replacements
-#     list_of_replacable_links.append(['src="http://www.urbancode.comws.jpg"', 'src="ws.jpg"'])
-#     list_of_replacable_links.append(['src="//www.youtube.com/embed/B1JpccSM3u8"', 'src="https://www.youtube.com/embed/hfftoBN9yXA"'])
-    
-#     return list_of_replacable_links
-
 def main():
     
     config = ucutil.get_config()
