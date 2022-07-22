@@ -6,7 +6,7 @@ from posixpath import split
 from unicodedata import decimal
 from github import Github
 import json
-import openpyxl
+import csv
 
 from pyparsing import nums
 
@@ -374,32 +374,90 @@ def get_nav_bar(config, plugin, actdoc, doc_level, act_dir=""):
 
     return number_of_columns, nav_bar_data
 
-
-def get_list_of_replacable_links():
+# URLS_WITH_REPLACEMENTS
+def get_list_of_urls_with_replacements(filter_field, filter_value, which_url):
     config = get_config()
+    blogs_dir = config[BLOGS_DIR]
     
     list_of_replacable_links=[]
-    # load excel with its path
-    wrkbk = openpyxl.load_workbook(f"{config[BLOGS_DIR]}/{config[BLOGS_FILE_NAME]}")
-    sh = wrkbk.active
+    # load CSV with its path
+    with open(f"{blogs_dir}/URLS_WITH_REPLACEMENTS.csv",  encoding='utf-8') as f:
+        reader = csv.reader(f, delimiter=";")
+        list_of_rows=list(reader)
     
-    # iterate through excel and display data
-    for i in range(2, sh.max_row+1):
-        url_dict={URL_ORIGINAL_LINK:"", URL_NEW_YES:"", URL_NEW_LINK:""}
-        for j in range(1, sh.max_column+1):
-            cell_obj = sh.cell(row=i, column=j)
-            logger1.debug(f"Row: {i} - Cell: {j} - DATA: {str(cell_obj.value)}")
-            if j==1: url_dict[URL_ORIGINAL_LINK]=str(cell_obj.value)
-            if j==3: url_dict[URL_NEW_YES]=str(cell_obj.value).lower()
-            if (j==4 and url_dict[URL_NEW_YES].lower() =="yes"):
-                url_dict[URL_NEW_LINK]=str(cell_obj.value)
-                break
-        logger1.debug(f"url_dict={url_dict}")        
-        if url_dict[URL_NEW_LINK]: 
-            logger1.debug(f"Original-Link={url_dict[URL_ORIGINAL_LINK]} - Replace-Link={url_dict[URL_NEW_LINK]}")
-            list_of_replacable_links.append(url_dict)
-    wrkbk.close()
+    for r in list_of_rows:
+        if r[filter_field].lower()==filter_value:
+            logger1.debug(f"r={r}")
+            entry=[r[0], r[which_url]]
+            list_of_replacable_links.append(entry)
     return list_of_replacable_links
+
+def get_list_of_replacable_links():
+    return get_list_of_urls_with_replacements(2, "yes", 3)
+def get_list_of_not_migrated_links():
+    return get_list_of_urls_with_replacements(2, "", 1)
+
+# def get_list_of_replacable_links():
+#     config = get_config()
+#     blogs_dir = config[BLOGS_DIR]
+    
+#     list_of_replacable_links=[]
+#     # load CSV with its path
+#     with open(f"{blogs_dir}/URLS_WITH_REPLACEMENTS.csv",  encoding='utf-8') as f:
+#         reader = csv.reader(f, delimiter=";")
+#         list_of_rows=list(reader)
+    
+#     for r in list_of_rows:
+#         if r[2].lower()=="yes":
+#             logger1.debug(f"r={r}")
+#             entry=[r[0], r[3]]
+#             list_of_replacable_links.append(entry)
+#     return list_of_replacable_links
+
+# def get_list_of_not_migrated_links():
+#     config = ucutil.get_config()
+#     blogs_dir = config[ucutil.BLOGS_DIR]
+    
+#     list_of_not_migrated_links=[]
+#     # load CSV with its path
+#     with open(f"{blogs_dir}/URLS_WITH_REPLACEMENTS.csv",  encoding='utf-8') as f:
+#         reader = csv.reader(f, delimiter=";")
+#         list_of_rows=list(reader)
+    
+#     for r in list_of_rows:
+#         if r[2].lower()=="":
+#             logger1.info(f"r={r}")
+#             entry=[r[0], r[1]]
+#             list_of_not_migrated_links.append(entry)
+
+#     return list_of_not_migrated_links
+
+# def get_list_of_replacable_links_XLS():
+#     config = get_config()
+    
+#     list_of_replacable_links=[]
+#     # load excel with its path
+#     wrkbk = openpyxl.load_workbook(f"{config[BLOGS_DIR]}/{config[BLOGS_FILE_NAME]}")
+#     sh = wrkbk.active
+    
+#     # iterate through excel and display data
+#     for i in range(2, sh.max_row+1):
+#         url_dict={URL_ORIGINAL_LINK:"", URL_NEW_YES:"", URL_NEW_LINK:""}
+#         for j in range(1, sh.max_column+1):
+#             cell_obj = sh.cell(row=i, column=j)
+#             logger1.debug(f"Row: {i} - Cell: {j} - DATA: {str(cell_obj.value)}")
+#             if j==1: url_dict[URL_ORIGINAL_LINK]=str(cell_obj.value)
+#             if j==3: url_dict[URL_NEW_YES]=str(cell_obj.value).lower()
+#             if (j==4 and url_dict[URL_NEW_YES].lower() =="yes"):
+#                 url_dict[URL_NEW_LINK]=str(cell_obj.value)
+#                 break
+#         logger1.debug(f"url_dict={url_dict}")        
+#         if url_dict[URL_NEW_LINK]: 
+#             logger1.debug(f"Original-Link={url_dict[URL_ORIGINAL_LINK]} - Replace-Link={url_dict[URL_NEW_LINK]}")
+#             list_of_replacable_links.append(url_dict)
+#     wrkbk.close()
+#     return list_of_replacable_links
+
 def main():
 
     print ("Utility Functions for urbancode.com migration project")    

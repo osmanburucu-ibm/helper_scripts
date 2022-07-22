@@ -1,8 +1,6 @@
-from copy import copy
 import xmltodict
 from datetime import datetime
 from pathlib import Path
-import openpyxl
 import os, shutil
 import logging
 import uc_migration_utils as ucutil
@@ -10,6 +8,7 @@ import re
 import markdownify
 from bs4 import BeautifulSoup
 from mdutils.mdutils import MdUtils
+import csv
 
 script_name = "create_missing_blogs"
 
@@ -75,14 +74,17 @@ def copy_image_to_target(targetdir, image_name, blogs_dir, image_path):
 
 def get_publishing_date(ablog):
     
-    d = datetime.strptime(ablog["pubDate"], '%a, %d %b %Y %H:%M:%S %z')
+    if ("-" in ablog["pubDate"]):
+        d = datetime.strptime(ablog["pubDate"], '%Y-%m-%d %H:%M:%S') 
+    else: 
+        d = datetime.strptime(ablog["pubDate"], '%a, %d %b %Y %H:%M:%S %z')
     return (d.strftime('%Y.%m.%d'))
 
 def replace_links_in_content (blog_content, all_replacable_links):
     
     new_blog_content = blog_content
     for l in all_replacable_links:
-        logger1.info(f"l={l}")
+        logger1.debug(f"l={l}")
         if l:        
             new_blog_content = new_blog_content.replace(l[0], l[1])
     return new_blog_content
@@ -90,7 +92,12 @@ def replace_links_in_content (blog_content, all_replacable_links):
 def create_dir_and_files(ablog, all_replacable_links):
     config = ucutil.get_config()
     blogs_dir = config[ucutil.BLOGS_DIR]
-    targetdir = f"{config[ucutil.BLOGS_DIR]}/migrated/{ablog['title']}"
+    
+    #  x = f'{allnumparts[0]}.' if forsort else f'{allnumparts[0]}'
+    if ("/" in ablog['title']): sanitized_title=ablog['title'].replace("/", "")
+    else: sanitized_title=ablog['title']
+  
+    targetdir = f"{config[ucutil.BLOGS_DIR]}/migrated/{sanitized_title}"
     ablog_content=ablog['content']
     
     os.makedirs(targetdir, exist_ok=True)
@@ -161,93 +168,78 @@ def create_blog(orig_link, my_dict, all_replacable_links):
     channel = my_dict['rss']['channel']
     ablog = {}
     for i in channel["item"]:
+        logger1.info(f"{orig_link} - {i['link']}")
         if (orig_link == i['link']):
             ablog["link"] = i['link']
             ablog["title"] = i['title']
-            ablog["pubDate"]=i["pubDate"]
-            ablog["content"]=i["content:encoded"]
-            logger1.debug(f"Title={ablog['title']}")
+            ablog["pubDate"] = i["pubDate"] or i["wp:post_date"]
+            ablog["content"] = i["content:encoded"]
+            logger1.info(f"Title={ablog['title']}")
             create_dir_and_files(ablog, all_replacable_links)
-            
-def get_list_of_replacable_links():
-    config = ucutil.get_config()
-    blogs_dir = config[ucutil.BLOGS_DIR]
     
-    list_of_replacable_links=[]
-    # load excel with its path
-    wrkbk = openpyxl.load_workbook(f"{blogs_dir}/MERGED-all_urls.xlsx")
-    sh = wrkbk.active
+# def get_list_of_replacable_links_XLS():
+#     config = ucutil.get_config()
+#     blogs_dir = config[ucutil.BLOGS_DIR]
     
-    # iterate through excel and display data
-    for i in range(2, sh.max_row+1):
-        print("\n")
-        print("Row ", i, " data :")
-        orig_link=""
-        for j in range(1, sh.max_column+1):
-            cell_obj = sh.cell(row=i, column=j)
-            print (f"{cell_obj.value} - ")
-            if j==1: 
-                orig_link=cell_obj.value
-                continue
-            if j==2: continue
-            if (j==3):
-                if (str(cell_obj.value).lower() =="yes"):
-                    replace_link=cell_obj.value
-                    continue
-                else:
-                    orig_link = ""
-                    break
-            if (j==4 and replace_link.lower()=="yes"):
-                replace_link=cell_obj.value
-                break
-            if (j > 4):
-                orig_link = ""
-                break
+#     list_of_replacable_links=[]
+#     # load excel with its path
+#     wrkbk = openpyxl.load_workbook(f"{blogs_dir}/MERGED-all_urls.xlsx")
+#     sh = wrkbk.active
+    
+#     # iterate through excel and display data
+#     for i in range(2, sh.max_row+1):
+#         # print("\n")
+#         # print("Row ", i, " data :")
+#         orig_link=""
+#         for j in range(1, sh.max_column+1):
+#             cell_obj = sh.cell(row=i, column=j)
+#             print (f"{cell_obj.value} - ")
+#             if j==1: 
+#                 orig_link=cell_obj.value
+#                 continue
+#             if j==2: continue
+#             if (j==3):
+#                 logger1.debug(f"j==3 DATA:{str(cell_obj.value).lower()}")
+#                 if (str(cell_obj.value).lower() =="yes"):
+#                     replace_link=cell_obj.value
+#                     continue
+#                 else:
+#                     orig_link = ""
+#                     break
+#             if (j==4 and replace_link.lower()=="yes"):
+#                 replace_link=cell_obj.value
+#                 break
+#             if (j > 4):
+#                 orig_link = ""
+#                 break
                 
-        if orig_link: 
-            logger1.info(f"Original-Link={orig_link} - Replace-Link={replace_link}")
-            entry=[orig_link, replace_link]
-            list_of_replacable_links.append(entry)
-    wrkbk.close()
-    # add some additional replacements
-    list_of_replacable_links.append(['src="http://www.urbancode.comws.jpg"', 'src="ws.jpg"'])
-    list_of_replacable_links.append(['src="//www.youtube.com/embed/B1JpccSM3u8"', 'src="https://www.youtube.com/embed/hfftoBN9yXA"'])
+#         if orig_link: 
+#             logger1.debug(f"Original-Link={orig_link} - Replace-Link={replace_link}")
+#             entry=[orig_link, replace_link]
+#             list_of_replacable_links.append(entry)
+#     wrkbk.close()
+#     # add some additional replacements
+#     list_of_replacable_links.append(['src="http://www.urbancode.comws.jpg"', 'src="ws.jpg"'])
+#     list_of_replacable_links.append(['src="//www.youtube.com/embed/B1JpccSM3u8"', 'src="https://www.youtube.com/embed/hfftoBN9yXA"'])
     
-    return list_of_replacable_links
+#     return list_of_replacable_links
 
 def main():
     
     config = ucutil.get_config()
     blogs_dir = config[ucutil.BLOGS_DIR]
+    
     with open(f"{blogs_dir}/all_content.urbancode.WordPress.xml", "r") as xml_obj:
         my_dict = xmltodict.parse(xml_obj.read())
         xml_obj.close()
-    
-    all_replacable_links = get_list_of_replacable_links()
-    
-    # load excel with its path
-    wrkbk = openpyxl.load_workbook(f"{blogs_dir}/MERGED-all_urls.xlsx")
-    sh = wrkbk.active
-    
-    # iterate through excel and display data
-    for i in range(2, sh.max_row+1):
-        print("\n")
-        print("Row ", i, " data :")
-        orig_link=""
-        for j in range(1, sh.max_column+1):
-            cell_obj = sh.cell(row=i, column=j)
-            print (f"{cell_obj.value} - ")
-            # if j==1: orig_link=cell_obj.value
-            # if ("urbancode" not in orig_link) or (j==2 and (cell_obj.value.upper)=="YES") or (j==3 and cell_obj.value!=None) or ("www.urbancode.com/plugin" in orig_link):
-            if j==1: orig_link=str(cell_obj.value)
-            if (j==3 and cell_obj.value!=None):
-                orig_link=""
-                break
-                
-        if orig_link: 
+        
+    all_replacable_links = ucutil.get_list_of_replacable_links()
+    all_not_migrated_links = ucutil.get_list_of_not_migrated_links()
+
+    for r in all_not_migrated_links:
+        if orig_link := r[0]:
             logger1.info(f"Original-Link={orig_link}")
             create_blog(orig_link, my_dict, all_replacable_links)
             
-    wrkbk.close() 
 if __name__ == '__main__':
     main()
