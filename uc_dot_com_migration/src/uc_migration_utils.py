@@ -99,6 +99,9 @@ URL_ORIGINAL_LINK="URL_ORIGINAL_LINK"
 URL_NEW_LINK="URL_NEW_LINK"
 URL_NEW_YES="URL_NEW_YES"
 
+# URLS_WITH_REPLACEMENTS.csv
+ALL_URLS_LIST_FILE_NAME="ALL_URLS_LIST_FILE_NAME"
+
 DEBUG_DRY_RUN="DEBUG_DRY_RUN"
 
 RELEASE_NOTES_DIR_FILE_NAME="RELEASE_NOTES_DIR_FILE_NAME"
@@ -145,6 +148,7 @@ def get_config():
         EXPORTED_PLUGIN_DOCS: os.getenv(EXPORTED_PLUGIN_DOCS, "plugin-docs.urbancode.WordPress.xml"),
         PRODUCT_PLUGIN_TYPE:os.getenv(PRODUCT_PLUGIN_TYPE, ""),
         DEBUG_DRY_RUN:os.getenv(DEBUG_DRY_RUN, "False"),
+        ALL_URLS_LIST_FILE_NAME:os.getenv(ALL_URLS_LIST_FILE_NAME,"URLS_WITH_REPLACEMENTS.csv"),
         BLOGS_DIR:os.getenv(BLOGS_DIR,"~/Rnd/Blogs"),
         BLOGS_FILE_NAME:os.getenv(BLOGS_FILE_NAME, "MERGED-all_urls.xlsx"),
         RELEASE_NOTES_DIR:os.getenv(BLOGS_DIR,"~/Rnd/Release_Notes"),
@@ -397,10 +401,11 @@ def get_nav_bar(config, plugin, actdoc, doc_level, act_dir=""):
 def get_list_of_urls_with_replacements(filter_field, filter_value, which_url):
     config = get_config()
     blogs_dir = config[BLOGS_DIR]
+    list_of_urls_file_name=config[ALL_URLS_LIST_FILE_NAME]
     
     list_of_replacable_links=[]
     # load CSV with its path
-    with open(f"{blogs_dir}/URLS_WITH_REPLACEMENTS.csv",  encoding='utf-8') as f:
+    with open(f"{blogs_dir}/{list_of_urls_file_name}",  encoding='utf-8') as f:
         reader = csv.reader(f, delimiter=";")
         list_of_rows=list(reader)
     

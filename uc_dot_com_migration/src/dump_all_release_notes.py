@@ -95,7 +95,7 @@ def create_dir_and_files(arn, all_replacable_links):
     arn_content = ucutil.process_all_images(blogs_dir, targetdir, arn_content, ucutil.IMAGE_URL_RE_SRC_JPG)  
 
     d = arn['pubDate']
-    ablog_content = ucutil.replace_links_in_content(ablog_content, all_replacable_links)
+    arn_content = ucutil.replace_links_in_content(arn_content, all_replacable_links)
     new_content = f"<!DOCTYPE html>\n<html><head><title>{arn['version']}</title></head>\n<body>\n<p><b>This article was originaly published in {d}</b></p>\n<p><h1>{arn['title']}</h1></p>\n<p>{arn_content}\n</p></body>\n</html>\n"
     with open(f"{targetdir}/{arn['title']}.html", "w") as afile:
         afile.write(new_content)
