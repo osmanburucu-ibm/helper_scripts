@@ -7,7 +7,9 @@ from unicodedata import decimal
 from github import Github
 import json
 import csv
-
+import re
+from pathlib import Path
+import shutil
 from pyparsing import nums
 
 logging.basicConfig()
@@ -83,6 +85,7 @@ RECREATE_PLUGIN_DOC_FILE="RECREATE_PLUGIN_DOC_FILE"
 RECREATE_PRODUCT_INDEX_FILE="RECREATE_PRODUCT_INDEX_FILE"
 SKIP_DOC_FILES="SKIP_DOC_FILES"
 
+EXPORTED_ALL_WP_CONTENT_FILE="EXPORTED_ALL_WP_CONTENT_FILE"
 EXPORTED_DOCS_PATH="EXPORTED_DOCS_PATH"
 EXPORTED_ALL_PLUGINS_LIST="EXPORTED_ALL_PLUGINS_LIST"
 EXPORTED_PLUGIN_DOCS="EXPORTED_PLUGIN_DOCS"
@@ -97,6 +100,19 @@ URL_NEW_LINK="URL_NEW_LINK"
 URL_NEW_YES="URL_NEW_YES"
 
 DEBUG_DRY_RUN="DEBUG_DRY_RUN"
+
+RELEASE_NOTES_DIR_FILE_NAME="RELEASE_NOTES_DIR_FILE_NAME"
+RELEASE_NOTES_DIR="RELEASE_NOTES_DIR"
+
+
+IMAGE_URL_RE_PNG='href="\/wp-content\/uploads\/.*?\.png"' # '\/wp-content\/uploads\/.*?\.png'# 'href="\/wp-content\/uploads\/.*?\.png"' # 're.findall(r'"(.*?)"', text1))'
+IMAGE_URL_RE_JPG='href="\/wp-content\/uploads\/.*?\.jpg"' # 're.findall(r'"(.*?)"', text1))'
+IMAGE_URL_RE_SRC_PNG='src="http:\/\/www\.urbancode\.com\/wp-content\/uploads\/.*?\.png"'
+IMAGE_URL_RE_SRC_JPG='src="http:\/\/www\.urbancode\.com\/wp-content\/uploads\/.*?\.jpg"'
+IMAGE_RE_SRC_PNG='src=\".*?.png\"'
+IMAGE_RE_SRC_JPG='src=\".*?.jpg\"'
+
+
 
 def get_config():
     return {
@@ -123,13 +139,16 @@ def get_config():
         RECREATE_PLUGIN_DOC_FILE: os.getenv(RECREATE_PLUGIN_DOC_FILE, "True"),
         RECREATE_PRODUCT_INDEX_FILE: os.getenv(RECREATE_PRODUCT_INDEX_FILE, "True"),
         SKIP_DOC_FILES: os.getenv(SKIP_DOC_FILES, "False"),
+        EXPORTED_ALL_WP_CONTENT_FILE: os.getenv(EXPORTED_ALL_WP_CONTENT_FILE,"all_content.urbancode.WordPress.xml"),
         EXPORTED_DOCS_PATH: os.getenv(EXPORTED_DOCS_PATH, "exports/WP_exports"),
         EXPORTED_ALL_PLUGINS_LIST: os.getenv(EXPORTED_ALL_PLUGINS_LIST, "plugins.urbancode.WordPress.xml"),
         EXPORTED_PLUGIN_DOCS: os.getenv(EXPORTED_PLUGIN_DOCS, "plugin-docs.urbancode.WordPress.xml"),
         PRODUCT_PLUGIN_TYPE:os.getenv(PRODUCT_PLUGIN_TYPE, ""),
         DEBUG_DRY_RUN:os.getenv(DEBUG_DRY_RUN, "False"),
         BLOGS_DIR:os.getenv(BLOGS_DIR,"~/Rnd/Blogs"),
-        BLOGS_FILE_NAME:os.getenv(BLOGS_FILE_NAME, "MERGED-all_urls.xlsx")
+        BLOGS_FILE_NAME:os.getenv(BLOGS_FILE_NAME, "MERGED-all_urls.xlsx"),
+        RELEASE_NOTES_DIR:os.getenv(BLOGS_DIR,"~/Rnd/Release_Notes"),
+        RELEASE_NOTES_DIR_FILE_NAME:os.getenv(RELEASE_NOTES_DIR_FILE_NAME, "RELEASE_NOTES_DIR.csv")
     }
 
 def get_all_plugins_list(all_plugins_list):
@@ -396,6 +415,66 @@ def get_list_of_replacable_links():
     return get_list_of_urls_with_replacements(2, "yes", 3)
 def get_list_of_not_migrated_links():
     return get_list_of_urls_with_replacements(2, "", 1)
+
+def copy_image_to_target(targetdir, image_name, blogs_dir, image_path):
+    new_image_name = image_name
+    logger1.debug(f"first new_image_name={new_image_name}")
+    if not os.path.exists(f"{targetdir}/{new_image_name}"):
+        if os.path.exists(f"{blogs_dir}/media/{image_path}/{new_image_name}"): 
+            shutil.copyfile(f"{blogs_dir}/media/{image_path}/{new_image_name}", f"{targetdir}/{new_image_name}")
+        else: 
+            logger1.debug(f"image not found {new_image_name}")
+            if x := re.search("(-\d+?x\d+?\.png)", new_image_name):
+                logger1.debug(f"image regex found {new_image_name}")
+                isplit = new_image_name.split(x[0])
+                iextension=Path(new_image_name).suffix
+                new_image_name=f"{isplit[0]}{iextension}"
+                logger1.debug(f"new new_image_name={new_image_name}")
+                copy_image_to_target(targetdir, new_image_name, blogs_dir, image_path)
+    return new_image_name
+
+def process_all_images(blogs_dir, targetdir, ablogcontent, regex_image_type):
+    CAPTION_RE_START='\[caption id=".*?"\]'
+    CAPTION_RE_END='\[\/caption\]'
+
+    ablog_content = ablogcontent
+    logger1.debug(f"regex_imagetype={regex_image_type}")
+    all_images=[]
+    r = re.findall(rf"{regex_image_type}", ablog_content) 
+
+    all_images.extend(r)
+    logger1.debug(f"r={r}")
+    for ir in all_images:
+        image_with_path=ir.strip()
+        image_with_path=image_with_path.replace('http://www.urbancode.com', '')
+        image_with_path=image_with_path.replace('href=', '')
+        image_with_path=image_with_path.replace('src=', '')
+        image_with_path=image_with_path.replace('"', '')
+        logger1.debug(f"image link={image_with_path}")
+        splitted = image_with_path.split("/")
+        logger1.debug(f"{splitted}")
+        image_name = splitted[-1]
+
+        logger1.debug(f"Target={targetdir}/{image_name}")
+        image_path = Path(image_with_path).parent.absolute()
+        logger1.debug(f"image_path={image_path}")
+        ablog_content = ablog_content.replace(f"{str(image_path)}/", "")
+        ablog_content = re.sub(CAPTION_RE_START, "\n", ablog_content, flags=re.MULTILINE)
+        ablog_content = ablog_content.replace(CAPTION_RE_END, "\n") # re.sub(CAPTION_RE_END, "\n", ablog_content, flags=re.MULTILINE)
+       
+        new_image_name = copy_image_to_target(targetdir, image_name, blogs_dir, image_path)               
+        if (new_image_name != image_name):
+            ablog_content=ablog_content.replace(image_name, new_image_name)
+    return ablog_content
+
+def replace_links_in_content (content, all_replacable_links):
+    
+    new_content = content
+    for l in all_replacable_links:
+        logger1.debug(f"l={l}")
+        if l:        
+            new_content = new_content.replace(l[0], l[1])
+    return new_content
 
 def main():
 

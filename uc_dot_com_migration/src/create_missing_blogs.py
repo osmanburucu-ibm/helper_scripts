@@ -80,15 +80,6 @@ def get_publishing_date(ablog):
         d = datetime.strptime(ablog["pubDate"], '%a, %d %b %Y %H:%M:%S %z')
     return (d.strftime('%Y.%m.%d'))
 
-def replace_links_in_content (blog_content, all_replacable_links):
-    
-    new_blog_content = blog_content
-    for l in all_replacable_links:
-        logger1.debug(f"l={l}")
-        if l:        
-            new_blog_content = new_blog_content.replace(l[0], l[1])
-    return new_blog_content
-    
 def create_dir_and_files(ablog, all_replacable_links):
     config = ucutil.get_config()
     blogs_dir = config[ucutil.BLOGS_DIR]
@@ -113,7 +104,7 @@ def create_dir_and_files(ablog, all_replacable_links):
              
     d = get_publishing_date(ablog)
     
-    ablog_content = replace_links_in_content(ablog_content, all_replacable_links)
+    ablog_content = ucutil.replace_links_in_content(ablog_content, all_replacable_links)
     # TODO: check if URLs in content which are not in my list and add them!!!!
     
     new_content = f"<!DOCTYPE html>\n<html><head><title>{ablog['title']}</title></head>\n<body>\n<p><b>This article was originaly published in {d}</b></p>\n<p><h1>{ablog['title']}</h1></p>\n<p>{ablog_content}\n</p></body>\n</html>\n"
