@@ -2,6 +2,7 @@
 import logging
 import os
 from decimal import Decimal
+from pickle import FALSE, TRUE
 from posixpath import split
 from unicodedata import decimal
 from github import Github
@@ -10,19 +11,20 @@ import csv
 import re
 from pathlib import Path
 import shutil
-from pyparsing import nums
+# from pyparsing import nums
+# import glob
 
 logging.basicConfig()
-logging.root.setLevel(logging.INFO)
+logging.root.setLevel(logging.DEBUG)
 logging.basicConfig(format="[%(filename)s:%(lineno)s - %(funcName)20s() ] %(message)s")
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 
 # create file handler which logs even debug messages
 fh = logging.FileHandler(f"{__name__}.log", 'w+')
 fh.setLevel(logging.DEBUG)
 # create console handler with a higher log level
 ch = logging.StreamHandler()
-ch.setLevel(logging.INFO)
+ch.setLevel(logging.DEBUG)
 lformat=logging.Formatter("[%(filename)s:%(lineno)s - %(funcName)20s() ] %(message)s")
 
 fh.setFormatter(lformat)
@@ -89,6 +91,7 @@ EXPORTED_ALL_WP_CONTENT_FILE="EXPORTED_ALL_WP_CONTENT_FILE"
 EXPORTED_DOCS_PATH="EXPORTED_DOCS_PATH"
 EXPORTED_ALL_PLUGINS_LIST="EXPORTED_ALL_PLUGINS_LIST"
 EXPORTED_PLUGIN_DOCS="EXPORTED_PLUGIN_DOCS"
+EXPORTED_BASE_PATH="EXPORTED_BASE_PATH"
 
 PRODUCT_PLUGIN_TYPE="PRODUCT_PLUGIN_TYPE"
 
@@ -142,6 +145,7 @@ def get_config():
         RECREATE_PLUGIN_DOC_FILE: os.getenv(RECREATE_PLUGIN_DOC_FILE, "True"),
         RECREATE_PRODUCT_INDEX_FILE: os.getenv(RECREATE_PRODUCT_INDEX_FILE, "True"),
         SKIP_DOC_FILES: os.getenv(SKIP_DOC_FILES, "False"),
+        EXPORTED_BASE_PATH: os.getenv(EXPORTED_BASE_PATH, ""),
         EXPORTED_ALL_WP_CONTENT_FILE: os.getenv(EXPORTED_ALL_WP_CONTENT_FILE,"all_content.urbancode.WordPress.xml"),
         EXPORTED_DOCS_PATH: os.getenv(EXPORTED_DOCS_PATH, "exports/WP_exports"),
         EXPORTED_ALL_PLUGINS_LIST: os.getenv(EXPORTED_ALL_PLUGINS_LIST, "plugins.urbancode.WordPress.xml"),
@@ -421,22 +425,84 @@ def get_list_of_replacable_links():
 def get_list_of_not_migrated_links():
     return get_list_of_urls_with_replacements(2, "", 1)
 
+def find_files(filename, search_path):
+    logger1.debug(f"filename={filename} - search_paht={search_path}")
+    result=[]
+    for root, dir, files in os.walk(search_path):
+        logger1.debug(f"root={root} - dir={dir} - files={files}")
+        if filename in files:
+            result.append(os.path.join(root, filename))
+    return result
+
 def copy_image_to_target(targetdir, image_name, blogs_dir, image_path):
     new_image_name = image_name
     logger1.debug(f"first new_image_name={new_image_name}")
-    if not os.path.exists(f"{targetdir}/{new_image_name}"):
-        if os.path.exists(f"{blogs_dir}/media/{image_path}/{new_image_name}"): 
-            shutil.copyfile(f"{blogs_dir}/media/{image_path}/{new_image_name}", f"{targetdir}/{new_image_name}")
-        else: 
-            logger1.debug(f"image not found {new_image_name}")
-            if x := re.search("(-\d+?x\d+?\.png)", new_image_name):
-                logger1.debug(f"image regex found {new_image_name}")
-                isplit = new_image_name.split(x[0])
-                iextension=Path(new_image_name).suffix
-                new_image_name=f"{isplit[0]}{iextension}"
-                logger1.debug(f"new new_image_name={new_image_name}")
-                copy_image_to_target(targetdir, new_image_name, blogs_dir, image_path)
+    search_path = f"{blogs_dir}/media/"
+    image_found=FALSE
+    files = find_files(new_image_name, search_path)
+    logger1.debug(f"files={files}")
+
+    for f in files:
+        logger1.debug(f"filename f={f}")
+        if (new_image_name in f): 
+            image_found=True
+            shutil.copyfile(f"{f}", f"{targetdir}/{new_image_name}")
+            break
+    if not image_found:
+        logger1.debug(f"image not found {new_image_name}")
+        if x := re.search("(-\d+?x\d+?\.png)", new_image_name):
+            logger1.debug(f"image regex found {new_image_name}")
+            isplit = new_image_name.split(x[0])
+            iextension=Path(new_image_name).suffix
+            new_image_name=f"{isplit[0]}{iextension}"
+            logger1.debug(f"new new_image_name={new_image_name}")
+            copy_image_to_target(targetdir, new_image_name, blogs_dir, image_path)
     return new_image_name
+
+# def x_copy_image_to_target(targetdir, image_name, blogs_dir, image_path):
+#     new_image_name = image_name
+#     logger1.debug(f"first new_image_name={new_image_name}")
+    
+#     image_found=FALSE
+#     for r, d, f in os.walk(f"{blogs_dir}/media/wp_content/"):
+#         logger1.debug(f"r={r}")
+#         logger1.debug(f"d={d}")
+#         for file in f:
+#             logger1.debug(f"file={file}")
+#             if new_image_name == file:
+#                 shutil.copyfile(os.path.join(r, file), f"{targetdir}/{new_image_name}")
+#                 logger1.debug(f"found={new_image_name}")
+#                 image_found=TRUE
+#                 break
+#         if image_found: break
+    
+#     if not image_found:
+#         logger1.debug(f"image not found {new_image_name}")
+#         if x := re.search("(-\d+?x\d+?\.png)", new_image_name):
+#             logger1.debug(f"image regex found {new_image_name}")
+#             isplit = new_image_name.split(x[0])
+#             iextension=Path(new_image_name).suffix
+#             new_image_name=f"{isplit[0]}{iextension}"
+#             logger1.debug(f"new new_image_name={new_image_name}")
+#             copy_image_to_target(targetdir, new_image_name, blogs_dir, image_path)
+#     return new_image_name
+    
+# def old_copy_image_to_target(targetdir, image_name, blogs_dir, image_path):
+#     new_image_name = image_name
+#     logger1.debug(f"first new_image_name={new_image_name}")
+#     if not os.path.exists(f"{targetdir}/{new_image_name}"):
+#         if os.path.exists(f"{blogs_dir}/media/{image_path}/{new_image_name}"): 
+#             shutil.copyfile(f"{blogs_dir}/media/{image_path}/{new_image_name}", f"{targetdir}/{new_image_name}")
+#         else: 
+#             logger1.debug(f"image not found {new_image_name}")
+#             if x := re.search("(-\d+?x\d+?\.png)", new_image_name):
+#                 logger1.debug(f"image regex found {new_image_name}")
+#                 isplit = new_image_name.split(x[0])
+#                 iextension=Path(new_image_name).suffix
+#                 new_image_name=f"{isplit[0]}{iextension}"
+#                 logger1.debug(f"new new_image_name={new_image_name}")
+#                 copy_image_to_target(targetdir, new_image_name, blogs_dir, image_path)
+#     return new_image_name
 
 def process_all_images(blogs_dir, targetdir, ablogcontent, regex_image_type):
     CAPTION_RE_START='\[caption id=".*?"\]'
@@ -450,6 +516,8 @@ def process_all_images(blogs_dir, targetdir, ablogcontent, regex_image_type):
     all_images.extend(r)
     logger1.debug(f"r={r}")
     for ir in all_images:
+        logger1.debug(f"ir={ir}")
+        original_image_name=ir.strip()
         image_with_path=ir.strip()
         image_with_path=image_with_path.replace('http://www.urbancode.com', '')
         image_with_path=image_with_path.replace('href=', '')
@@ -461,15 +529,22 @@ def process_all_images(blogs_dir, targetdir, ablogcontent, regex_image_type):
         image_name = splitted[-1]
 
         logger1.debug(f"Target={targetdir}/{image_name}")
-        image_path = Path(image_with_path).parent.absolute()
+        # does not work for URLS
+        # image_path = Path(image_with_path).parent.absolute()
+        image_path = '/'.join(splitted[:-1])
         logger1.debug(f"image_path={image_path}")
-        ablog_content = ablog_content.replace(f"{str(image_path)}/", "")
+        if (image_path): ablog_content = ablog_content.replace(f"{image_path}/", "")
+        logger1.debug(f"ablog_content after image_path removed={ablog_content}")
         ablog_content = re.sub(CAPTION_RE_START, "\n", ablog_content, flags=re.MULTILINE)
         ablog_content = ablog_content.replace(CAPTION_RE_END, "\n") # re.sub(CAPTION_RE_END, "\n", ablog_content, flags=re.MULTILINE)
-       
-        new_image_name = copy_image_to_target(targetdir, image_name, blogs_dir, image_path)               
-        if (new_image_name != image_name):
+
+        new_image_name = copy_image_to_target(targetdir, image_name, blogs_dir, image_path)
+        ablog_content=ablog_content.replace('<img src="http://www.urbancode.com', '<img src="')
+        if (new_image_name != image_name) and (new_image_name):
             ablog_content=ablog_content.replace(image_name, new_image_name)
+            logger1.debug(f"ablog_content after image_name {image_name} replaced with new_image_name{new_image_name} == {ablog_content}")
+            ablog_content=ablog_content.replace(original_image_name, new_image_name)
+            logger1.debug(f"ablog_content after original_image_name {original_image_name} replaced with new_image_name{new_image_name} == {ablog_content}")
     return ablog_content
 
 def replace_links_in_content (content, all_replacable_links):

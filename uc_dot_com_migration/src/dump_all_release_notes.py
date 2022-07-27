@@ -10,16 +10,16 @@ import markdownify
 script_name = "dump_all_release_notes"
 
 logging.basicConfig()
-logging.root.setLevel(logging.INFO)
+logging.root.setLevel(logging.DEBUG)
 logging.basicConfig(format="[%(filename)s:%(lineno)s - %(funcName)20s() ] %(message)s")
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 
 # create file handler which logs even debug messages
 fh = logging.FileHandler(f"{script_name}.log", "w+")
 fh.setLevel(logging.DEBUG)
 
 ch = logging.StreamHandler()
-ch.setLevel(logging.INFO)
+ch.setLevel(logging.DEBUG)
 lformat=logging.Formatter("[%(filename)s:%(lineno)s - %(funcName)20s() ] %(message)s")
 
 fh.setFormatter(lformat)
@@ -43,6 +43,10 @@ def get_all_release_notes(all_content):
     for i in channel["item"]:
         arn = {}
         if (i["wp:post_type"] == "release_note"):
+            arn["release_notes"] = ""
+            arn["release_summary"] = ""
+            arn["getting_started"]= ""
+            
             arn["link"] = i['link']
             arn["title"] = i['title']
             arn["pubDate"] = i["pubDate"] or i["wp:post_date"]
@@ -66,12 +70,45 @@ def get_all_release_notes(all_content):
                     if x[1] == 'a:1:{i:0;s:2:"97";}': arn["product"] = "UCR"
                     if x[1] == 'a:1:{i:0;s:2:"811";}': arn["product"] = "UCV"
                     if x[1] == 'a:1:{i:0;s:3:"811";}': arn["product"] = "UCV"
+                    
                 if k[1] == "version":
                     x = list(p.items())[1]
                     arn["version"] = x[1]
+                    
+                if k[1] == "release_notes":
+                    x = list(p.items())[1]
+                    arn["release_notes"]=str(x[1])
+   
+                if k[1] == "release_summary":
+                    x = list(p.items())[1]
+                    arn["release_summary"]=str(x[1])
+                    
+                if k[1] == "getting_started":
+                    x = list(p.items())[1]
+                    arn["getting_started"]=str(x[1])
+
+
             logger1.debug(f"Title={arn['title']} - Version={arn['version']} - Product={arn['product']} - link={arn['link']}")
+            
+            # DEBUG: if arn["product"] !="UCD": continue
+            #if arn["product"] !="UCR": continue
+            # DEBUG: 
             if arn["version"] !="unknown": allreleasenotes.append(arn) 
     return allreleasenotes
+
+def get_combined_content(arn):
+    new_content = arn['content']
+    if arn["release_summary"]:
+        logger1.info(f"RELEASE_SUMMARY={arn['release_summary']}")
+        new_content = f"{new_content}<h2>Release Summary</h2><br>{arn['release_summary']}"
+    if arn["release_notes"]:
+        logger1.info(f"RELEASE_NOTES={arn['release_notes']}")
+        new_content = f"{new_content}<h2>Release Notes</h2><br>{arn['release_notes']}"
+    if arn["getting_started"]:
+        logger1.info(f"GETTING_STARTED={arn['getting_started']}")
+        new_content = f"{new_content}<h2>Getting Started</h2><br>{arn['getting_started']}"
+
+    return new_content
 
 def create_dir_and_files(arn, all_replacable_links):
     config = ucutil.get_config()
@@ -81,8 +118,8 @@ def create_dir_and_files(arn, all_replacable_links):
     version_name = version_name.replace("/", "") if ("/" in version_name) else version_name
 
     targetdir = f"{config[ucutil.BLOGS_DIR]}/{arn['product']}/{version_name}"
-    arn_content=arn['content']
-
+    arn_content=get_combined_content(arn) # arn['content']
+    logger1.debug(f"got combined conetnt={arn_content}")
     os.makedirs(targetdir, exist_ok=True)
     with open(f"{targetdir}/original_link.txt", "a") as afile:
         afile.write(f"{arn['link']}\n")
@@ -93,15 +130,21 @@ def create_dir_and_files(arn, all_replacable_links):
     arn_content = ucutil.process_all_images(blogs_dir, targetdir, arn_content, ucutil.IMAGE_URL_RE_JPG)
     arn_content = ucutil.process_all_images(blogs_dir, targetdir, arn_content, ucutil.IMAGE_RE_SRC_JPG)
     arn_content = ucutil.process_all_images(blogs_dir, targetdir, arn_content, ucutil.IMAGE_URL_RE_SRC_JPG)  
+    logger1.debug(f"all images processed={arn_content}")
 
     d = arn['pubDate']
     arn_content = ucutil.replace_links_in_content(arn_content, all_replacable_links)
+    logger1.debug(f"all links replaced={arn_content}")
     new_content = f"<!DOCTYPE html>\n<html><head><title>{arn['version']}</title></head>\n<body>\n<p><b>This article was originaly published in {d}</b></p>\n<p><h1>{arn['title']}</h1></p>\n<p>{arn_content}\n</p></body>\n</html>\n"
+    logger1.debug(f"new_content={new_content}")
+
+    soup2 = BeautifulSoup(new_content, "html.parser")
+    new_content = soup2.prettify()
     with open(f"{targetdir}/{arn['title']}.html", "w") as afile:
         afile.write(new_content)
 
     md_doc_file = MdUtils(f"{targetdir}/{arn['title']}.md") #, title=ablog['title'])
-    soup2 = BeautifulSoup(new_content, "html.parser")
+
 
     md_doc_file.new_paragraph(md(soup2))
     md_doc_file.create_md_file()
@@ -110,9 +153,10 @@ def main():
     
     config = ucutil.get_config()
     blogs_dir = config[ucutil.BLOGS_DIR]
+    exported_base_path = config[ucutil.EXPORTED_BASE_PATH]
     content_file=config[ucutil.EXPORTED_ALL_WP_CONTENT_FILE]
     
-    with open(f"{blogs_dir}/{content_file}", "r") as xml_obj:
+    with open(f"{exported_base_path}/{content_file}", "r") as xml_obj:
         my_dict = xmltodict.parse(xml_obj.read())
         xml_obj.close()
     
@@ -120,6 +164,9 @@ def main():
     allreleasenotes = get_all_release_notes(my_dict)
     allreleasenotes = sorted(allreleasenotes, key=lambda k: (k['product'], k['version'], k['pubDate']))
     for rn in allreleasenotes:
+        # DEBUG: 
+        # if (rn['version'] != "6.1.1.4"): continue
+        # DEBUG: 
         logger1.info(f"Title={rn['title']} - Version={rn['version']} - Product={rn['product']} - link={rn['link']}")
         create_dir_and_files(rn, all_replacable_links)
 
