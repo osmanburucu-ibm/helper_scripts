@@ -2,7 +2,7 @@ import os
 import logging
 import uc_migration_utils as ucutil
 
-script_name = "update_docs_with_new_links"
+script_name = "update_files_with_new_links"
 
 logging.basicConfig()
 logging.root.setLevel(logging.INFO)
@@ -30,14 +30,15 @@ def update_files_with_new_links(sub_dir, files, list_of_links):
     DRY_RUN= config[ucutil.DEBUG_DRY_RUN]
 
     for file in files:
-        if (".md" not in file): continue
+        if (".md" not in file) and (".html" not in file):
+            continue
         logger1.info (f"{sub_dir}/{file}")
         with open (f"{sub_dir}/{file}", "r") as f:
             file_content = f.readlines()
 
-        # copy the first 6 lines which contain the header and the last 3 lines with updated latest version!
         new_content = ''.join(file_content)
         for url_list in list_of_links:
+            logger1.debug(f"url_list={url_list}")
             logger1.debug(f"url_list[URL_ORIGINAL_LINK]={url_list[ucutil.URL_ORIGINAL_LINK]} - url_list[ucutil.URL_NEW_LINK]={url_list[ucutil.URL_NEW_LINK]}")
             new_content = new_content.replace(url_list[ucutil.URL_ORIGINAL_LINK], url_list[ucutil.URL_NEW_LINK])
         if (new_content != ''.join(file_content)):
@@ -52,7 +53,7 @@ def update_files_with_new_links(sub_dir, files, list_of_links):
 def main():
     
     config = ucutil.get_config()
-    rootdir=ucutil.get_target_doc_path(config, "", level=ucutil.DOC_LEVEL_PLUGIN_README)
+    rootdir= config[ucutil.DOCS_DIR]
     logger1.debug(f"Rootdir={rootdir}")
 
     list_of_links=ucutil.get_list_of_replacable_links()

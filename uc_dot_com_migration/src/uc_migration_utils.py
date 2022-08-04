@@ -98,9 +98,15 @@ PRODUCT_PLUGIN_TYPE="PRODUCT_PLUGIN_TYPE"
 BLOGS_DIR="BLOGS_DIR"
 BLOGS_FILE_NAME="BLOGS_FILE_NAME"
 
-URL_ORIGINAL_LINK="URL_ORIGINAL_LINK"
-URL_NEW_LINK="URL_NEW_LINK"
-URL_NEW_YES="URL_NEW_YES"
+DOCS_DIR="DOCS_DIR"
+
+# URL_ORIGINAL_LINK="URL_ORIGINAL_LINK"
+# URL_NEW_LINK="URL_NEW_LINK"
+# URL_NEW_YES="URL_NEW_YES"
+URL_ORIGINAL_LINK=0
+URL_NEW_LINK=1
+URL_NEW_YES="YES"
+
 
 # URLS_WITH_REPLACEMENTS.csv
 ALL_URLS_LIST_FILE_NAME="ALL_URLS_LIST_FILE_NAME"
@@ -118,10 +124,11 @@ IMAGE_URL_RE_SRC_JPG='src="http:\/\/www\.urbancode\.com\/wp-content\/uploads\/.*
 IMAGE_RE_SRC_PNG='src=\".*?.png\"'
 IMAGE_RE_SRC_JPG='src=\".*?.jpg\"'
 
-
+CONFIG_FILE_LOCATION="CONFIG_FILE_LOCATION"
 
 def get_config():
     return {
+        CONFIG_FILE_LOCATION: os.getenv("CONFIG_FILE_LOCATION", "~/Rnd"),
         GITHUB_API_URL: os.getenv("GITHUB_API_URL", "https://api.github.com"),
         PLUGIN_LIST_URL: os.getenv("PLUGIN_LIST_URL", "https://www.urbancode.com/plugins"),
         UC_BASE_URL: os.getenv("UC_BASE_URL", "http://www.urbancode.com"), 
@@ -156,7 +163,9 @@ def get_config():
         BLOGS_DIR:os.getenv(BLOGS_DIR,"~/Rnd/Blogs"),
         BLOGS_FILE_NAME:os.getenv(BLOGS_FILE_NAME, "MERGED-all_urls.xlsx"),
         RELEASE_NOTES_DIR:os.getenv(BLOGS_DIR,"~/Rnd/Release_Notes"),
-        RELEASE_NOTES_DIR_FILE_NAME:os.getenv(RELEASE_NOTES_DIR_FILE_NAME, "RELEASE_NOTES_DIR.csv")
+        RELEASE_NOTES_DIR_FILE_NAME:os.getenv(RELEASE_NOTES_DIR_FILE_NAME, "RELEASE_NOTES_DIR.csv"),
+        DOCS_DIR:os.getenv(DOCS_DIR,"~/Rnd/Blogs/migrated")
+
     }
 
 def get_all_plugins_list(all_plugins_list):
@@ -404,12 +413,12 @@ def get_nav_bar(config, plugin, actdoc, doc_level, act_dir=""):
 # URLS_WITH_REPLACEMENTS
 def get_list_of_urls_with_replacements(filter_field, filter_value, which_url):
     config = get_config()
-    blogs_dir = config[BLOGS_DIR]
+    config_files_loc = config[CONFIG_FILE_LOCATION]
     list_of_urls_file_name=config[ALL_URLS_LIST_FILE_NAME]
     
     list_of_replacable_links=[]
     # load CSV with its path
-    with open(f"{blogs_dir}/{list_of_urls_file_name}",  encoding='utf-8') as f:
+    with open(f"{config_files_loc}/{list_of_urls_file_name}",  encoding='utf-8') as f:
         reader = csv.reader(f, delimiter=";")
         list_of_rows=list(reader)
     
