@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "other-automation"
+version = "0.1.0"
+description = ""
+authors = ["Osman Burucu <osman.burucu@at.ibm.com>"]
+readme = "README.md"
+packages = [{include = "other_automation"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.30.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
